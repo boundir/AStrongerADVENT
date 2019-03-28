@@ -24,6 +24,9 @@
     <Content Include="Config\Bosses\XComGameData_CharacterStats.ini">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Config\XComGameData.ini">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ReadMe.txt" />
     <Content Include="ModPreview.jpg" />
     <Content Include="Config\XComEditor.ini" />
