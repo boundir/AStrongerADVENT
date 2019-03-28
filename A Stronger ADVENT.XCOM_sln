@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # XCOM ModBuddy Solution File, Format Version 11.00
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "A Stronger ADVENT", "A Stronger ADVENT\A Stronger ADVENT.x2proj", "{A03363B6-1CFC-41BA-BA87-2722E762E2A6}"
+Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "A Stronger ADVENT", "A Stronger ADVENT\A Stronger ADVENT.x2proj", "{11476714-79A7-4C1F-BA35-7F83C1988919}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|XCOM 2 = Default|XCOM 2
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A03363B6-1CFC-41BA-BA87-2722E762E2A6}.Default|XCOM 2.ActiveCfg = Default|XCOM 2
-		{A03363B6-1CFC-41BA-BA87-2722E762E2A6}.Default|XCOM 2.Build.0 = Default|XCOM 2
+		{11476714-79A7-4C1F-BA35-7F83C1988919}.Default|XCOM 2.ActiveCfg = Default|XCOM 2
+		{11476714-79A7-4C1F-BA35-7F83C1988919}.Default|XCOM 2.Build.0 = Default|XCOM 2
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

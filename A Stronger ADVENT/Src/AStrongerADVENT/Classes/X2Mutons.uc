@@ -17,7 +17,6 @@ static event OnPostCharacterTemplatesCreated() {
         {
             CharacterTemplate.Abilities.AddItem('CounterattackPreparation');
             CharacterTemplate.Abilities.AddItem('CounterattackDescription');
-            CharacterTemplate.Abilities.AddItem('DarkEventAbility_Barrier');
         }
 	}
 	// Muton Infector
@@ -29,7 +28,6 @@ static event OnPostCharacterTemplatesCreated() {
         {
             CharacterTemplate.Abilities.AddItem('CounterattackPreparation');
             CharacterTemplate.Abilities.AddItem('CounterattackDescription');
-            CharacterTemplate.Abilities.AddItem('DarkEventAbility_Barrier');
         }
 	}
 }

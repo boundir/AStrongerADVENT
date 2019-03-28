@@ -11,12 +11,16 @@
   <ItemGroup>
     <Folder Include="Config\" />
     <Folder Include="Config\Bosses" />
+    <Folder Include="Config\Berserkers" />
     <Folder Include="Localization\" />
     <Folder Include="Src\" />
     <Folder Include="Src\AStrongerADVENT\" />
     <Folder Include="Src\AStrongerADVENT\Classes\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config\Berserkers\XComGameData_CharacterStats.ini">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Config\Bosses\XComGameData_CharacterStats.ini">
       <SubType>Content</SubType>
     </Content>
