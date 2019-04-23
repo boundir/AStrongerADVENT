@@ -26,5 +26,7 @@ static event InstallNewCampaign(XComGameState StartState)
 
 static event OnPostTemplatesCreated() {
 	class'X2Mutons'.static.OnPostCharacterTemplatesCreated();
-	//class'X2Archons'.static.OnPostCharacterTemplatesCreated();
+	class'X2Archons'.static.OnPostCharacterTemplatesCreated();
+	class'X2Codex'.static.OnPostCharacterTemplatesCreated();
+	class'X2Sectoids'.static.OnPostCharacterTemplatesCreated();
 }

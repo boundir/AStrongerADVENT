@@ -1,4 +1,4 @@
-class X2Archons extends Object;
+class X2Codex extends Object;
 
 static event OnPostCharacterTemplatesCreated() {
 	local X2CharacterTemplateManager			CharacterTemplateMgr;
@@ -8,15 +8,17 @@ static event OnPostCharacterTemplatesCreated() {
 
 	CharacterTemplateMgr = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
 
-	// Archon Prime
-	CharacterTemplateMgr.FindDataTemplateAllDifficulties('ArchonM4', DataTemplates);
+	// Codex Prime
+	CharacterTemplateMgr.FindDataTemplateAllDifficulties('CodexM4', DataTemplates);
 	for( i = 0; i < DataTemplates.Length; ++i )
 	{
 		CharacterTemplate = X2CharacterTemplate(DataTemplates[i]);
 		if( CharacterTemplate != none )
 		{
-			CharacterTemplate.AdditionalAnimSets.AddItem(AnimSet(`CONTENT.RequestGameArchetype("DLC_60_ArchonKing_ANIM.Anims.AS_ArchonKing")));
-			CharacterTemplate.Abilities.AddItem('IcarusDropGrab');
+			CharacterTemplate.Abilities.RemoveItem('TriggerSuperposition');
+			CharacterTemplate.Abilities.RemoveItem('Superposition');
+			CharacterTemplate.Abilities.AddItem('TriggerSuperpositionPrime');
+			CharacterTemplate.Abilities.AddItem('SuperpositionPrime');
 		}
 	}
 }

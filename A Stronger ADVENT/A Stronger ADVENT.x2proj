@@ -12,7 +12,22 @@
     <Folder Include="Config\" />
     <Folder Include="Config\Bosses" />
     <Folder Include="Config\Berserkers" />
+    <Folder Include="Config\Mutons" />
+    <Folder Include="Config\Troopers" />
+    <Folder Include="Config\Sectoids" />
     <Folder Include="Localization\" />
+    <Folder Include="Content" />
+    <Folder Include="Localization\INT" />
+    <Folder Include="Localization\FRA" />
+    <Folder Include="Localization\CHN" />
+    <Folder Include="Localization\CHT" />
+    <Folder Include="Localization\DEU" />
+    <Folder Include="Localization\ESN" />
+    <Folder Include="Localization\ITA" />
+    <Folder Include="Localization\JPN" />
+    <Folder Include="Localization\KOR" />
+    <Folder Include="Localization\RUS" />
+    <Folder Include="Localization\POL" />
     <Folder Include="Src\" />
     <Folder Include="Src\AStrongerADVENT\" />
     <Folder Include="Src\AStrongerADVENT\Classes\" />
@@ -24,7 +39,55 @@
     <Content Include="Config\Bosses\XComGameData_CharacterStats.ini">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Config\Mutons\XComGameData_CharacterStats.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\Sectoids\XComGameData_CharacterStats.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\Troopers\XComGameData_CharacterStats.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComAI.ini">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Config\XComGameData.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComGameData_SoldierSkills.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\CHN\XComGame.chn">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\CHT\XComGame.cht">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\DEU\XComGame.deu">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\ESN\XComGame.esn">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\FRA\XComGame.fra">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\INT\XComGame.int">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\ITA\XComGame.ita">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\JPN\XComGame.jpn">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\KOR\XComGame.kor">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\POL\XComGame.pol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\RUS\XComGame.rus">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ReadMe.txt" />
@@ -32,12 +95,20 @@
     <Content Include="Config\XComEditor.ini" />
     <Content Include="Config\XComEngine.ini" />
     <Content Include="Config\XComGame.ini" />
-    <Content Include="Localization\XComGame.int" />
+    <Content Include="Src\AStrongerADVENT\Classes\X2Ability_Codex.uc">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Src\AStrongerADVENT\Classes\X2Archons.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\AStrongerADVENT\Classes\X2Codex.uc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\AStrongerADVENT\Classes\X2DownloadableContentInfo_AStrongerADVENT.uc" />
     <Content Include="Src\AStrongerADVENT\Classes\X2Mutons.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\AStrongerADVENT\Classes\X2Sectoids.uc">
       <SubType>Content</SubType>
     </Content>
   </ItemGroup>
