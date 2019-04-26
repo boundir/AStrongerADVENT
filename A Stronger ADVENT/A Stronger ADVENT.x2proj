@@ -3,7 +3,76 @@
   <PropertyGroup>
     <Guid>004f9e5e-97ab-4158-a54b-d6d5b56502fc</Guid>
     <Name>A Stronger ADVENT</Name>
-    <Description>ABA "extension"</Description>
+    <Description>A Stronger ADVENT
+======
+
+DerBK was kind enough to let us of the possibilities for the Alien to win over XCOM.
+We will try to follow this path.
+
+Changes
+======
+
+Several changes have been done. There will be more to come.
+
+
+Stats
+------
+
+| Enemy                  | Stat        | Rookie     | Veter an   | Commander   | Legend     |
+| -----------------------|-------------|------------|------------|-------------|------------|
+| Sectoid Soldier        | Offense     | 60 -&gt; 80   | 60 -&gt; 80   | 60 -&gt; 80    | 60 -&gt; 80   |
+|                        | HP          | 12 -&gt; 12   | 14 -&gt; 16   | 16 -&gt; 20    | 18 -&gt; 24   |
+| ADVENT Sniper          | Offense     | 65 -&gt; 70   | 65 -&gt; 70   | 65 -&gt; 70    | 65 -&gt; 70   |
+| Advanced Sniper        | Offense     | 70 -&gt; 80   | 70 -&gt; 80   | 70 -&gt; 80    | 70 -&gt; 80   |
+| Elite Sniper           | Offense     | 75 -&gt; 90   | 75 -&gt; 90   | 75 -&gt; 90    | 75 -&gt; 90   |
+| Muton Prime            | Armor       | 3 -&gt; 4     | 3 -&gt; 4     | 3 -&gt; 4      | 3 -&gt; 4     |
+|                        | Defense     | 10 -&gt; 20   | 10 -&gt; 20   | 10 -&gt; 20    | 10 -&gt; 20   |
+|                        | HP          | 16         | 18 -&gt; 19   | 20 -&gt; 22    | 22 -&gt; 25   |
+| Berserker Prime        | HP          | 20 -&gt; 24   | 24 -&gt; 28   | 28 -&gt; 32    | 32 -&gt; 36   |
+|                        | Crit-Chance | 10 -&gt; 15   | 10 -&gt; 15   | 10 -&gt; 15    | 10 -&gt; 15   |
+| Firestarter Prime      | HP          | 20 -&gt; 24   | 24 -&gt; 28   | 28 -&gt; 32    | 32 -&gt; 36   |
+|                        | Crit-Chance | 10 -&gt; 15   | 10 -&gt; 15   | 10 -&gt; 15    | 10 -&gt; 15   |
+| Berserker              | Crit-Chance | 10 -&gt; 15   | 10 -&gt; 15   | 10 -&gt; 15    | 10 -&gt; 15   |
+| Firestarter            | Crit-Chance | 10 -&gt; 15   | 10 -&gt; 15   | 10 -&gt; 15    | 10 -&gt; 15   |
+| Andromedon Prime       | Defense     | 10 -&gt; 15   | 10 -&gt; 15   | 10 -&gt; 15    | 10 -&gt; 15   |
+|                        | HP          | 20 -&gt; 24   | 23 -&gt; 27   | 26 -&gt; 30    | 29 -&gt; 33   |
+|                        | Offense     | 70 -&gt; 80   | 70 -&gt; 80   | 70 -&gt; 80    | 70 -&gt; 80   |
+| Andromedon Prime Shell | Mobility    | 12 -&gt; 15   | 12 -&gt; 15   | 12 -&gt; 15    | 12 -&gt; 15   |
+|                        | HP          | 14 -&gt; 24   | 16 -&gt; 26   | 18 -&gt; 28    | 20 -&gt; 30   |
+| Sectopod Prime         | Armor       | 5 -&gt; 7     | 5 -&gt; 7     | 5 -&gt; 7      | 5 -&gt; 7     |
+|                        | Defense     | -10 -&gt; 20  | -10 -&gt; 20  | -10 -&gt; 20   | -10 -&gt; 20  |
+|                        | HP          | 32 -&gt; 40   | 37 -&gt; 45   | 42 -&gt; 50    | 47 -&gt; 55   |
+|                        | HP          | 14 -&gt; 24   | 16 -&gt; 26   | 18 -&gt; 28    | 20 -&gt; 30   |
+| Gatekeeper Prime       | Armor       | 4 -&gt; 4     | 4 -&gt; 5     | 4 -&gt; 6      | 4 -&gt; 7     |
+|                        | Defense     | 0 -&gt; 15    | 0 -&gt; 15    | 0 -&gt; 15     | 0 -&gt; 15    |
+|                        | Mobility    | 12 -&gt; 16   | 12 -&gt; 16   | 12 -&gt; 16    | 12 -&gt; 16   |
+|                        | Will        | 100 -&gt; 200 | 100 -&gt; 200 | 100 -&gt; 200  | 100 -&gt; 200 |
+
+
+Abilities
+------
+
+- Melee Vulnerability for the Sectoid Soldier, until he wears something ( buffed his HP ).
+- Melee Vulnerability for the Sectoid Soldier Prime, until he wears something ( buffed his HP ).
+- Codex Prime will not lose Health when cloning.
+- Vanish ability is now a free action.
+- Muton Pyro can now Counterattack.
+- Muton Infector can now Counterattack.
+- Archon Prime is now able to perform Icarus Drop.
+
+
+AI
+------
+
+- The Spectre will now use Vanish after Shadowbind.
+- The Spectre Prime will now use Vanish after Shadowbind.
+
+
+Unit
+------
+
+- When a Spectre Prime uses Shadowbind it will now create a Shadow Prime.
+tags= War of the Chosen, Gameplay, AI, Alien, Suffering Is Fun</Description>
     <SteamPublishID>0</SteamPublishID>
     <AssemblyName>A Stronger ADVENT</AssemblyName>
     <RootNamespace>A Stronger ADVENT</RootNamespace>
@@ -13,6 +82,7 @@
     <Folder Include="Config\Bosses" />
     <Folder Include="Config\Berserkers" />
     <Folder Include="Config\Mutons" />
+    <Folder Include="Config\Spectre" />
     <Folder Include="Config\Troopers" />
     <Folder Include="Config\Sectoids" />
     <Folder Include="Localization\" />
@@ -43,6 +113,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Config\Sectoids\XComGameData_CharacterStats.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\Spectre\XComGameData_CharacterStats.ini">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Config\Troopers\XComGameData_CharacterStats.ini">
@@ -95,20 +168,35 @@
     <Content Include="Config\XComEditor.ini" />
     <Content Include="Config\XComEngine.ini" />
     <Content Include="Config\XComGame.ini" />
-    <Content Include="Src\AStrongerADVENT\Classes\X2Ability_Codex.uc">
+    <Content Include="Src\AStrongerADVENT\Classes\X2Ability_ASA_Codex.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\AStrongerADVENT\Classes\X2Ability_ASA_Spectre.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\AStrongerADVENT\Classes\X2Action_ASA_ShadowbindTarget.uc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\AStrongerADVENT\Classes\X2Archons.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\AStrongerADVENT\Classes\X2Character_Shadow.uc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\AStrongerADVENT\Classes\X2Codex.uc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\AStrongerADVENT\Classes\X2DownloadableContentInfo_AStrongerADVENT.uc" />
+    <Content Include="Src\AStrongerADVENT\Classes\X2Effect_ASA_SpawnShadowbindUnit.uc">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Src\AStrongerADVENT\Classes\X2Mutons.uc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\AStrongerADVENT\Classes\X2Sectoids.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\AStrongerADVENT\Classes\X2Spectres.uc">
       <SubType>Content</SubType>
     </Content>
   </ItemGroup>

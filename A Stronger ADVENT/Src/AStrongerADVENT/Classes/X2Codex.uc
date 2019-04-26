@@ -18,7 +18,6 @@ static event OnPostCharacterTemplatesCreated() {
 			CharacterTemplate.Abilities.RemoveItem('TriggerSuperposition');
 			CharacterTemplate.Abilities.RemoveItem('Superposition');
 			CharacterTemplate.Abilities.AddItem('TriggerSuperpositionPrime');
-			CharacterTemplate.Abilities.AddItem('SuperpositionPrime');
 		}
 	}
 }

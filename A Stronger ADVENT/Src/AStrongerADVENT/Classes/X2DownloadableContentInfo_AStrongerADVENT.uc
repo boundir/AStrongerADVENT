@@ -29,4 +29,5 @@ static event OnPostTemplatesCreated() {
 	class'X2Archons'.static.OnPostCharacterTemplatesCreated();
 	class'X2Codex'.static.OnPostCharacterTemplatesCreated();
 	class'X2Sectoids'.static.OnPostCharacterTemplatesCreated();
+	class'X2Spectres'.static.OnPostCharacterTemplatesCreated();
 }
