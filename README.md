@@ -1,8 +1,8 @@
 A Stronger ADVENT
 ======
 
-DerBK was kind enough to let us know that ADVENT **could** win over XCOM.
-We will try to follow this path.
+Using A Better ADVENT mod as a base, I'm trying to balance the aliens my way. It does include things like stats, loadout, abilities, ai or even new units.
+
 
 Changes
 ======
@@ -13,7 +13,7 @@ Several changes have been done. There will be more to come.
 Stats
 ------
 
-| Enemy                  | Stat        | Rookie     | Veter an   | Commander   | Legend     |
+| Enemy                  | Stat        | Rookie     | Veteran    | Commander   | Legend     |
 | -----------------------|-------------|------------|------------|-------------|------------|
 | Sectoid Soldier        | Offense     | 60 -> 80   | 60 -> 80   | 60 -> 80    | 60 -> 80   |
 |                        | HP          | 12 -> 12   | 14 -> 16   | 16 -> 20    | 18 -> 24   |
