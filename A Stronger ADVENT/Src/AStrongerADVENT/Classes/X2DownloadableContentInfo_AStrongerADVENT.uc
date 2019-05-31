@@ -25,9 +25,9 @@ static event InstallNewCampaign(XComGameState StartState)
 {}
 
 static event OnPostTemplatesCreated() {
-	class'X2Mutons'.static.OnPostCharacterTemplatesCreated();
-	class'X2Archons'.static.OnPostCharacterTemplatesCreated();
-	class'X2Codex'.static.OnPostCharacterTemplatesCreated();
-	class'X2Sectoids'.static.OnPostCharacterTemplatesCreated();
-	class'X2Spectres'.static.OnPostCharacterTemplatesCreated();
+	class'AStrongerADVENT_OPTC_Mutons'.static.OnPostCharacterTemplatesCreated();
+	class'AStrongerADVENT_OPTC_Archons'.static.OnPostCharacterTemplatesCreated();
+	class'AStrongerADVENT_OPTC_Codex'.static.OnPostCharacterTemplatesCreated();
+	class'AStrongerADVENT_OPTC_Sectoids'.static.OnPostCharacterTemplatesCreated();
+	class'AStrongerADVENT_OPTC_Spectres'.static.OnPostCharacterTemplatesCreated();
 }

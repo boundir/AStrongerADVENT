@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------------
 //  Copyright (c) 2016 Firaxis Games, Inc. All rights reserved.
 //---------------------------------------------------------------------------------------
-class X2Ability_ASA_Spectre extends X2Ability_Spectre
+class AStrongerADVENT_Ability_Spectre extends X2Ability_Spectre
 	config(GameData_SoldierSkills);
 
 static function array<X2DataTemplate> CreateTemplates()
@@ -21,7 +21,7 @@ static function X2DataTemplate CreateShadowbindM4(name AbilityTemplateName, name
 	local X2Condition_UnitProperty UnitPropertyCondition;
 	local X2Condition_UnitImmunities UnitImmunityCondition;
 	local X2Effect_RemoveEffects RemoveEffects;
-	local X2Effect_ASA_SpawnShadowbindUnit SpawnShadowbindUnit;
+	local AStrongerADVENT_Effect_SpawnShadowbindUnit SpawnShadowbindUnit;
 	local X2AbilityCooldown_LocalAndGlobal Cooldown;
 	local X2Effect_OverrideDeathAction DeathActionEffect;
 	local X2Effect_Persistent UnconsciousEffect;
@@ -80,7 +80,7 @@ static function X2DataTemplate CreateShadowbindM4(name AbilityTemplateName, name
 	Template.AddTargetEffect(RemoveEffects);
 
 	DeathActionEffect = new class'X2Effect_OverrideDeathAction';
-	DeathActionEffect.DeathActionClass = class'X2Action_ASA_ShadowbindTarget';
+	DeathActionEffect.DeathActionClass = class'AStrongerADVENT_Action_ShadowbindTarget';
 	DeathActionEffect.EffectName = 'ShadowbindUnconcious';
 	Template.AddTargetEffect(DeathActionEffect);
 
@@ -89,7 +89,7 @@ static function X2DataTemplate CreateShadowbindM4(name AbilityTemplateName, name
 	UnconsciousEffect.VisualizationFn = ShadowbindUnconsciousVisualization;
 	Template.AddTargetEffect(UnconsciousEffect);
 
-	SpawnShadowbindUnit = new class'X2Effect_ASA_SpawnShadowbindUnit';
+	SpawnShadowbindUnit = new class'AStrongerADVENT_Effect_SpawnShadowbindUnit';
 	SpawnShadowbindUnit.BuildPersistentEffect(1, true, false, true);
 	SpawnShadowbindUnit.bRemoveWhenTargetDies = false;
 	SpawnShadowbindUnit.UnitToSpawnName = UnitToSpawnName;
@@ -114,7 +114,7 @@ simulated function ShadowbindM4_BuildVisualization(XComGameState VisualizeGameSt
 	local VisualizationActionMetadata ShadowMetaData, CosmeticUnitMetaData;
 	local XComGameState_Unit ShadowUnit, ShadowbindTargetUnit, TargetUnitState, CosmeticUnit;
 	local UnitValue ShadowUnitValue;
-	local X2Effect_ASA_SpawnShadowbindUnit SpawnShadowEffect;
+	local AStrongerADVENT_Effect_SpawnShadowbindUnit SpawnShadowEffect;
 	local int j;
 	local name SpawnShadowEffectResult;
 	local X2Action_Fire SourceFire;
@@ -124,7 +124,7 @@ simulated function ShadowbindM4_BuildVisualization(XComGameState VisualizeGameSt
 	local VisualizationActionMetadata SourceMetaData, TargetMetaData;
 	local X2Action_MoveTurn MoveTurnAction;
 	local X2Action_PlayAnimation AddAnimAction, AnimAction;
-	local X2Action_ASA_ShadowbindTarget TargetShadowbind;
+	local AStrongerADVENT_Action_ShadowbindTarget TargetShadowbind;
 	local XComGameState_Item ItemState;
 	local X2GremlinTemplate GremlinTemplate;
 	local Array<X2Action> FoundNodes;
@@ -160,7 +160,7 @@ simulated function ShadowbindM4_BuildVisualization(XComGameState VisualizeGameSt
 	SourceMoveBegin = X2Action_MoveBegin(VisMgr.GetNodeOfType(VisMgr.BuildVisTree, class'X2Action_MoveBegin', SourceUnit));
 
 	// Find the Target's Shadowbind
-	TargetShadowbind = X2Action_ASA_ShadowbindTarget(VisMgr.GetNodeOfType(VisMgr.BuildVisTree, class'X2Action_ASA_ShadowbindTarget', , Context.InputContext.PrimaryTarget.ObjectID));
+	TargetShadowbind = AStrongerADVENT_Action_ShadowbindTarget(VisMgr.GetNodeOfType(VisMgr.BuildVisTree, class'AStrongerADVENT_Action_ShadowbindTarget', , Context.InputContext.PrimaryTarget.ObjectID));
 
 	SourceMetaData.StateObject_OldState = SourceFire.Metadata.StateObject_OldState;
 	SourceMetaData.StateObject_NewState = SourceFire.Metadata.StateObject_NewState;
@@ -192,7 +192,7 @@ simulated function ShadowbindM4_BuildVisualization(XComGameState VisualizeGameSt
 	SpawnShadowEffectResult = 'AA_UnknownError';
 	for (j = 0; j < Context.ResultContext.TargetEffectResults.Effects.Length; ++j)
 	{
-		SpawnShadowEffect = X2Effect_ASA_SpawnShadowbindUnit(Context.ResultContext.TargetEffectResults.Effects[j]);
+		SpawnShadowEffect = AStrongerADVENT_Effect_SpawnShadowbindUnit(Context.ResultContext.TargetEffectResults.Effects[j]);
 
 		if (SpawnShadowEffect != none)
 		{

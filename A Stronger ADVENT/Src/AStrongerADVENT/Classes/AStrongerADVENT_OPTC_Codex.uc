@@ -1,4 +1,4 @@
-class X2Codex extends Object;
+class AStrongerADVENT_OPTC_Codex extends Object;
 
 static event OnPostCharacterTemplatesCreated() {
 	local X2CharacterTemplateManager			CharacterTemplateMgr;

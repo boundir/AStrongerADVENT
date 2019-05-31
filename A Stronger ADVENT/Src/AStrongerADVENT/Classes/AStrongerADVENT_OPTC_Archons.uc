@@ -1,4 +1,4 @@
-class X2Archons extends Object;
+class AStrongerADVENT_OPTC_Archons extends Object;
 
 static event OnPostCharacterTemplatesCreated() {
 	local X2CharacterTemplateManager			CharacterTemplateMgr;
@@ -19,4 +19,16 @@ static event OnPostCharacterTemplatesCreated() {
 			CharacterTemplate.Abilities.AddItem('IcarusDropGrab');
 		}
 	}
+
+	// Archon Valkyrie
+	CharacterTemplateMgr.FindDataTemplateAllDifficulties('ArchonMelee', DataTemplates);
+	for( i = 0; i < DataTemplates.Length; ++i )
+	{
+		CharacterTemplate = X2CharacterTemplate(DataTemplates[i]);
+		if( CharacterTemplate != none )
+		{
+			CharacterTemplate.Abilities.AddItem('StaffControl');
+		}
+	}
+
 }

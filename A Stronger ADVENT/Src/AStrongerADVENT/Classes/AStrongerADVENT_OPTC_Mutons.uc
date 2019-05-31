@@ -1,4 +1,4 @@
-class X2Sectoids extends Object;
+class AStrongerADVENT_OPTC_Mutons extends Object;
 
 static event OnPostCharacterTemplatesCreated() {
 	local X2CharacterTemplateManager			CharacterTemplateMgr;
@@ -8,24 +8,26 @@ static event OnPostCharacterTemplatesCreated() {
 
 	CharacterTemplateMgr = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
 
-	// Sectoid Soldier
-	CharacterTemplateMgr.FindDataTemplateAllDifficulties('SectoidTrooper', DataTemplates);
+	// Muton Pyro
+	CharacterTemplateMgr.FindDataTemplateAllDifficulties('MutonDragonrounds', DataTemplates);
 	for( i = 0; i < DataTemplates.Length; ++i )
 	{
 		CharacterTemplate = X2CharacterTemplate(DataTemplates[i]);
 		if( CharacterTemplate != none )
 		{
-			CharacterTemplate.Abilities.AddItem('VulnerabilityMelee');
+			CharacterTemplate.Abilities.AddItem('CounterattackPreparation');
+			CharacterTemplate.Abilities.AddItem('CounterattackDescription');
 		}
 	}
-	// Sectoid Soldier Prime
-	CharacterTemplateMgr.FindDataTemplateAllDifficulties('SectoidTrooperM4', DataTemplates);
+	// Muton Infector
+	CharacterTemplateMgr.FindDataTemplateAllDifficulties('MutonVenomrounds', DataTemplates);
 	for( i = 0; i < DataTemplates.Length; ++i )
 	{
 		CharacterTemplate = X2CharacterTemplate(DataTemplates[i]);
 		if( CharacterTemplate != none )
 		{
-			CharacterTemplate.Abilities.AddItem('VulnerabilityMelee');
+			CharacterTemplate.Abilities.AddItem('CounterattackPreparation');
+			CharacterTemplate.Abilities.AddItem('CounterattackDescription');
 		}
 	}
 }

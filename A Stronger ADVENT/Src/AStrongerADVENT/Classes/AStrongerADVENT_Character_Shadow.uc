@@ -1,4 +1,4 @@
-class X2Character_Shadow extends X2Character_DefaultCharacters config(GameData_CharacterStats);
+class AStrongerADVENT_Character_Shadow extends X2Character_DefaultCharacters config(GameData_CharacterStats);
 
 static function array<X2DataTemplate> CreateTemplates()
 {

@@ -1,7 +1,7 @@
 //-----------------------------------------------------------
 // Used by the visualizer system to control a Visualization Actor
 //-----------------------------------------------------------
-class X2Action_ASA_ShadowbindTarget extends X2Action_Death;
+class AStrongerADVENT_Action_ShadowbindTarget extends X2Action_Death;
 
 function Init()
 {

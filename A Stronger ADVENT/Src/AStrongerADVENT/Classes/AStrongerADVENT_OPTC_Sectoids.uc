@@ -1,4 +1,4 @@
-class X2Spectres extends Object;
+class AStrongerADVENT_OPTC_Sectoids extends Object;
 
 static event OnPostCharacterTemplatesCreated() {
 	local X2CharacterTemplateManager			CharacterTemplateMgr;
@@ -8,26 +8,24 @@ static event OnPostCharacterTemplatesCreated() {
 
 	CharacterTemplateMgr = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
 
-	// Spectre Prime
-	CharacterTemplateMgr.FindDataTemplateAllDifficulties('SpectreM4', DataTemplates);
+	// Sectoid Soldier
+	CharacterTemplateMgr.FindDataTemplateAllDifficulties('SectoidTrooper', DataTemplates);
 	for( i = 0; i < DataTemplates.Length; ++i )
 	{
 		CharacterTemplate = X2CharacterTemplate(DataTemplates[i]);
 		if( CharacterTemplate != none )
 		{
-			CharacterTemplate.Abilities.RemoveItem('ShadowbindM2');
-			CharacterTemplate.Abilities.AddItem('ShadowbindM4');
+			CharacterTemplate.Abilities.AddItem('VulnerabilityMelee');
 		}
 	}
-
-	// Shadowbound Unit Prime
-	CharacterTemplateMgr.FindDataTemplateAllDifficulties('ShadowbindUnitM4', DataTemplates);
+	// Sectoid Soldier Prime
+	CharacterTemplateMgr.FindDataTemplateAllDifficulties('SectoidTrooperM4', DataTemplates);
 	for( i = 0; i < DataTemplates.Length; ++i )
 	{
 		CharacterTemplate = X2CharacterTemplate(DataTemplates[i]);
 		if( CharacterTemplate != none )
 		{
-			CharacterTemplate.Abilities.AddItem('ShadowReaction');
+			CharacterTemplate.Abilities.AddItem('VulnerabilityMelee');
 		}
 	}
 }

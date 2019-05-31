@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------------
 //  Copyright (c) 2016 Firaxis Games, Inc. All rights reserved.
 //---------------------------------------------------------------------------------------
-class X2Ability_ASA_Codex extends X2Ability_Cyberus
+class AStrongerADVENT_Ability_Codex extends X2Ability_Cyberus
 	config(GameData_SoldierSkills);
 
 static function array<X2DataTemplate> CreateTemplates()

@@ -183,35 +183,44 @@ tags= War of the Chosen, Gameplay, AI, Alien, Suffering Is Fun</Description>
     <Content Include="Config\XComEditor.ini" />
     <Content Include="Config\XComEngine.ini" />
     <Content Include="Config\XComGame.ini" />
-    <Content Include="Src\AStrongerADVENT\Classes\X2Ability_ASA_Codex.uc">
+    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_Ability_Archon.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\X2Ability_ASA_Spectre.uc">
+    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_Ability_Codex.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\X2Action_ASA_ShadowbindTarget.uc">
+    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_Ability_Priest.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\X2Archons.uc">
+    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_Ability_Spectre.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\X2Character_Shadow.uc">
+    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_Action_ShadowbindTarget.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\X2Codex.uc">
+    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_OPTC_Archons.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_Character_Shadow.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_OPTC_Codex.uc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\AStrongerADVENT\Classes\X2DownloadableContentInfo_AStrongerADVENT.uc" />
-    <Content Include="Src\AStrongerADVENT\Classes\X2Effect_ASA_SpawnShadowbindUnit.uc">
+    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_Effect_SpawnShadowbindUnit.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\X2Mutons.uc">
+    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_Item_XpackWeapons.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\X2Sectoids.uc">
+    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_OPTC_Mutons.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\X2Spectres.uc">
+    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_OPTC_Sectoids.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_OPTC_Spectres.uc">
       <SubType>Content</SubType>
     </Content>
   </ItemGroup>

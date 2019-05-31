@@ -1,4 +1,4 @@
-class X2Mutons extends Object;
+class AStrongerADVENT_OPTC_Spectres extends Object;
 
 static event OnPostCharacterTemplatesCreated() {
 	local X2CharacterTemplateManager			CharacterTemplateMgr;
@@ -8,26 +8,26 @@ static event OnPostCharacterTemplatesCreated() {
 
 	CharacterTemplateMgr = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
 
-	// Muton Pyro
-	CharacterTemplateMgr.FindDataTemplateAllDifficulties('MutonDragonrounds', DataTemplates);
+	// Spectre Prime
+	CharacterTemplateMgr.FindDataTemplateAllDifficulties('SpectreM4', DataTemplates);
 	for( i = 0; i < DataTemplates.Length; ++i )
 	{
 		CharacterTemplate = X2CharacterTemplate(DataTemplates[i]);
 		if( CharacterTemplate != none )
 		{
-			CharacterTemplate.Abilities.AddItem('CounterattackPreparation');
-			CharacterTemplate.Abilities.AddItem('CounterattackDescription');
+			CharacterTemplate.Abilities.RemoveItem('ShadowbindM2');
+			CharacterTemplate.Abilities.AddItem('ShadowbindM4');
 		}
 	}
-	// Muton Infector
-	CharacterTemplateMgr.FindDataTemplateAllDifficulties('MutonVenomrounds', DataTemplates);
+
+	// Shadowbound Unit Prime
+	CharacterTemplateMgr.FindDataTemplateAllDifficulties('ShadowbindUnitM4', DataTemplates);
 	for( i = 0; i < DataTemplates.Length; ++i )
 	{
 		CharacterTemplate = X2CharacterTemplate(DataTemplates[i]);
 		if( CharacterTemplate != none )
 		{
-			CharacterTemplate.Abilities.AddItem('CounterattackPreparation');
-			CharacterTemplate.Abilities.AddItem('CounterattackDescription');
+			CharacterTemplate.Abilities.AddItem('ShadowReaction');
 		}
 	}
 }

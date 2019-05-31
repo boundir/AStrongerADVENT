@@ -1,4 +1,4 @@
-class X2Effect_ASA_SpawnShadowbindUnit extends X2Effect_SpawnUnit
+class AStrongerADVENT_Effect_SpawnShadowbindUnit extends X2Effect_SpawnUnit
 	config(GameData_SoldierSkills);
 
 var config array<Name> AbilitiesShadowCantHave;
@@ -64,13 +64,13 @@ function AddSpawnVisualizationsToTracks(XComGameStateContext Context, XComGameSt
 {
 	local XComGameStateVisualizationMgr VisMgr;
 	local XComGameStateHistory History;
-	local X2Action_ASA_ShadowbindTarget TargetShadowbind;
+	local AStrongerADVENT_Action_ShadowbindTarget TargetShadowbind;
 	local X2Action_CreateDoppelganger CopyUnitAction;
 
 	VisMgr = `XCOMVISUALIZATIONMGR;
 	History = `XCOMHISTORY;
 
-	TargetShadowbind = X2Action_ASA_ShadowbindTarget(VisMgr.GetNodeOfType(VisMgr.BuildVisTree, class'X2Action_ASA_ShadowbindTarget', , XComGameStateContext_Ability(Context).InputContext.PrimaryTarget.ObjectID));
+	TargetShadowbind = AStrongerADVENT_Action_ShadowbindTarget(VisMgr.GetNodeOfType(VisMgr.BuildVisTree, class'AStrongerADVENT_Action_ShadowbindTarget', , XComGameStateContext_Ability(Context).InputContext.PrimaryTarget.ObjectID));
 
 	// Copy the target unit's appearance to the Shadow
 	CopyUnitAction = X2Action_CreateDoppelganger(class'X2Action_CreateDoppelganger'.static.AddToVisualizationTree(SpawnedUnitTrack, Context, true, , TargetShadowbind.ParentActions));//TargetShadowbind/*, TargetShadowbind.ParentActions*/));
