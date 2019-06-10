@@ -76,9 +76,10 @@ AI
 
 - The Spectre will now use Vanish after Shadowbind.
 - The Spectre Prime will now use Vanish after Shadowbind.
+- The Priest will prioritize using Holy Warrior on your MindControlled units.
 
 
 Unit
 ------
 
-- When a Spectre Prime uses Shadowbind it will now create a Shadow Prime.
+- Spectre Prime will now create a Shadow Prime.

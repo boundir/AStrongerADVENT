@@ -87,7 +87,7 @@ Unit
 
 - When a Spectre Prime uses Shadowbind it will now create a Shadow Prime.
 
-tags= War of the Chosen, Gameplay, AI, Alien, Suffering Is Fun</Description>
+tags= War of the Chosen, Gameplay, AI, Alien</Description>
     <SteamPublishID>0</SteamPublishID>
     <AssemblyName>A Stronger ADVENT</AssemblyName>
     <RootNamespace>A Stronger ADVENT</RootNamespace>
@@ -189,9 +189,6 @@ tags= War of the Chosen, Gameplay, AI, Alien, Suffering Is Fun</Description>
     <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_Ability_Codex.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_Ability_Priest.uc">
-      <SubType>Content</SubType>
-    </Content>
     <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_Ability_Spectre.uc">
       <SubType>Content</SubType>
     </Content>
@@ -207,11 +204,11 @@ tags= War of the Chosen, Gameplay, AI, Alien, Suffering Is Fun</Description>
     <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_OPTC_Codex.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\X2DownloadableContentInfo_AStrongerADVENT.uc" />
-    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_Effect_SpawnShadowbindUnit.uc">
+    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_OPTC_HolyWarrior.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_Item_XpackWeapons.uc">
+    <Content Include="Src\AStrongerADVENT\Classes\X2DownloadableContentInfo_AStrongerADVENT.uc" />
+    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_Effect_SpawnShadowbindUnit.uc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_OPTC_Mutons.uc">
