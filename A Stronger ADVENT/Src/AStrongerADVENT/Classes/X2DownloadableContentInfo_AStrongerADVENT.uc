@@ -24,10 +24,17 @@ static event OnLoadedSavedGame()
 static event InstallNewCampaign(XComGameState StartState)
 {}
 
-static event OnPostTemplatesCreated() {
-	class'AStrongerADVENT_OPTC_Mutons'.static.OnPostCharacterTemplatesCreated();
-	class'AStrongerADVENT_OPTC_Archons'.static.OnPostCharacterTemplatesCreated();
-	class'AStrongerADVENT_OPTC_Codex'.static.OnPostCharacterTemplatesCreated();
-	class'AStrongerADVENT_OPTC_Sectoids'.static.OnPostCharacterTemplatesCreated();
-	class'AStrongerADVENT_OPTC_Spectres'.static.OnPostCharacterTemplatesCreated();
+static function bool AbilityTagExpandHandler(string InString, out string OutString)
+{
+	local name Type;
+
+	Type = name(InString);
+
+	switch(Type)
+	{
+		case 'STAFFCONTROLAIM':
+			OutString = string(class'AStrongerADVENT_Ability_Archon'.default.STAFFCONTROL_AIM);
+			return true;
+	}
+	return false;
 }

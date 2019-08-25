@@ -1,6 +1,7 @@
-class AStrongerADVENT_OPTC_Mutons extends Object;
+class AStrongerADVENT_OPTC_Mutons extends X2DownloadableContentInfo;
 
-static event OnPostCharacterTemplatesCreated() {
+static event OnPostTemplatesCreated()
+{
 	local X2CharacterTemplateManager			CharacterTemplateMgr;
 	local X2CharacterTemplate					CharacterTemplate;
 	local array<X2DataTemplate>					DataTemplates;

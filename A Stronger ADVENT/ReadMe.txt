@@ -1,85 +1,276 @@
-﻿A Stronger ADVENT
-======
+﻿[h1]Description[/h1]
 
 Using A Better ADVENT mod as a base, I'm trying to balance the aliens my way. It does include things like stats, loadout, abilities, ai or even new units.
 
-
-Changes
-======
+[h1]Changes[/h1]
 
 Several changes have been done. There will be more to come.
 
+[h1]Stats[/h1]
 
-Stats
-------
+[table]
+    [tr]
+        [th]Enemy[/th]
+        [th]Stat[/th]
+        [th]Rookie[/th]
+        [th]Veteran[/th]
+        [th]Commander[/th]
+        [th]Legend[/th]
+    [/tr]
+    [tr]
+        [td]Sectoid Soldier[/td]
+        [td]Offense[/td]
+        [td]60 -> 80[/td]
+        [td]60 -> 80[/td]
+        [td]60 -> 80[/td]
+        [td]60 -> 80[/td]
+    [/tr]
+    [tr]
+        [td][/td]
+        [td]HP[/td]
+        [td]12 -> 12[/td]
+        [td]14 -> 16[/td]
+        [td]16 -> 20[/td]
+        [td]18 -> 24[/td]
+    [/tr]
+    [tr]
+        [td]ADVENT Sniper[/td]
+        [td]Offense[/td]
+        [td]65 -> 70[/td]
+        [td]65 -> 70[/td]
+        [td]65 -> 70[/td]
+        [td]65 -> 70[/td]
+    [/tr]
+    [tr]
+        [td]Advanced Sniper[/td]
+        [td]Offense[/td]
+        [td]70 -> 80[/td]
+        [td]70 -> 80[/td]
+        [td]70 -> 80[/td]
+        [td]70 -> 80[/td]
+    [/tr]
+    [tr]
+        [td]Elite Sniper[/td]
+        [td]Offense[/td]
+        [td]75 -> 90[/td]
+        [td]75 -> 90[/td]
+        [td]75 -> 90[/td]
+        [td]75 -> 90[/td]
+    [/tr]
+    [tr]
+        [td]Muton Prime[/td]
+        [td]Armor[/td]
+        [td]3 -> 4[/td]
+        [td]3 -> 4[/td]
+        [td]3 -> 4[/td]
+        [td]3 -> 4[/td]
+    [/tr]
+    [tr]
+        [td][/td]
+        [td]Defense[/td]
+        [td]10 -> 20[/td]
+        [td]10 -> 20[/td]
+        [td]10 -> 20[/td]
+        [td]10 -> 20[/td]
+    [/tr]
+    [tr]
+        [td][/td]
+        [td]HP[/td]
+        [td]16 -> 16[/td]
+        [td]18 -> 19[/td]
+        [td]20 -> 22[/td]
+        [td]22 -> 25[/td]
+    [/tr]
+    [tr]
+        [td]Berserker Prime[/td]
+        [td]HP[/td]
+        [td]20 -> 24[/td]
+        [td]24 -> 28[/td]
+        [td]28 -> 32[/td]
+        [td]32 -> 36[/td]
+    [/tr]
+    [tr]
+        [td][/td]
+        [td]Crit-Chance[/td]
+        [td]10 -> 15[/td]
+        [td]10 -> 15[/td]
+        [td]10 -> 15[/td]
+        [td]10 -> 15[/td]
+    [/tr]
+    [tr]
+        [td]Firestarter Prime[/td]
+        [td]HP[/td]
+        [td]20 -> 24[/td]
+        [td]24 -> 28[/td]
+        [td]28 -> 32[/td]
+        [td]32 -> 36[/td]
+    [/tr]
+    [tr]
+        [td][/td]
+        [td]Crit-Chance[/td]
+        [td]10 -> 15[/td]
+        [td]10 -> 15[/td]
+        [td]10 -> 15[/td]
+        [td]10 -> 15[/td]
+    [/tr]
+    [tr]
+        [td]Berserker[/td]
+        [td]Crit-Chance[/td]
+        [td]10 -> 15[/td]
+        [td]10 -> 15[/td]
+        [td]10 -> 15[/td]
+        [td]10 -> 15[/td]
+    [/tr]
+    [tr]
+        [td]Firestarter[/td]
+        [td]Crit-Chance[/td]
+        [td]10 -> 15[/td]
+        [td]10 -> 15[/td]
+        [td]10 -> 15[/td]
+        [td]10 -> 15[/td]
+    [/tr]
+    [tr]
+        [td]Andromedon Prime[/td]
+        [td]Defense[/td]
+        [td]10 -> 15[/td]
+        [td]10 -> 15[/td]
+        [td]10 -> 15[/td]
+        [td]10 -> 15[/td]
+    [/tr]
+    [tr]
+        [td][/td]
+        [td]HP[/td]
+        [td]20 -> 24[/td]
+        [td]23 -> 27[/td]
+        [td]26 -> 30[/td]
+        [td]29 -> 33[/td]
+    [/tr]
+    [tr]
+        [td][/td]
+        [td]Offense[/td]
+        [td]70 -> 80[/td]
+        [td]70 -> 80[/td]
+        [td]70 -> 80[/td]
+        [td]70 -> 80[/td]
+    [/tr]
+    [tr]
+        [td]Andromedon Prime Shell[/td]
+        [td]Mobility[/td]
+        [td]12 -> 15[/td]
+        [td]12 -> 15[/td]
+        [td]12 -> 15[/td]
+        [td]12 -> 15[/td]
+    [/tr]
+    [tr]
+        [td][/td]
+        [td]HP[/td]
+        [td]14 -> 24[/td]
+        [td]16 -> 26[/td]
+        [td]18 -> 28[/td]
+        [td]20 -> 30[/td]
+    [/tr]
+    [tr]
+        [td]Sectopod Prime[/td]
+        [td]Armor[/td]
+        [td]5 -> 7[/td]
+        [td]5 -> 7[/td]
+        [td]5 -> 7[/td]
+        [td]5 -> 7[/td]
+    [/tr]
+    [tr]
+        [td][/td]
+        [td]Defense[/td]
+        [td]-10 -> 20[/td]
+        [td]-10 -> 20[/td]
+        [td]-10 -> 20[/td]
+        [td]-10 -> 20[/td]
+    [/tr]
+    [tr]
+        [td][/td]
+        [td]HP[/td]
+        [td]32 -> 40[/td]
+        [td]37 -> 45[/td]
+        [td]42 -> 50[/td]
+        [td]47 -> 55[/td]
+    [/tr]
+    [tr]
+        [td]Gatekeeper Prime[/td]
+        [td]Armor[/td]
+        [td]4 -> 4[/td]
+        [td]4 -> 5[/td]
+        [td]4 -> 6[/td]
+        [td]4 -> 7[/td]
+    [/tr]
+    [tr]
+        [td][/td]
+        [td]Defense[/td]
+        [td]0 -> 15[/td]
+        [td]0 -> 15[/td]
+        [td]0 -> 15[/td]
+        [td]0 -> 15[/td]
+    [/tr]
+    [tr]
+        [td][/td]
+        [td]Mobility[/td]
+        [td]12 -> 16[/td]
+        [td]12 -> 16[/td]
+        [td]12 -> 16[/td]
+        [td]12 -> 16[/td]
+    [/tr]
+    [tr]
+        [td][/td]
+        [td]Will[/td]
+        [td]100 -> 200[/td]
+        [td]100 -> 200[/td]
+        [td]100 -> 200[/td]
+        [td]100 -> 200[/td]
+    [/tr]
+[/table]
 
-| Enemy                  | Stat        | Rookie     | Veteran    | Commander   | Legend     |
-| -----------------------|-------------|------------|------------|-------------|------------|
-| Sectoid Soldier        | Offense     | 60 -> 80   | 60 -> 80   | 60 -> 80    | 60 -> 80   |
-|                        | HP          | 12 -> 12   | 14 -> 16   | 16 -> 20    | 18 -> 24   |
-| ADVENT Sniper          | Offense     | 65 -> 70   | 65 -> 70   | 65 -> 70    | 65 -> 70   |
-| Advanced Sniper        | Offense     | 70 -> 80   | 70 -> 80   | 70 -> 80    | 70 -> 80   |
-| Elite Sniper           | Offense     | 75 -> 90   | 75 -> 90   | 75 -> 90    | 75 -> 90   |
-| Muton Prime            | Armor       | 3 -> 4     | 3 -> 4     | 3 -> 4      | 3 -> 4     |
-|                        | Defense     | 10 -> 20   | 10 -> 20   | 10 -> 20    | 10 -> 20   |
-|                        | HP          | 16 -> 16   | 18 -> 19   | 20 -> 22    | 22 -> 25   |
-| Berserker Prime        | HP          | 20 -> 24   | 24 -> 28   | 28 -> 32    | 32 -> 36   |
-|                        | Crit-Chance | 10 -> 15   | 10 -> 15   | 10 -> 15    | 10 -> 15   |
-| Firestarter Prime      | HP          | 20 -> 24   | 24 -> 28   | 28 -> 32    | 32 -> 36   |
-|                        | Crit-Chance | 10 -> 15   | 10 -> 15   | 10 -> 15    | 10 -> 15   |
-| Berserker              | Crit-Chance | 10 -> 15   | 10 -> 15   | 10 -> 15    | 10 -> 15   |
-| Firestarter            | Crit-Chance | 10 -> 15   | 10 -> 15   | 10 -> 15    | 10 -> 15   |
-| Andromedon Prime       | Defense     | 10 -> 15   | 10 -> 15   | 10 -> 15    | 10 -> 15   |
-|                        | HP          | 20 -> 24   | 23 -> 27   | 26 -> 30    | 29 -> 33   |
-|                        | Offense     | 70 -> 80   | 70 -> 80   | 70 -> 80    | 70 -> 80   |
-| Andromedon Prime Shell | Mobility    | 12 -> 15   | 12 -> 15   | 12 -> 15    | 12 -> 15   |
-|                        | HP          | 14 -> 24   | 16 -> 26   | 18 -> 28    | 20 -> 30   |
-| Sectopod Prime         | Armor       | 5 -> 7     | 5 -> 7     | 5 -> 7      | 5 -> 7     |
-|                        | Defense     | -10 -> 20  | -10 -> 20  | -10 -> 20   | -10 -> 20  |
-|                        | HP          | 32 -> 40   | 37 -> 45   | 42 -> 50    | 47 -> 55   |
-| Gatekeeper Prime       | Armor       | 4 -> 4     | 4 -> 5     | 4 -> 6      | 4 -> 7     |
-|                        | Defense     | 0 -> 15    | 0 -> 15    | 0 -> 15     | 0 -> 15    |
-|                        | Mobility    | 12 -> 16   | 12 -> 16   | 12 -> 16    | 12 -> 16   |
-|                        | Will        | 100 -> 200 | 100 -> 200 | 100 -> 200  | 100 -> 200 |
+[h1]Abilities[/h1]
+[list]
+    [*] Melee Vulnerability for the Sectoid Soldier, until he wears something ( buffed his HP ).
+    [*] Melee Vulnerability for the Sectoid Soldier Prime, until he wears something ( buffed his HP ).
+    [*] Codex Prime will not lose Health when cloning.
+    [*] Vanish ability is now a free action.
+    [*] Muton Pyro can now Counterattack.
+    [*] Muton Infector can now Counterattack.
+    [*] Archon Prime is now able to perform Icarus Drop.
+    [*] Archon Valkyrie can dash and slash.
+    [*] Sectopod Prime can trigger Lightning Storm if an enemy approaches its melee range.
+[/list]
 
+[h1]Loadout[/h1]
+[list]
+    [*] Are equiped with AP rounds:
+    [list]
+        [*] ADVENT Guardian
+        [*] Advanced Guardian.
+        [*] Advanced Sharpshooter.
+        [*] Elite Sharpshooter.
+    [/list]
+    [*] Are equiped with Talon rounds:
+    [list]
+        [*] Advanced Assault.
+        [*] Advanced Striker.
+        [*] Elite Assault.
+        [*] Elite Striker.
+    [/list]
+[/list]
 
-Abilities
-------
+[h1]AI[/h1]
+[list]
+    [*] The Spectre will now use Vanish after Shadowbind.
+    [*] The Spectre Prime will now use Vanish after Shadowbind.
+    [*] The Priest will prioritize using Holy Warrior on your MindControlled units.
+[/list]
 
-- Melee Vulnerability for the Sectoid Soldier, until he wears something ( buffed his HP ).
-- Melee Vulnerability for the Sectoid Soldier Prime, until he wears something ( buffed his HP ).
-- Codex Prime will not lose Health when cloning.
-- Vanish ability is now a free action.
-- Muton Pyro can now Counterattack.
-- Muton Infector can now Counterattack.
-- Archon Prime is now able to perform Icarus Drop.
-- Archon Valkyrie now have Staff Control, granting +5 Aim.
+[h1]Unit[/h1]
+[list]
+    [*] Spectre Prime will now create a Shadow Prime.
+[/list]
 
-
-Loadout
-------
-
-- Are equiped with AP rounds:
-  - ADVENT Guardian
-  - Advanced Guardian.
-  - Advanced Sharpshooter.
-  - Elite Sharpshooter.
-- Are equiped with Talon rounds:
-  - Advanced Assault.
-  - Advanced Striker.
-  - Elite Assault.
-  - Elite Striker.
-
-
-AI
-------
-
-- The Spectre will now use Vanish after Shadowbind.
-- The Spectre Prime will now use Vanish after Shadowbind.
-- The Priest will prioritize using Holy Warrior on your MindControlled units.
-
-
-Unit
-------
-
-- Spectre Prime will now create a Shadow Prime.
+[h1]Troubleshooting[/h1]
+https://www.reddit.com/r/xcom2mods/wiki/mod_troubleshooting
+[url=steamcommunity.com/sharedfiles/filedetails/?id=683218526]Mods not working properly / at all[/url]
+[url=steamcommunity.com/sharedfiles/filedetails/?id=625230005]Mod not working? Mods still have their effects after you disable them?[/url]

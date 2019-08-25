@@ -145,6 +145,9 @@ tags= War of the Chosen, Gameplay, AI, Alien</Description>
     <Content Include="Config\XComGameData_SoldierSkills.ini">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Config\XComStrongerADVENT.ini">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Localization\CHN\XComGame.chn">
       <SubType>Content</SubType>
     </Content>
@@ -189,6 +192,9 @@ tags= War of the Chosen, Gameplay, AI, Alien</Description>
     <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_Ability_Codex.uc">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_Ability_Sectopod.uc">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_Ability_Spectre.uc">
       <SubType>Content</SubType>
     </Content>
@@ -205,6 +211,9 @@ tags= War of the Chosen, Gameplay, AI, Alien</Description>
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_OPTC_HolyWarrior.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_Weapons.uc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\AStrongerADVENT\Classes\X2DownloadableContentInfo_AStrongerADVENT.uc" />
