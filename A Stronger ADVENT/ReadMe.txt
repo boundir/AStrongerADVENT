@@ -263,6 +263,7 @@ Several changes have been done. There will be more to come.
     [*] The Spectre will now use Vanish after Shadowbind.
     [*] The Spectre Prime will now use Vanish after Shadowbind.
     [*] The Priest will prioritize using Holy Warrior on your MindControlled units.
+    [*] Units are more likely to use grenades.
 [/list]
 
 [h1]Unit[/h1]
