@@ -18,7 +18,7 @@ Several changes have been done. There will be more to come.
         [th]Legend[/th]
     [/tr]
     [tr]
-        [td]Sectoid Soldier[/td]
+        [td]Sectoid Soldier Prime[/td]
         [td]Offense[/td]
         [td]60 -> 80[/td]
         [td]60 -> 80[/td]
@@ -229,7 +229,7 @@ Several changes have been done. There will be more to come.
 
 [h1]Abilities[/h1]
 [list]
-    [*] Melee Vulnerability for the Sectoid Soldier, until he wears something ( buffed his HP ).
+    [*] Melee Vulnerability for the Sectoid Soldier, until he wears something.
     [*] Melee Vulnerability for the Sectoid Soldier Prime, until he wears something ( buffed his HP ).
     [*] Codex Prime will not lose Health when cloning.
     [*] Vanish ability is now a free action.
@@ -242,6 +242,14 @@ Several changes have been done. There will be more to come.
 
 [h1]Loadout[/h1]
 [list]
+    [*] Muton Pyro are equiped with an Incendiary grenade.
+    [*] Muton Infector are equiped with a Gas grenade.
+    [*] Are equiped with a pistol:
+    [list]
+        [*] ADVENT Purifier (M1 Pistol).
+        [*] Advanced Purifier (M2 Pistol).
+        [*] Elite Purifier (M3 Pistol).
+    [/list]
     [*] Are equiped with AP rounds:
     [list]
         [*] ADVENT Guardian
@@ -264,6 +272,8 @@ Several changes have been done. There will be more to come.
     [*] The Spectre Prime will now use Vanish after Shadowbind.
     [*] The Priest will prioritize using Holy Warrior on your MindControlled units.
     [*] Units are more likely to use grenades.
+    [*] Purifier will attack the mimic beacon with his pistol.
+    [*] Units in fire will try to remove it by hunkering down if using ADVENT Avenger's Everyone Gets Hunker Down mod.
 [/list]
 
 [h1]Unit[/h1]
