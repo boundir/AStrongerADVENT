@@ -97,6 +97,9 @@ tags= War of the Chosen, Gameplay, AI, Alien</Description>
     <Folder Include="Config\Bosses" />
     <Folder Include="Config\Berserkers" />
     <Folder Include="Config\Mutons" />
+    <Folder Include="Config\Archons" />
+    <Folder Include="Config\Codex" />
+    <Folder Include="Config\Vipers" />
     <Folder Include="Config\Spectre" />
     <Folder Include="Config\Troopers" />
     <Folder Include="Config\Sectoids" />
@@ -118,34 +121,73 @@ tags= War of the Chosen, Gameplay, AI, Alien</Description>
     <Folder Include="Src\AStrongerADVENT\Classes\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config\Berserkers\XComAI.ini">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Config\Berserkers\XComGameData_CharacterStats.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\Bosses\XComAI.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\Bosses\XComGameData.ini">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Config\Bosses\XComGameData_CharacterStats.ini">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Config\Bosses\XComGameData_WeaponData.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\Codex\XComAI.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\Mutons\XComAI.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\Mutons\XComGameData.ini">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Config\Mutons\XComGameData_CharacterStats.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\Archons\XComAI.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\Sectoids\XComAI.ini">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Config\Sectoids\XComGameData_CharacterStats.ini">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Config\Spectre\XComAI.ini">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Config\Spectre\XComGameData_CharacterStats.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\Troopers\XComAI.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\Troopers\XComGameData.ini">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Config\Troopers\XComGameData_CharacterStats.ini">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Config\Troopers\XComGameData_WeaponData.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\Vipers\XComAI.ini">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Config\XComAI.ini">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Config\XComGameData.ini">
+    <Content Include="Config\XComGameCore.ini">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Config\XComGameData_SoldierSkills.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\XComStrongerADVENT.ini">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Localization\CHN\XComGame.chn">
