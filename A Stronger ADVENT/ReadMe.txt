@@ -4,9 +4,7 @@ Using A Better ADVENT mod as a base, I'm trying to balance the aliens my way. It
 
 [h1]Changes[/h1]
 
-Several changes have been done. There will be more to come.
-
-[h1]Stats[/h1]
+[b][u]Stats[/u][/b]
 
 [table]
     [tr]
@@ -227,7 +225,7 @@ Several changes have been done. There will be more to come.
     [/tr]
 [/table]
 
-[h1]Abilities[/h1]
+[b][u]Abilities[/u][/b]
 [list]
     [*] Melee Vulnerability for the Sectoid Soldier, until he wears something.
     [*] Melee Vulnerability for the Sectoid Soldier Prime, until he wears something ( buffed his HP ).
@@ -240,7 +238,7 @@ Several changes have been done. There will be more to come.
     [*] Sectopod Prime can trigger Lightning Storm if an enemy approaches its melee range.
 [/list]
 
-[h1]Loadout[/h1]
+[b][u]Loadouts[/u][/b]
 [list]
     [*] Muton Pyro are equiped with an Incendiary grenade.
     [*] Muton Infector are equiped with a Gas grenade.
@@ -266,7 +264,7 @@ Several changes have been done. There will be more to come.
     [/list]
 [/list]
 
-[h1]AI[/h1]
+[b][u]AI[/u][/b]
 [list]
     [*] The Spectre will now use Vanish after Shadowbind.
     [*] The Spectre Prime will now use Vanish after Shadowbind.
@@ -276,9 +274,17 @@ Several changes have been done. There will be more to come.
     [*] Units in fire will try to remove it by hunkering down if using ADVENT Avenger's Everyone Gets Hunker Down mod.
 [/list]
 
-[h1]Unit[/h1]
+[b][u]Units[/u][/b]
 [list]
     [*] Spectre Prime will now create a Shadow Prime.
+[/list]
+
+[h1]Recommanded mods[/h1]
+[list]
+    [*] [url=steamcommunity.com/sharedfiles/filedetails/?id=1541012085]Everyone Gets Hunker Down WOTC[/url] by ADVENT Avenger.
+    [*] [url=steamcommunity.com/sharedfiles/filedetails/?id=1878647436]Hunker Down Flanking Fix WOTC[/url] by ADVENT Avenger.
+    [*] [url=steamcommunity.com/sharedfiles/filedetails/?id=1133952445][WOTC] ADVENT Reinforcements[/url] by Wilko.
+    [*] [url=steamcommunity.com/sharedfiles/filedetails/?id=1168806643][WOTC] ADVENT Suppression[/url] by Wilko.
 [/list]
 
 [h1]Troubleshooting[/h1]

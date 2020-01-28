@@ -127,6 +127,9 @@ tags= War of the Chosen, Gameplay, AI, Alien</Description>
     <Content Include="Config\Berserkers\XComGameData_CharacterStats.ini">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Config\Berserkers\XComGameData_WeaponData.ini">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Config\Bosses\XComAI.ini">
       <SubType>Content</SubType>
     </Content>
@@ -190,37 +193,82 @@ tags= War of the Chosen, Gameplay, AI, Alien</Description>
     <Content Include="Config\XComGameData_SoldierSkills.ini">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Content\CIN_XP_SpectreM4.umap">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\GameUnit_SpectreM4.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\MutonM4_ANIM.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\UILibrary_AStrongerADVENT.upk">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Localization\CHN\XComGame.chn">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\CHN\AStrongerADVENT.chn">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Localization\CHT\XComGame.cht">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Localization\CHT\AStrongerADVENT.cht">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Localization\DEU\XComGame.deu">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\DEU\AStrongerADVENT.deu">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Localization\ESN\XComGame.esn">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Localization\ESN\AStrongerADVENT.esn">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Localization\FRA\XComGame.fra">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\FRA\AStrongerADVENT.fra">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Localization\INT\XComGame.int">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Localization\INT\AStrongerADVENT.int">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Localization\ITA\XComGame.ita">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\ITA\AStrongerADVENT.ita">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Localization\JPN\XComGame.jpn">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Localization\JPN\AStrongerADVENT.jpn">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Localization\KOR\XComGame.kor">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\KOR\AStrongerADVENT.kor">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Localization\POL\XComGame.pol">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Localization\POL\AStrongerADVENT.pol">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Localization\RUS\XComGame.rus">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\RUS\AStrongerADVENT.rus">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ReadMe.txt" />
@@ -228,47 +276,41 @@ tags= War of the Chosen, Gameplay, AI, Alien</Description>
     <Content Include="Config\XComEditor.ini" />
     <Content Include="Config\XComEngine.ini" />
     <Content Include="Config\XComGame.ini" />
-    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_Ability_Archon.uc">
+    <Content Include="Src\AStrongerADVENT\Classes\X2Ability_ASA_Archon.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_Ability_Codex.uc">
+    <Content Include="Src\AStrongerADVENT\Classes\X2Ability_ASA_Codex.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_Ability_Sectopod.uc">
+    <Content Include="Src\AStrongerADVENT\Classes\X2Ability_ASA_Sectopod.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_Ability_Spectre.uc">
+    <Content Include="Src\AStrongerADVENT\Classes\X2Ability_ASA_Spectre.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_Action_ShadowbindTarget.uc">
+    <Content Include="Src\AStrongerADVENT\Classes\X2Action_ASA_ShadowbindTarget.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_OPTC_Archons.uc">
+    <Content Include="Src\AStrongerADVENT\Classes\X2Character_ASA_Characters.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_Character_Shadow.uc">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_OPTC_Codex.uc">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_OPTC_HolyWarrior.uc">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_Weapons.uc">
+    <Content Include="Src\AStrongerADVENT\Classes\X2Item_ASA_Weapons.uc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\AStrongerADVENT\Classes\X2DownloadableContentInfo_AStrongerADVENT.uc" />
-    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_Effect_SpawnShadowbindUnit.uc">
+    <Content Include="Src\AStrongerADVENT\Classes\X2Effect_ASA_SpawnShadowbindUnit.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_OPTC_Mutons.uc">
+    <Content Include="Src\AStrongerADVENT\Classes\X2Effect_ASA_BeastMaster.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_OPTC_Sectoids.uc">
+    <Content Include="Src\AStrongerADVENT\Classes\X2Effect_ASA_WarCry.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\AStrongerADVENT_OPTC_Spectres.uc">
+    <Content Include="Src\AStrongerADVENT\Classes\X2Helper_Characters.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\AStrongerADVENT\Classes\X2Helper_Abilities.uc">
       <SubType>Content</SubType>
     </Content>
   </ItemGroup>

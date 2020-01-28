@@ -10,19 +10,63 @@
 
 class X2DownloadableContentInfo_AStrongerADVENT extends X2DownloadableContentInfo;
 
-/// <summary>
-/// This method is run if the player loads a saved game that was created prior to this DLC / Mod being installed, and allows the 
-/// DLC / Mod to perform custom processing in response. This will only be called once the first time a player loads a save that was
-/// create without the content installed. Subsequent saves will record that the content was installed.
-/// </summary>
-static event OnLoadedSavedGame()
-{}
+static function UpdateAnimations(out array<AnimSet> CustomAnimSets, XComGameState_Unit UnitState, XComUnitPawn Pawn)
+{
+	local Animset AnimSetToAdd, AnimSet;
+	local AnimSequence Sequence;
 
-/// <summary>
-/// Called when the player starts a new campaign while this DLC / Mod is installed
-/// </summary>
-static event InstallNewCampaign(XComGameState StartState)
-{}
+	if(!UnitState.IsSoldier())
+	{
+		return;
+	}
+
+	AnimSetToAdd = AnimSet(`CONTENT.RequestGameArchetype("GameUnit_SpectreM4.Anims.AS_ShadowbindUnitM4"));
+
+	// CustomAnimSets.AddItem(AnimSetToAdd);
+
+	if (Pawn.Mesh.AnimSets.Find(AnimSetToAdd) == INDEX_NONE)
+	{
+		Pawn.Mesh.AnimSets.AddItem(AnimSetToAdd);
+		Pawn.Mesh.UpdateAnimations();
+	}
+
+	// foreach Pawn.Mesh.AnimSets(AnimSet)
+	// {
+	// 	`log("AnimSet: " $ PathName(AnimSet),, 'UpdateAnimations');
+
+	// 	foreach AnimSet.Sequences(Sequence)
+	// 	{
+	// 		`log("SequenceName: " $ Sequence.SequenceName,, 'UpdateAnimations');
+	// 	}
+	// }
+}
+
+static event OnPostTemplatesCreated()
+{
+	// Add Melee Resistance to Berserkers
+	class'X2Helper_Characters'.static.ApplyMeleeResistance();
+	// Add Melee Vulnerability to Sectoids
+	class'X2Helper_Characters'.static.ApplyMeleeVulnerability();
+	// Add Icarus Drop to Archon Prime
+	class'X2Helper_Characters'.static.ArchonPrimeIcarusDrop();
+	// Add BeastMaster and War Cry to Muton Prime
+	class'X2Helper_Characters'.static.MutonPrimeAbilities();
+	// Add CounterAttack to ABA Muton variants
+	class'X2Helper_Characters'.static.MutonCounterAttack();
+	// Add TriggerSuperpositionPrime to Codex Prime
+	class'X2Helper_Characters'.static.CodexPrimeAbilities();
+	// Spectre Prime can create a Prime copy
+	class'X2Helper_Characters'.static.SpectrePrimeAbilities();
+	// Add Animation to XCOM squad when targetted by Shadowbind
+	// class'X2Helper_Characters'.static.SoldierShadowbindAnimation();
+	// Spectre Prime's copy have Prime Reactions
+	class'X2Helper_Characters'.static.ShadowPrimeAbilities();
+
+	// Allow Holy Warrior to target Mind Controlled units
+	class'X2Helper_Abilities'.static.HolyWarriorOnMindControlled();
+	// Archon Valkyrie melee attack can dash and slash
+	class'X2Helper_Abilities'.static.PatchValkyrieMeleeAttack();
+}
 
 static function bool AbilityTagExpandHandler(string InString, out string OutString)
 {
@@ -33,7 +77,7 @@ static function bool AbilityTagExpandHandler(string InString, out string OutStri
 	switch(Type)
 	{
 		case 'STAFFCONTROLAIM':
-			OutString = string(class'AStrongerADVENT_Ability_Archon'.default.STAFFCONTROL_AIM);
+			OutString = string(class'X2Ability_ASA_Archon'.default.STAFFCONTROL_AIM);
 			return true;
 	}
 	return false;
