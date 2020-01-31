@@ -1,5 +1,4 @@
-class X2Effect_ASA_SpawnShadowbindUnit extends X2Effect_SpawnUnit
-	config(GameData_SoldierSkills);
+class X2Effect_ASA_SpawnShadowbindUnit extends X2Effect_SpawnUnit config(GameData_SoldierSkills);
 
 var config array<Name> AbilitiesShadowCantHave;
 

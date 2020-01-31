@@ -4,8 +4,7 @@
 //  MODIFICATION: Boundir
 //  PURPOSE:      Creates WarCry effect, which provides stat boosts to nearby friendly units
 //--------------------------------------------------------------------------------------- 
-Class X2Effect_ASA_WarCry extends X2Effect_ModifyStats
-	config (AStrongerADVENT);
+Class X2Effect_ASA_WarCry extends X2Effect_ModifyStats config (AStrongerADVENT);
 
 var array<StatChange> m_aStatChangesHigh;
 var array<StatChange> m_aStatChangesLow;

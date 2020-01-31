@@ -18,11 +18,7 @@ static function bool AllowOverrideActionDeath(VisualizationActionMetadata Action
 
 	ShadowbindContext = XComGameStateContext_Ability(Context);
 
-	if( ShadowbindContext != none &&
-		(ShadowbindContext.InputContext.AbilityTemplateName == 'Shadowbind' ||
-		 ShadowbindContext.InputContext.AbilityTemplateName == 'ShadowbindM2' ||
-		 ShadowbindContext.InputContext.AbilityTemplateName == 'ShadowbindM4' ||
-		 ShadowbindContext.InputContext.AbilityTemplateName == 'ShadowbindMP') )
+	if( ShadowbindContext != none && ShadowbindContext.InputContext.AbilityTemplateName == 'ShadowbindM4' )
 	{
 		return true;
 	}

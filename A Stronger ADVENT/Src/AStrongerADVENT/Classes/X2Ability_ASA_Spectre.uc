@@ -10,6 +10,7 @@ static function array<X2DataTemplate> CreateTemplates()
 
 	Templates.AddItem(CreateShadowbindM4('ShadowbindM4', 'ShadowbindUnitM4'));
 	Templates.AddItem(CreateShadowbindReaction());
+	Templates.AddItem(CreateShadowUnitM4Initialize());
 
 	return Templates;
 }
@@ -130,6 +131,9 @@ simulated function ShadowbindM4_BuildVisualization(XComGameState VisualizeGameSt
 	local Array<X2Action> FoundNodes;
 	local int ScanNodes;
 	local X2Action_MarkerNamed JoinAction;
+	local XGUnit GremlinUnit;
+	local XComUnitPawn GremlinPawn;
+	
 
 	TypicalAbility_BuildVisualization(VisualizeGameState);
 
@@ -216,14 +220,14 @@ simulated function ShadowbindM4_BuildVisualization(XComGameState VisualizeGameSt
 		SpawnShadowEffect.AddSpawnVisualizationsToTracks(Context, ShadowUnit, ShadowMetaData, ShadowbindTargetUnit);
 
 		AnimAction = X2Action_PlayAnimation(class'X2Action_PlayAnimation'.static.AddToVisualizationTree(ShadowMetaData, Context, true, TargetShadowbind));
-		AnimAction.Params.AnimName = 'HL_Shadowbind_TargetShadow';
+		AnimAction.Params.AnimName = 'HL_ShadowbindM4_TargetShadow';
 		AnimAction.Params.BlendTime = 0.0f;
 
 		VisMgr.ConnectAction(JoinAction, VisMgr.BuildVisTree, false, AnimAction);
 
 		AddAnimAction = X2Action_PlayAnimation(class'X2Action_PlayAnimation'.static.AddToVisualizationTree(ShadowMetaData, Context, false, TargetShadowbind));
 		AddAnimAction.bFinishAnimationWait = false;
-		AddAnimAction.Params.AnimName = 'ADD_HL_Shadowbind_FadeIn';
+		AddAnimAction.Params.AnimName = 'ADD_HL_ShadowbindM4_FadeIn';
 		AddAnimAction.Params.Additive = true;
 		AddAnimAction.Params.BlendTime = 0.0f;
 
@@ -241,13 +245,30 @@ simulated function ShadowbindM4_BuildVisualization(XComGameState VisualizeGameSt
 			History.GetCurrentAndPreviousGameStatesForObjectID(CosmeticUnit.ObjectID, CosmeticUnitMetaData.StateObject_OldState, CosmeticUnitMetaData.StateObject_NewState, , VisualizeGameState.HistoryIndex);
 			CosmeticUnitMetaData.VisualizeActor = CosmeticUnit.GetVisualizer();
 
+			GremlinUnit = XGUnit(CosmeticUnitMetaData.VisualizeActor);
+			if( GremlinUnit != none )
+			{
+				`log("GOT THE XGUNIT",, 'GremlinShadowbindPlayAnim');
+				GremlinPawn = GremlinUnit.GetPawn();
+
+				if( GremlinPawn != none )
+				{
+					`log("GOT THE PAWN",, 'GremlinShadowbindPlayAnim');
+					GremlinPawn.Mesh.UpdateAnimations();
+				}
+			}
+
+			// `log("HEY I WILL PLAY THE ANIMATION NOW",, 'GremlinShadowbindPlayAnim');
 			AddAnimAction = X2Action_PlayAnimation(class'X2Action_PlayAnimation'.static.AddToVisualizationTree(CosmeticUnitMetaData, Context, false, TargetShadowbind));
 			AddAnimAction.bFinishAnimationWait = false;
+			// Didn't manage to make it play yet.
+			// AddAnimAction.Params.AnimName = 'ADD_HL_ShadowbindM4_FadeIn';
 			AddAnimAction.Params.AnimName = 'ADD_HL_Shadowbind_FadeIn';
 			AddAnimAction.Params.Additive = true;
 			AddAnimAction.Params.BlendTime = 0.0f;
 
 			VisMgr.ConnectAction(JoinAction, VisMgr.BuildVisTree, false, AddAnimAction);
+			// `log("WARNED YOU! I DID IT... MAYBE",, 'GremlinShadowbindPlayAnim');
 		}
 	}
 }
@@ -318,6 +339,32 @@ static function X2AbilityTemplate CreateShadowbindReaction()
 	Template.FrameAbilityCameraType = eCameraFraming_Always;
 	Template.BuildNewGameStateFn = TypicalAbility_BuildGameState;
 	Template.BuildVisualizationFn = TypicalAbility_BuildVisualization;
+
+	return Template;
+}
+
+static function X2AbilityTemplate CreateShadowUnitM4Initialize()
+{
+	local X2AbilityTemplate Template;
+	local X2Effect_SpectralArmyUnit SpectralArmyUnitEffect;
+
+	`CREATE_X2ABILITY_TEMPLATE(Template, 'ShadowUnitM4Initialize');
+
+	Template.AbilitySourceName = 'eAbilitySource_Perk';
+	Template.eAbilityIconBehaviorHUD = EAbilityIconBehavior_NeverShow;
+	Template.Hostility = eHostility_Neutral;
+
+	Template.AbilityToHitCalc = default.DeadEye;
+	Template.AbilityTargetStyle = default.SelfTarget;
+	Template.AbilityTriggers.AddItem(default.UnitPostBeginPlayTrigger);
+
+	SpectralArmyUnitEffect = new class'X2Effect_ASA_ShadowUnitM4';
+	SpectralArmyUnitEffect.BuildPersistentEffect(1, true, true, true);
+	SpectralArmyUnitEffect.bRemoveWhenTargetDies = true;
+	Template.AddShooterEffect(SpectralArmyUnitEffect);
+
+	Template.bSkipFireAction = true;
+	Template.BuildNewGameStateFn = TypicalAbility_BuildGameState;
 
 	return Template;
 }

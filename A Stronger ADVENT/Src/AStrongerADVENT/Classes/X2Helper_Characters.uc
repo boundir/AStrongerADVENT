@@ -176,37 +176,6 @@ static function SpectrePrimeAbilities()
 	}
 }
 
-static function SoldierShadowbindAnimation()
-{
-	local X2CharacterTemplateManager CharacterTemplateMgr;
-	local X2CharacterTemplate CharacterTemplate;
-	local array<X2DataTemplate> TemplateAllDifficulties;
-	local X2DataTemplate Template;
-	local array<name> SoldierUnits;
-	local name UnitName;
-
-	SoldierUnits.AddItem('Soldier');
-	SoldierUnits.AddItem('TemplarSoldier');
-	SoldierUnits.AddItem('ReaperSoldier');
-	SoldierUnits.AddItem('SkirmisherSoldier');
-
-	CharacterTemplateMgr = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
-
-	foreach SoldierUnits(UnitName)
-	{
-		CharacterTemplateMgr.FindDataTemplateAllDifficulties(UnitName, TemplateAllDifficulties);
-
-		foreach TemplateAllDifficulties(Template)
-		{
-			CharacterTemplate = X2CharacterTemplate(Template);
-			if( CharacterTemplate != none )
-			{
-				CharacterTemplate.AdditionalAnimSets.AddItem(AnimSet(`CONTENT.RequestGameArchetype("GameUnit_SpectreM4.Anims.AS_ShadowbindUnitM4")));
-			}
-		}
-	}
-}
-
 static function ShadowPrimeAbilities()
 {
 	local X2CharacterTemplateManager CharacterTemplateMgr;
@@ -223,7 +192,40 @@ static function ShadowPrimeAbilities()
 		CharacterTemplate = X2CharacterTemplate(Template);
 		if( CharacterTemplate != none )
 		{
+			CharacterTemplate.Abilities.RemoveItem('ShadowUnitInitialize');
+			CharacterTemplate.Abilities.AddItem('ShadowUnitM4Initialize');
 			CharacterTemplate.Abilities.AddItem('ShadowReaction');
+		}
+	}
+}
+
+static function GremlinShadowbindAnimation()
+{
+	local X2CharacterTemplateManager CharacterTemplateMgr;
+	local X2CharacterTemplate CharacterTemplate;
+	local array<X2DataTemplate> TemplateAllDifficulties;
+	local X2DataTemplate Template;
+	local array<name> GremlinUnits;
+	local name UnitName;
+
+	GremlinUnits.AddItem('GremlinMk1');
+	GremlinUnits.AddItem('GremlinMk2');
+	GremlinUnits.AddItem('GremlinMk3');
+
+	CharacterTemplateMgr = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
+
+	foreach GremlinUnits(UnitName)
+	{
+		CharacterTemplateMgr.FindDataTemplateAllDifficulties(UnitName, TemplateAllDifficulties);
+
+		foreach TemplateAllDifficulties(Template)
+		{
+			CharacterTemplate = X2CharacterTemplate(Template);
+			if( CharacterTemplate != none )
+			{
+				`log("GremlinShadowbindAnimation" @ CharacterTemplate.DataName,, 'UpdateAnimations');
+				CharacterTemplate.AdditionalAnimSets.AddItem(AnimSet(`CONTENT.RequestGameArchetype("ShadowUnit_ANIM.Anims.AS_ShadowGremlin")));
+			}
 		}
 	}
 }

@@ -202,6 +202,9 @@ tags= War of the Chosen, Gameplay, AI, Alien</Description>
     <Content Include="Content\MutonM4_ANIM.upk">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Content\ShadowUnit_ANIM.upk">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Content\UILibrary_AStrongerADVENT.upk">
       <SubType>Content</SubType>
     </Content>
@@ -292,6 +295,9 @@ tags= War of the Chosen, Gameplay, AI, Alien</Description>
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\AStrongerADVENT\Classes\X2Character_ASA_Characters.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\AStrongerADVENT\Classes\X2Effect_ASA_ShadowUnitM4.uc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\AStrongerADVENT\Classes\X2Item_ASA_Weapons.uc">

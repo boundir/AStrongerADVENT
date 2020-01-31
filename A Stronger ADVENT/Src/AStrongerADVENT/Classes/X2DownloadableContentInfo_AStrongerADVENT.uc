@@ -8,28 +8,53 @@
 //  Copyright (c) 2016 Firaxis Games, Inc. All rights reserved.
 //---------------------------------------------------------------------------------------
 
-class X2DownloadableContentInfo_AStrongerADVENT extends X2DownloadableContentInfo;
+class X2DownloadableContentInfo_AStrongerADVENT extends X2DownloadableContentInfo config(GameCore);
+
+var config array<name> ANIMSET_ADDITION_TEMPLATES;
 
 static function UpdateAnimations(out array<AnimSet> CustomAnimSets, XComGameState_Unit UnitState, XComUnitPawn Pawn)
 {
-	local Animset AnimSetToAdd, AnimSet;
+	local Animset AnimSetToAdd;
+
+	local Animset AnimSet;
 	local AnimSequence Sequence;
 
-	if(!UnitState.IsSoldier())
+	AnimSetToAdd = AnimSet(`CONTENT.RequestGameArchetype("ShadowUnit_ANIM.Anims.AS_ShadowUnitM4"));
+
+	// `log("DEBUG Pawn: " $ Pawn,, 'UpdateAnimations');
+	// `log("DEBUG Template: " $ UnitState.GetMyTemplateName(),, 'UpdateAnimations');
+	// `log("===================================BEFORE============================",, 'UpdateAnimations');
+	// foreach Pawn.Mesh.AnimSets(AnimSet)
+	// {
+	// 	`log("AnimSet: " $ PathName(AnimSet),, 'UpdateAnimations');
+
+	// 	foreach AnimSet.Sequences(Sequence)
+	// 	{
+	// 		`log("SequenceName: " $ Sequence.SequenceName,, 'UpdateAnimations');
+	// 	}
+	// }
+
+	if(UnitState.IsSoldier() || UnitState.GetMyTemplateName() == 'ShadowbindUnitM4')
 	{
-		return;
+		if (Pawn.Mesh.AnimSets.Find(AnimSetToAdd) == INDEX_NONE)
+		{
+			Pawn.Mesh.AnimSets.AddItem(AnimSetToAdd);
+			Pawn.Mesh.UpdateAnimations();
+		}
 	}
 
-	AnimSetToAdd = AnimSet(`CONTENT.RequestGameArchetype("GameUnit_SpectreM4.Anims.AS_ShadowbindUnitM4"));
+	AnimSetToAdd = AnimSet(`CONTENT.RequestGameArchetype("ShadowUnit_ANIM.Anims.AS_ShadowGremlin"));
 
-	// CustomAnimSets.AddItem(AnimSetToAdd);
-
-	if (Pawn.Mesh.AnimSets.Find(AnimSetToAdd) == INDEX_NONE)
+	if(default.ANIMSET_ADDITION_TEMPLATES.Find(UnitState.GetMyTemplateName()) != INDEX_NONE)
 	{
-		Pawn.Mesh.AnimSets.AddItem(AnimSetToAdd);
-		Pawn.Mesh.UpdateAnimations();
+		if (Pawn.Mesh.AnimSets.Find(AnimSetToAdd) == INDEX_NONE)
+		{
+			Pawn.Mesh.AnimSets.AddItem(AnimSetToAdd);
+			Pawn.Mesh.UpdateAnimations();
+		}
 	}
 
+	// `log("===================================AFTER============================",, 'UpdateAnimations');
 	// foreach Pawn.Mesh.AnimSets(AnimSet)
 	// {
 	// 	`log("AnimSet: " $ PathName(AnimSet),, 'UpdateAnimations');
@@ -58,7 +83,7 @@ static event OnPostTemplatesCreated()
 	// Spectre Prime can create a Prime copy
 	class'X2Helper_Characters'.static.SpectrePrimeAbilities();
 	// Add Animation to XCOM squad when targetted by Shadowbind
-	// class'X2Helper_Characters'.static.SoldierShadowbindAnimation();
+	class'X2Helper_Characters'.static.GremlinShadowbindAnimation();
 	// Spectre Prime's copy have Prime Reactions
 	class'X2Helper_Characters'.static.ShadowPrimeAbilities();
 
