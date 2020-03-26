@@ -294,6 +294,9 @@ tags= War of the Chosen, Gameplay, AI, Alien</Description>
     <Content Include="Src\AStrongerADVENT\Classes\X2Action_ASA_ShadowbindTarget.uc">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Src\AStrongerADVENT\Classes\X2Action_PlayShadowbindAnimation.uc">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Src\AStrongerADVENT\Classes\X2Character_ASA_Characters.uc">
       <SubType>Content</SubType>
     </Content>

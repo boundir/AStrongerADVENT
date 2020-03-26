@@ -227,15 +227,18 @@ Using A Better ADVENT mod as a base, I'm trying to balance the aliens my way. It
 
 [b][u]Abilities[/u][/b]
 [list]
-    [*] Melee Vulnerability for the Sectoid Soldier, until he wears something.
-    [*] Melee Vulnerability for the Sectoid Soldier Prime, until he wears something ( buffed his HP ).
-    [*] Codex Prime will not lose Health when cloning.
-    [*] Vanish ability is now a free action.
-    [*] Muton Pyro can now Counterattack.
-    [*] Muton Infector can now Counterattack.
     [*] Archon Prime is now able to perform Icarus Drop.
     [*] Archon Valkyrie can dash and slash.
+    [*] Berserker's Devastating Punch deals damage on miss (+2 damage).
+    [*] Berserkers (vanilla and A Better ADVENT variants) now have melee resistance (-1 damage).
+    [*] Codex Prime will not lose Health when cloning.
+    [*] Muton Infector and Pyro can now Counterattack.
+    [*] Muton Prime can now use War Cry, which gives aim, will and mobility boost to allies.
+    [*] Muton Prime now have Beastmaster, which prevents it to take damage from units of type Berserker.
+    [*] Sectoid Soldier have Melee Vulnerability, until he wears something.
+    [*] Sectoid Soldier Prime have Melee Vulnerability, until he wears something ( buffed his HP ).
     [*] Sectopod Prime can trigger Lightning Storm if an enemy approaches its melee range.
+    [*] Spectre Vanish ability is now a free action.
 [/list]
 
 [b][u]Loadouts[/u][/b]
@@ -250,8 +253,8 @@ Using A Better ADVENT mod as a base, I'm trying to balance the aliens my way. It
     [/list]
     [*] Are equiped with AP rounds:
     [list]
-        [*] ADVENT Guardian
         [*] Advanced Guardian.
+        [*] Elite Guardian.
         [*] Advanced Sharpshooter.
         [*] Elite Sharpshooter.
     [/list]
@@ -268,15 +271,16 @@ Using A Better ADVENT mod as a base, I'm trying to balance the aliens my way. It
 [list]
     [*] The Spectre will now use Vanish after Shadowbind.
     [*] The Spectre Prime will now use Vanish after Shadowbind.
-    [*] The Priest will prioritize using Holy Warrior on your MindControlled units.
+    [*] The Priest will prioritize using Holy Warrior on your Mind Controlled units.
     [*] Units are more likely to use grenades.
     [*] Purifier will attack the mimic beacon with his pistol.
-    [*] Units in fire will try to remove it by hunkering down if using ADVENT Avenger's Everyone Gets Hunker Down mod.
+    [*] Units on fire will try to remove it by hunkering down if using ADVENT Avenger's Everyone Gets Hunker Down mod.
 [/list]
 
 [b][u]Units[/u][/b]
 [list]
     [*] Spectre Prime will now create a Shadow Prime.
+    [*] New look for Spectre Prime.
 [/list]
 
 [h1]Recommanded mods[/h1]

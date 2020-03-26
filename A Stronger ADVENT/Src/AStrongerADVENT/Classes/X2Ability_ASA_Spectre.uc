@@ -124,7 +124,7 @@ simulated function ShadowbindM4_BuildVisualization(XComGameState VisualizeGameSt
 	local array<X2Action> TransformStopParents;
 	local VisualizationActionMetadata SourceMetaData, TargetMetaData;
 	local X2Action_MoveTurn MoveTurnAction;
-	local X2Action_PlayAnimation AddAnimAction, AnimAction;
+	local X2Action_PlayShadowbindAnimation AddAnimAction, AnimAction;
 	local X2Action_ASA_ShadowbindTarget TargetShadowbind;
 	local XComGameState_Item ItemState;
 	local X2GremlinTemplate GremlinTemplate;
@@ -219,13 +219,13 @@ simulated function ShadowbindM4_BuildVisualization(XComGameState VisualizeGameSt
 		
 		SpawnShadowEffect.AddSpawnVisualizationsToTracks(Context, ShadowUnit, ShadowMetaData, ShadowbindTargetUnit);
 
-		AnimAction = X2Action_PlayAnimation(class'X2Action_PlayAnimation'.static.AddToVisualizationTree(ShadowMetaData, Context, true, TargetShadowbind));
+		AnimAction = X2Action_PlayShadowbindAnimation(class'X2Action_PlayShadowbindAnimation'.static.AddToVisualizationTree(ShadowMetaData, Context, true, TargetShadowbind));
 		AnimAction.Params.AnimName = 'HL_ShadowbindM4_TargetShadow';
 		AnimAction.Params.BlendTime = 0.0f;
 
 		VisMgr.ConnectAction(JoinAction, VisMgr.BuildVisTree, false, AnimAction);
 
-		AddAnimAction = X2Action_PlayAnimation(class'X2Action_PlayAnimation'.static.AddToVisualizationTree(ShadowMetaData, Context, false, TargetShadowbind));
+		AddAnimAction = X2Action_PlayShadowbindAnimation(class'X2Action_PlayShadowbindAnimation'.static.AddToVisualizationTree(ShadowMetaData, Context, false, TargetShadowbind));
 		AddAnimAction.bFinishAnimationWait = false;
 		AddAnimAction.Params.AnimName = 'ADD_HL_ShadowbindM4_FadeIn';
 		AddAnimAction.Params.Additive = true;
@@ -258,29 +258,25 @@ simulated function ShadowbindM4_BuildVisualization(XComGameState VisualizeGameSt
 				}
 			}
 
-			// `log("HEY I WILL PLAY THE ANIMATION NOW",, 'GremlinShadowbindPlayAnim');
-			AddAnimAction = X2Action_PlayAnimation(class'X2Action_PlayAnimation'.static.AddToVisualizationTree(CosmeticUnitMetaData, Context, false, TargetShadowbind));
+			AddAnimAction = X2Action_PlayShadowbindAnimation(class'X2Action_PlayShadowbindAnimation'.static.AddToVisualizationTree(CosmeticUnitMetaData, Context, false, TargetShadowbind));
 			AddAnimAction.bFinishAnimationWait = false;
-			// Didn't manage to make it play yet.
-			// AddAnimAction.Params.AnimName = 'ADD_HL_ShadowbindM4_FadeIn';
-			AddAnimAction.Params.AnimName = 'ADD_HL_Shadowbind_FadeIn';
+			AddAnimAction.Params.AnimName = 'ADD_HL_ShadowbindM4_FadeIn';
 			AddAnimAction.Params.Additive = true;
 			AddAnimAction.Params.BlendTime = 0.0f;
 
 			VisMgr.ConnectAction(JoinAction, VisMgr.BuildVisTree, false, AddAnimAction);
-			// `log("WARNED YOU! I DID IT... MAYBE",, 'GremlinShadowbindPlayAnim');
 		}
 	}
 }
 
 private function ASA_SpectreMoveInsertTransform(XComGameState VisualizeGameState, VisualizationActionMetadata ActionMetaData, array<X2Action> TransformStartParents, array<X2Action> TransformStopParents)
 {
-	local X2Action_PlayAnimation AnimAction;
+	local X2Action_PlayShadowbindAnimation AnimAction;
 
-	AnimAction = X2Action_PlayAnimation(class'X2Action_PlayAnimation'.static.AddToVisualizationTree(ActionMetaData, VisualizeGameState.GetContext(), true, , TransformStartParents));
+	AnimAction = X2Action_PlayShadowbindAnimation(class'X2Action_PlayShadowbindAnimation'.static.AddToVisualizationTree(ActionMetaData, VisualizeGameState.GetContext(), true, , TransformStartParents));
 	AnimAction.Params.AnimName = 'HL_Transform_Start';
 
-	AnimAction = X2Action_PlayAnimation(class'X2Action_PlayAnimation'.static.AddToVisualizationTree(ActionMetaData, VisualizeGameState.GetContext(), true, , TransformStopParents));
+	AnimAction = X2Action_PlayShadowbindAnimation(class'X2Action_PlayShadowbindAnimation'.static.AddToVisualizationTree(ActionMetaData, VisualizeGameState.GetContext(), true, , TransformStopParents));
 	AnimAction.Params.AnimName = 'HL_Transform_Stop';
 }
 
@@ -346,7 +342,7 @@ static function X2AbilityTemplate CreateShadowbindReaction()
 static function X2AbilityTemplate CreateShadowUnitM4Initialize()
 {
 	local X2AbilityTemplate Template;
-	local X2Effect_SpectralArmyUnit SpectralArmyUnitEffect;
+	local X2Effect_ASA_ShadowUnitM4 ShadowUnitEffect;
 
 	`CREATE_X2ABILITY_TEMPLATE(Template, 'ShadowUnitM4Initialize');
 
@@ -358,10 +354,10 @@ static function X2AbilityTemplate CreateShadowUnitM4Initialize()
 	Template.AbilityTargetStyle = default.SelfTarget;
 	Template.AbilityTriggers.AddItem(default.UnitPostBeginPlayTrigger);
 
-	SpectralArmyUnitEffect = new class'X2Effect_ASA_ShadowUnitM4';
-	SpectralArmyUnitEffect.BuildPersistentEffect(1, true, true, true);
-	SpectralArmyUnitEffect.bRemoveWhenTargetDies = true;
-	Template.AddShooterEffect(SpectralArmyUnitEffect);
+	ShadowUnitEffect = new class'X2Effect_ASA_ShadowUnitM4';
+	ShadowUnitEffect.BuildPersistentEffect(1, true, true, true);
+	ShadowUnitEffect.bRemoveWhenTargetDies = true;
+	Template.AddShooterEffect(ShadowUnitEffect);
 
 	Template.bSkipFireAction = true;
 	Template.BuildNewGameStateFn = TypicalAbility_BuildGameState;

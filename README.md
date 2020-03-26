@@ -7,9 +7,6 @@ Using A Better ADVENT mod as a base, I'm trying to balance the aliens my way. It
 Changes
 ======
 
-Several changes have been done. There will be more to come.
-
-
 Stats
 ------
 
@@ -46,36 +43,39 @@ Stats
 Abilities
 ------
 
-- Melee Vulnerability for the Sectoid Soldier, until he wears something.
-- Melee Vulnerability for the Sectoid Soldier Prime, until he wears something ( buffed his HP ).
-- Codex Prime will not lose Health when cloning.
-- Vanish ability is now a free action.
-- Muton Pyro can now Counterattack.
-- Muton Infector can now Counterattack.
-- Archon Prime is now able to perform Icarus Drop.
-- Archon Valkyrie can dash and slash.
-- Sectopod Prime can trigger Lightning Storm if an enemy approaches its melee range.
+- **Archon Prime** is now able to perform Icarus Drop.
+- **Archon Valkyrie** can dash and slash.
+- Berserker's **Devastating Punch** deals damage on miss (+2 damage).
+- **Berserkers** (vanilla and A Better ADVENT variants) now have Melee Resistance (-1 damage).
+- **Codex Prime** will not lose Health when cloning.
+- **Muton Infector** and **Pyro** can now Counterattack.
+- **Muton Prime** can now use War Cry, which gives aim, will and mobility boost to allies.
+- **Muton Prime** now have Beastmaster, which prevents it to take damage from units of type Berserker.
+- **Sectoid Soldier** have Melee Vulnerability, until he wears something.
+- **Sectoid Soldier Prime** have Melee Vulnerability, until he wears something ( buffed his HP ).
+- **Sectopod Prime** can trigger Lightning Storm if an enemy approaches its melee range.
+- Spectre's **Vanish** ability is now a free action.
 
 
 Loadout
 ------
 
-- Muton Pyro are equiped with an Incendiary grenade.
-- Muton Infector are equiped with a Gas grenade.
+- **Muton Pyro** are equiped with an Incendiary grenade.
+- **Muton Infector** are equiped with a Gas grenade.
 - Are equiped with a pistol:
-  - ADVENT Purifier (M1 Pistol).
-  - Advanced Purifier (M2 Pistol).
-  - Elite Purifier (M3 Pistol).
+  - **ADVENT Purifier** (M1 Pistol).
+  - **Advanced Purifier** (M2 Pistol).
+  - **Elite Purifier** (M3 Pistol).
 - Are equiped with AP rounds:
-  - ADVENT Guardian
-  - Advanced Guardian.
-  - Advanced Sharpshooter.
-  - Elite Sharpshooter.
+  - **Advanced Guardian**.
+  - **Elite Guardian**
+  - **Advanced Sharpshooter**.
+  - **Elite Sharpshooter**.
 - Are equiped with Talon rounds:
-  - Advanced Assault.
-  - Advanced Striker.
-  - Elite Assault.
-  - Elite Striker.
+  - **Advanced Assault**.
+  - **Advanced Striker**.
+  - **Elite Assault**.
+  - **Elite Striker**.
 
 
 AI
@@ -83,13 +83,14 @@ AI
 
 - The Spectre will now use Vanish after Shadowbind.
 - The Spectre Prime will now use Vanish after Shadowbind.
-- The Priest will prioritize using Holy Warrior on your MindControlled units.
+- The Priest will prioritize using Holy Warrior on your Mind Controlled units.
 - Units are more likely to use grenades.
 - Purifier will attack the mimic beacon with his pistol.
-- Units in fire will try to remove it by hunkering down if using ADVENT Avenger's Everyone Gets Hunker Down mod.
+- Units on fire will try to remove it by hunkering down if using ADVENT Avenger's Everyone Gets Hunker Down mod.
 
 
 Unit
 ------
 
-- Spectre Prime will now create a Shadow Prime.
+- Spectre Prime will now create a **Shadow Prime**.
+- New look for **Spectre Prime**.

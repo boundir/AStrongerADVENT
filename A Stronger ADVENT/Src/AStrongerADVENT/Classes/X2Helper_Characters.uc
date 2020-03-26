@@ -150,7 +150,7 @@ static function CodexPrimeAbilities()
 	}
 }
 
-static function SpectrePrimeAbilities()
+static function SpectrePrimeRework()
 {
 	local X2CharacterTemplateManager CharacterTemplateMgr;
 	local X2CharacterTemplate CharacterTemplate;
@@ -199,22 +199,22 @@ static function ShadowPrimeAbilities()
 	}
 }
 
-static function GremlinShadowbindAnimation()
+static function AddTargetIcons()
 {
 	local X2CharacterTemplateManager CharacterTemplateMgr;
 	local X2CharacterTemplate CharacterTemplate;
 	local array<X2DataTemplate> TemplateAllDifficulties;
 	local X2DataTemplate Template;
-	local array<name> GremlinUnits;
+	local array<name> ShadowUnits;
 	local name UnitName;
 
-	GremlinUnits.AddItem('GremlinMk1');
-	GremlinUnits.AddItem('GremlinMk2');
-	GremlinUnits.AddItem('GremlinMk3');
+	ShadowUnits.AddItem('ShadowbindUnit');
+	ShadowUnits.AddItem('ShadowbindUnitM2');
+	ShadowUnits.AddItem('ShadowbindUnitM4');
 
 	CharacterTemplateMgr = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
 
-	foreach GremlinUnits(UnitName)
+	foreach ShadowUnits(UnitName)
 	{
 		CharacterTemplateMgr.FindDataTemplateAllDifficulties(UnitName, TemplateAllDifficulties);
 
@@ -223,8 +223,7 @@ static function GremlinShadowbindAnimation()
 			CharacterTemplate = X2CharacterTemplate(Template);
 			if( CharacterTemplate != none )
 			{
-				`log("GremlinShadowbindAnimation" @ CharacterTemplate.DataName,, 'UpdateAnimations');
-				CharacterTemplate.AdditionalAnimSets.AddItem(AnimSet(`CONTENT.RequestGameArchetype("ShadowUnit_ANIM.Anims.AS_ShadowGremlin")));
+				CharacterTemplate.strTargetIconImage = "UILibrary_AStrongerADVENT.TargetIcons.target_shadowunit";
 			}
 		}
 	}
