@@ -198,33 +198,3 @@ static function ShadowPrimeAbilities()
 		}
 	}
 }
-
-static function AddTargetIcons()
-{
-	local X2CharacterTemplateManager CharacterTemplateMgr;
-	local X2CharacterTemplate CharacterTemplate;
-	local array<X2DataTemplate> TemplateAllDifficulties;
-	local X2DataTemplate Template;
-	local array<name> ShadowUnits;
-	local name UnitName;
-
-	ShadowUnits.AddItem('ShadowbindUnit');
-	ShadowUnits.AddItem('ShadowbindUnitM2');
-	ShadowUnits.AddItem('ShadowbindUnitM4');
-
-	CharacterTemplateMgr = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
-
-	foreach ShadowUnits(UnitName)
-	{
-		CharacterTemplateMgr.FindDataTemplateAllDifficulties(UnitName, TemplateAllDifficulties);
-
-		foreach TemplateAllDifficulties(Template)
-		{
-			CharacterTemplate = X2CharacterTemplate(Template);
-			if( CharacterTemplate != none )
-			{
-				CharacterTemplate.strTargetIconImage = "UILibrary_AStrongerADVENT.TargetIcons.target_shadowunit";
-			}
-		}
-	}
-}

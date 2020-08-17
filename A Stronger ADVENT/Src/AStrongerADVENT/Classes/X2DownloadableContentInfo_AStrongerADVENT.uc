@@ -42,8 +42,6 @@ static event OnPostTemplatesCreated()
 	class'X2Helper_Characters'.static.CodexPrimeAbilities();
 	// Spectre Prime can create a Prime copy, add a new red look
 	class'X2Helper_Characters'.static.SpectrePrimeRework();
-	// Add target icons for Shadowbind Units
-	class'X2Helper_Characters'.static.AddTargetIcons();
 	// Spectre Prime's copy have Prime Reactions
 	class'X2Helper_Characters'.static.ShadowPrimeAbilities();
 
