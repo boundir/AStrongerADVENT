@@ -38,6 +38,10 @@ Stats
 |                        | Defense     | 0 -> 15    | 0 -> 15    | 0 -> 15    | 0 -> 15    |
 |                        | Mobility    | 12 -> 16   | 12 -> 16   | 12 -> 16   | 12 -> 16   |
 |                        | Will        | 100 -> 200 | 100 -> 200 | 100 -> 200 | 100 -> 200 |
+| Shadow Prime           | Offense     | 85         | 85         | 85         | 85         |
+|                        | HP          | 12         | 14         | 16         | 18         |
+|                        | Armor       | 2          | 2          | 2          | 2          |
+|                        | Defense     | 5          | 5          | 5          | 5          |
 
 
 Abilities
@@ -81,11 +85,11 @@ Loadout
 AI
 ---
 
-- The Spectre will now use Vanish after Shadowbind.
-- The Spectre Prime will now use Vanish after Shadowbind.
-- The Priest will prioritize using Holy Warrior on your Mind Controlled units.
+- The **Spectre** will now use Vanish after Shadowbind.
+- The **Spectre Prime** will now use Vanish after Shadowbind.
+- The **Priest** will prioritize using Holy Warrior on your Mind Controlled units.
 - Units are more likely to use grenades.
-- Purifier will attack the mimic beacon with his pistol.
+- **Purifier** will attack the mimic beacon with his pistol.
 - Units on fire will try to remove it by hunkering down if using ADVENT Avenger's Everyone Gets Hunker Down mod.
 
 
@@ -93,4 +97,4 @@ Unit
 -----
 
 - Spectre Prime will now create a **Shadow Prime**.
-- New look for **Spectre Prime**.
+- New look for **Spectre Prime** and **Shadow Prime**.
