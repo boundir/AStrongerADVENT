@@ -101,7 +101,7 @@ tags= War of the Chosen, Gameplay, AI, Alien</Description>
     <Folder Include="Config\Codex" />
     <Folder Include="Config\Vipers" />
     <Folder Include="Config\Spectre" />
-    <Folder Include="Config\Troopers" />
+    <Folder Include="Config\ADVENT" />
     <Folder Include="Config\Sectoids" />
     <Folder Include="Localization\" />
     <Folder Include="Content" />
@@ -169,16 +169,16 @@ tags= War of the Chosen, Gameplay, AI, Alien</Description>
     <Content Include="Config\Spectre\XComGameData_CharacterStats.ini">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Config\Troopers\XComAI.ini">
+    <Content Include="Config\ADVENT\XComAI.ini">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Config\Troopers\XComGameData.ini">
+    <Content Include="Config\ADVENT\XComGameData.ini">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Config\Troopers\XComGameData_CharacterStats.ini">
+    <Content Include="Config\ADVENT\XComGameData_CharacterStats.ini">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Config\Troopers\XComGameData_WeaponData.ini">
+    <Content Include="Config\ADVENT\XComGameData_WeaponData.ini">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Config\Vipers\XComAI.ini">
