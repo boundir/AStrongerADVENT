@@ -166,6 +166,9 @@ tags= War of the Chosen, Gameplay, AI, Alien</Description>
     <Content Include="Config\Spectre\XComAI.ini">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Config\Spectre\XComGameData.ini">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Config\Spectre\XComGameData_CharacterStats.ini">
       <SubType>Content</SubType>
     </Content>
@@ -181,6 +184,9 @@ tags= War of the Chosen, Gameplay, AI, Alien</Description>
     <Content Include="Config\ADVENT\XComGameData_WeaponData.ini">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Config\Spectre\XComGameData_WeaponData.ini">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Config\Vipers\XComAI.ini">
       <SubType>Content</SubType>
     </Content>
@@ -188,6 +194,9 @@ tags= War of the Chosen, Gameplay, AI, Alien</Description>
       <SubType>Content</SubType>
     </Content>
     <Content Include="Config\XComGameCore.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComGameData.ini">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Config\XComGameData_SoldierSkills.ini">
@@ -202,7 +211,13 @@ tags= War of the Chosen, Gameplay, AI, Alien</Description>
     <Content Include="Content\MutonM4_ANIM.upk">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Content\Perk_HorrorM4.upk">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Content\ShadowUnit_ANIM.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\UILibrary_AStrongerADVENT.upk">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Localization\CHN\XComGame.chn">

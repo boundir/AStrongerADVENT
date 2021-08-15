@@ -172,6 +172,7 @@ static function SpectrePrimeRework()
 			CharacterTemplate.strMatineePackages.Length = 0;
 			CharacterTemplate.strPawnArchetypes.AddItem("GameUnit_SpectreM4.Archetypes.ARC_GameUnit_SpectreM4");
 			CharacterTemplate.strMatineePackages[0] = "CIN_XP_SpectreM4";
+			CharacterTemplate.DefaultLoadout = 'SpectreM4_Loadout';
 		}
 	}
 }

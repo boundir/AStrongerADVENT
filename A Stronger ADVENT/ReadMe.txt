@@ -265,10 +265,9 @@ Using A Better ADVENT mod as a base, I'm trying to balance the aliens my way. It
     [*] Berserkers (vanilla and A Better ADVENT variants) now have melee resistance (-1 damage).
     [*] Codex Prime will not lose Health when cloning.
     [*] Muton Infector and Pyro can now Counterattack.
-    [*] Muton Prime can now use War Cry, which gives aim, will and mobility boost to allies.
-    [*] Muton Prime now have Beastmaster, which prevents it to take damage from units of type Berserker.
-    [*] Sectoid Soldier have Melee Vulnerability, until he wears something.
-    [*] Sectoid Soldier Prime have Melee Vulnerability, until he wears something ( buffed his HP ).
+    [*] Muton Prime can now use War Cry, giving aim, will and mobility boost to allies.
+    [*] Muton Prime now have Beastmaster, preventing it to take damage from unit types Berserker.
+    [*] Sectoid Soldier and Soldier Prime have Melee Vulnerability.
     [*] Sectopod Prime can trigger Lightning Storm if an enemy approaches its melee range.
     [*] Spectre Vanish ability is now a free action.
 [/list]
@@ -283,26 +282,15 @@ Using A Better ADVENT mod as a base, I'm trying to balance the aliens my way. It
         [*] Advanced Purifier (M2 Pistol).
         [*] Elite Purifier (M3 Pistol).
     [/list]
-    [*] Are equiped with AP rounds:
-    [list]
-        [*] Advanced Guardian.
-        [*] Elite Guardian.
-        [*] Advanced Sharpshooter.
-        [*] Elite Sharpshooter.
-    [/list]
-    [*] Are equiped with Talon rounds:
-    [list]
-        [*] Advanced Assault.
-        [*] Advanced Striker.
-        [*] Elite Assault.
-        [*] Elite Striker.
-    [/list]
+    [*] Advanced Guardian, Elite Guardian, Advanced Sharpshooter, Elite Sharpshooter are equiped with AP rounds:
+    [*] Advanced Assault, Advanced Striker, Elite Assault, Elite Striker are equiped with Talon rounds:
+[list]
+        
 [/list]
 
 [b][u]AI[/u][/b]
 [list]
-    [*] The Spectre will now use Vanish after Shadowbind.
-    [*] The Spectre Prime will now use Vanish after Shadowbind.
+    [*] The Spectre and Spectre Prime will now use Vanish after Shadowbind.
     [*] The Priest will prioritize using Holy Warrior on your Mind Controlled units.
     [*] Units are more likely to use grenades.
     [*] Purifier will attack the mimic beacon with his pistol.
@@ -323,7 +311,3 @@ Using A Better ADVENT mod as a base, I'm trying to balance the aliens my way. It
     [*] [url=steamcommunity.com/sharedfiles/filedetails/?id=1168806643][WOTC] ADVENT Suppression[/url] by Wilko.
 [/list]
 
-[h1]Troubleshooting[/h1]
-https://www.reddit.com/r/xcom2mods/wiki/mod_troubleshooting
-[url=steamcommunity.com/sharedfiles/filedetails/?id=683218526]Mods not working properly / at all[/url]
-[url=steamcommunity.com/sharedfiles/filedetails/?id=625230005]Mod not working? Mods still have their effects after you disable them?[/url]

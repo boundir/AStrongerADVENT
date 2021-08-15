@@ -4,6 +4,9 @@ var config WeaponDamageValue PURIFIER_PISTOL_M1_WPN_BASEDAMAGE;
 var config WeaponDamageValue PURIFIER_PISTOL_M2_WPN_BASEDAMAGE;
 var config WeaponDamageValue PURIFIER_PISTOL_M3_WPN_BASEDAMAGE;
 
+var config WeaponDamageValue SPECTRE_RIFLE_M4_WPN_BASEDAMAGE;
+var config array<WeaponDamageValue> SPECTRE_PSI_M4_ABILITY_DAMAGE;
+
 var config WeaponDamageValue SECTOPOD_LIGHTNINGSTORM_BASEDAMAGE;
 var config int SECTOPOD_LIGHTNINGSTORM_AIM;
 
@@ -15,6 +18,8 @@ static function array<X2DataTemplate> CreateTemplates()
 	Weapons.AddItem(CreateTemplate_PurifierPistolM1_WPN());
 	Weapons.AddItem(CreateTemplate_PurifierPistolM2_WPN());
 	Weapons.AddItem(CreateTemplate_PurifierPistolM3_WPN());
+	Weapons.AddItem(CreateTemplate_SpectreM4_WPN());
+	Weapons.AddItem(CreateTemplate_SpectreM4_PsiAttack());
 
 	return Weapons;
 }
@@ -184,6 +189,74 @@ static function X2DataTemplate CreateTemplate_PurifierPistolM3_WPN()
 	Template.CanBeBuilt = false;
 	Template.DamageTypeTemplateName = 'Projectile_MagAdvent';
 	Template.bHideClipSizeStat = true;
+
+	return Template;
+}
+
+static function X2DataTemplate CreateTemplate_SpectreM4_WPN()
+{
+	local X2WeaponTemplate Template;
+
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'SpectreM4_WPN');
+
+	Template.WeaponPanelImage = "_BeamRifle";                       // used by the UI. Probably determines iconview of the weapon.
+	Template.ItemCat = 'weapon';
+	Template.WeaponCat = 'rifle';
+	Template.WeaponTech = 'beam';
+	Template.strImage = "img:///UILibrary_Common.AlienWeapons.ViperRifle";
+	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer); //invalidates multiplayer availability
+
+	Template.RangeAccuracy = class'X2Item_DefaultWeapons'.default.FLAT_MAGNETIC_RANGE;
+	Template.BaseDamage = default.SPECTRE_RIFLE_M4_WPN_BASEDAMAGE;
+	Template.iClipSize = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_ICLIPSIZE;
+	Template.iSoundRange = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_ISOUNDRANGE;
+	Template.iEnvironmentDamage = class'X2Item_DefaultWeapons'.default.ASSAULTRIFLE_MAGNETIC_IENVIRONMENTDAMAGE;
+	Template.iIdealRange = class'X2Item_XpackWeapons'.default.SPECTREM2_IDEALRANGE;
+
+	Template.DamageTypeTemplateName = 'Heavy';
+
+	Template.InfiniteAmmo = true;
+
+	Template.InventorySlot = eInvSlot_PrimaryWeapon;
+	Template.Abilities.AddItem('StandardShot');
+	Template.Abilities.AddItem('Overwatch');
+	Template.Abilities.AddItem('OverwatchShot');
+	Template.Abilities.AddItem('Reload');
+	Template.Abilities.AddItem('HotLoadAmmo');
+
+	// This all the resources; sounds, animations, models, physics, the works.
+	Template.GameArchetype = "Weapons_SpectreM4.Alien.WP_SpectreM4Rifle";
+
+	Template.iPhysicsImpulse = 5;
+
+	Template.CanBeBuilt = false;
+	Template.TradingPostValue = 30;
+
+	return Template;
+}
+
+static function X2DataTemplate CreateTemplate_SpectreM4_PsiAttack()
+{
+	local X2WeaponTemplate Template;
+
+	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'SpectreM4_PsiAttack');
+
+	Template.ItemCat = 'weapon';
+	Template.WeaponCat = 'psiamp';
+	Template.WeaponTech = 'alien';
+	Template.strImage = "img:///UILibrary_StrategyImages.X2InventoryIcons.Inv_Psi_Amp";
+	Template.InventorySlot = eInvSlot_SecondaryWeapon;
+	// This all the resources; sounds, animations, models, physics, the works.
+
+	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer); //invalidates multiplayer availability
+
+	Template.ExtraDamage = default.SPECTRE_PSI_M4_ABILITY_DAMAGE;
+
+	Template.CanBeBuilt = false;
+
+	Template.DamageTypeTemplateName = 'Psi';
+
+	Template.Abilities.AddItem('HorrorM4');
 
 	return Template;
 }
