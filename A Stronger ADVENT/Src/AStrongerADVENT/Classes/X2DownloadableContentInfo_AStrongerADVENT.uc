@@ -49,6 +49,25 @@ static event OnPostTemplatesCreated()
 	class'X2Helper_Abilities'.static.HolyWarriorOnMindControlled();
 	// Archon Valkyrie melee attack can dash and slash
 	class'X2Helper_Abilities'.static.PatchValkyrieMeleeAttack();
+	// Archon Valkyrie melee attack can dash and slash
+	class'X2Helper_Abilities'.static.SpectreVanishIsFreeAction();
+	// Archon Valkyrie melee attack can dash and slash
+	class'X2Helper_Abilities'.static.PurifierFlamethrowerGuaranteedHit();
+
+	// Gives Spectre tier 2 secondary weapon HorrorM4
+	class'X2Helper_Items'.static.PatchSpectreSecondaryWeapon();
+
+	// Add Perk to cache
+	AddPerkContentToCache();
+}
+
+static function AddPerkContentToCache()
+{
+	local XComContentManager Content;
+
+    Content = `CONTENT;
+    Content.BuildPerkPackageCache();
+    Content.CachePerkContent('ASA_Perk_Horror');
 }
 
 static function bool AbilityTagExpandHandler(string InString, out string OutString)
