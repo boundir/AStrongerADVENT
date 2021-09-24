@@ -49,7 +49,7 @@ static function X2DataTemplate CreateTemplate_LightningStorm()
 	Template.Aim = default.SECTOPOD_LIGHTNINGSTORM_AIM;
 	Template.BaseDamage.DamageType = 'Melee';
 
-	Template.Abilities.AddItem('SectopodLightningStorm');
+	Template.Abilities.AddItem('SectopodLightningStorm_ASA');
 	
 	Template.StartingItem = false;
 	Template.CanBeBuilt = false;
