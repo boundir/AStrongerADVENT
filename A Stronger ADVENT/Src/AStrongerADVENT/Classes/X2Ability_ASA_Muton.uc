@@ -1,8 +1,7 @@
 //---------------------------------------------------------------------------------------
 //  Copyright (c) 2016 Firaxis Games, Inc. All rights reserved.
 //---------------------------------------------------------------------------------------
-class X2Ability_ASA_Muton extends X2Ability_Muton
-	config(GameData_SoldierSkills);
+class X2Ability_ASA_Muton extends X2Ability_Muton config(GameData_SoldierSkills);
 
 var config float WARCRY_RADIUS_METERS;
 var config int WARCRY_DURATION;
@@ -14,8 +13,8 @@ var config int WARCRY_MUTON_MOBILITY_BONUS;
 var config int WARCRY_OTHER_OFFENSE_BONUS;
 var config int WARCRY_OTHER_WILL_BONUS;
 var config int WARCRY_OTHER_MOBILITY_BONUS;
-var config array <string> WARCRY_MUTON_BONUS;
-var config array <string> WARCRY_OTHER_BONUS;
+var config array<string> WARCRY_MUTON_BONUS;
+var config array<string> WARCRY_OTHER_BONUS;
 
 static function array<X2DataTemplate> CreateTemplates()
 {
@@ -124,20 +123,20 @@ static function X2AbilityTemplate CreateAbility_WarCry()
 
 	ForEach default.WARCRY_MUTON_BONUS(AlienName, i)
 	{
-		StatEffect.AddCharacterNameHigh (name(AlienName));
+		StatEffect.AddCharacterNameHigh(name(AlienName));
 	}
 	ForEach default.WARCRY_OTHER_BONUS(AlienName, i)
 	{
-		StatEffect.AddCharacterNameLow (name(AlienName));
+		StatEffect.AddCharacterNameLow(name(AlienName));
 	}
 
-	StatEffect.AddPersistentStatChange (eStat_Offense, float (default.WARCRY_MUTON_OFFENSE_BONUS), true);
-	StatEffect.AddPersistentStatChange (eStat_Mobility, float (default.WARCRY_MUTON_MOBILITY_BONUS), true);
-	StatEffect.AddPersistentStatChange (eStat_Will, float (default.WARCRY_MUTON_WILL_BONUS), true);
+	StatEffect.AddPersistentStatChange(eStat_Offense, float (default.WARCRY_MUTON_OFFENSE_BONUS), true);
+	StatEffect.AddPersistentStatChange(eStat_Mobility, float (default.WARCRY_MUTON_MOBILITY_BONUS), true);
+	StatEffect.AddPersistentStatChange(eStat_Will, float (default.WARCRY_MUTON_WILL_BONUS), true);
 
-	StatEffect.AddPersistentStatChange (eStat_Offense, float (default.WARCRY_OTHER_OFFENSE_BONUS), false);
-	StatEffect.AddPersistentStatChange (eStat_Mobility, float (default.WARCRY_OTHER_MOBILITY_BONUS), false);
-	StatEffect.AddPersistentStatChange (eStat_Will, float (default.WARCRY_OTHER_WILL_BONUS), false);
+	StatEffect.AddPersistentStatChange(eStat_Offense, float (default.WARCRY_OTHER_OFFENSE_BONUS), false);
+	StatEffect.AddPersistentStatChange(eStat_Mobility, float (default.WARCRY_OTHER_MOBILITY_BONUS), false);
+	StatEffect.AddPersistentStatChange(eStat_Will, float (default.WARCRY_OTHER_WILL_BONUS), false);
 
 	//Template.AddShooterEffect(StatEffect); This would make Centurion gain bonuses from own War Cry
 	Template.AddMultiTargetEffect(StatEffect);
