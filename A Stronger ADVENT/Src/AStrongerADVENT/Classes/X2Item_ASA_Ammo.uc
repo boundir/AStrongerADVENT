@@ -2,7 +2,6 @@ class X2Item_ASA_Ammo extends X2Item config(GameCore);
 
 var config int ACID_ROUND_DMGMOD;
 var config int ACID_ROUND_SHRED;
-var config bool SHOULD_ACID_BURN_SPREAD;
 
 static function array<X2DataTemplate> CreateTemplates()
 {
@@ -28,7 +27,7 @@ static function X2DataTemplate CreateAcidRounds()
 
 	Template.Abilities.AddItem('ASA_AcidRounds');
 
-	Template.TargetEffects.AddItem(class'X2StatusEffects'.static.CreateAcidBurningStatusEffect(1, default.SHOULD_ACID_BURN_SPREAD));
+	Template.TargetEffects.AddItem(class'X2StatusEffects'.static.CreateAcidBurningStatusEffect(1, 1));
 
 	Template.CanBeBuilt = false;
 	Template.PointsToComplete = 0;
