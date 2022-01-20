@@ -1,0 +1,12 @@
+[list]
+    [*] First attempt fix animation for Horror on Spectre Prime.
+    [*] Tier 3 weapons Spectre Prime (+1 damage).
+    [*] Reverts Lost targeting back to 70% against XCOM so they don't become XCOM's personal army.
+    [*] Fixes Savage and Terror encounter lists from A Better ADVENT until main mod gets updated.
+    [*] Adds War Cry to Yellow Alert mod defensive action for Muton Prime.
+    [*] Units will attack the device twice per turn at max instead of unlimited.
+    [*] Purifiers can't miss (configurable).
+    [*] Enemy units will try to avoid grenading Lost.
+    [*] Adds Acid rounds for Andromedon Prime instead of Acid weapon.
+    [*] Slightly buff Andromedon Prime HP.
+[/list]

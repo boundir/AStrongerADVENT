@@ -55,7 +55,7 @@ static event OnPostTemplatesCreated()
 	class'X2Helper_Abilities'.static.PurifierFlamethrowerGuaranteedHit();
 
 	// Gives Spectre tier 2 secondary weapon HorrorM4
-	class'X2Helper_Items'.static.PatchSpectreSecondaryWeapon();
+	// class'X2Helper_Items'.static.PatchSpectreSecondaryWeapon();
 
 	// Add Perk to cache
 	AddPerkContentToCache();

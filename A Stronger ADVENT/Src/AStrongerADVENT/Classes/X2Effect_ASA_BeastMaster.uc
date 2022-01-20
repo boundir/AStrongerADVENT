@@ -14,7 +14,7 @@ function int GetDefendingDamageModifier (XComGameState_Effect EffectState, XComG
 
 	DamageMod = 0;
 
-	if(default.BEASTMASTER_INCLUDE_GROUP.Find(Attacker.GetMyTemplate().CharacterGroupName) != INDEX_NON)
+	if(default.BEASTMASTER_INCLUDE_GROUP.Find(Attacker.GetMyTemplate().CharacterGroupName) != INDEX_NONE)
 	{
 		DamageMod = -CurrentDamage;
 	}

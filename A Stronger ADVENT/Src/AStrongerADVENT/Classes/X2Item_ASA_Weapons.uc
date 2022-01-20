@@ -199,12 +199,12 @@ static function X2DataTemplate CreateTemplate_SpectreM4_WPN()
 
 	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'SpectreM4_WPN');
 
-	Template.WeaponPanelImage = "_BeamRifle";                       // used by the UI. Probably determines iconview of the weapon.
+	Template.WeaponPanelImage = "_BeamRifle";
 	Template.ItemCat = 'weapon';
 	Template.WeaponCat = 'rifle';
 	Template.WeaponTech = 'beam';
 	Template.strImage = "img:///UILibrary_Common.AlienWeapons.ViperRifle";
-	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer); //invalidates multiplayer availability
+	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 
 	Template.RangeAccuracy = class'X2Item_DefaultWeapons'.default.FLAT_MAGNETIC_RANGE;
 	Template.BaseDamage = default.SPECTRE_RIFLE_M4_WPN_BASEDAMAGE;
