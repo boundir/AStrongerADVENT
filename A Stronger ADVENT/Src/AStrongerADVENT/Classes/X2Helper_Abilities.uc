@@ -147,3 +147,26 @@ static function PurifierFlamethrowerGuaranteedHit()
 		}
 	}
 }
+
+static function BlazingPinionsInflictPanic()
+{
+	local X2AbilityTemplateManager AbilityTemplateMgr;
+	local X2AbilityTemplate AbilityTemplate;
+	local array<X2DataTemplate> TemplateAllDifficulties;
+	local X2DataTemplate Template;
+	local X2AbilityToHitCalc_StandardAim StandardAim;
+
+	AbilityTemplateMgr = class'X2AbilityTemplateManager'.static.GetAbilityTemplateManager();
+
+	AbilityTemplateMgr.FindDataTemplateAllDifficulties('BlazingPinionsStage1', TemplateAllDifficulties);
+
+	foreach TemplateAllDifficulties(Template)
+	{
+		AbilityTemplate = X2AbilityTemplate(Template);
+
+		if( AbilityTemplate != none )
+		{
+			AbilityTemplate.AdditionalAbilities.AddItem('BlazingPinionsPanicPassive');
+		}
+	}
+}

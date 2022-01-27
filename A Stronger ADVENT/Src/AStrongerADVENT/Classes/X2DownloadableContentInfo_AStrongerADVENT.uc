@@ -49,10 +49,12 @@ static event OnPostTemplatesCreated()
 	class'X2Helper_Abilities'.static.HolyWarriorOnMindControlled();
 	// Archon Valkyrie melee attack can dash and slash
 	class'X2Helper_Abilities'.static.PatchValkyrieMeleeAttack();
-	// Archon Valkyrie melee attack can dash and slash
+	// Spectre can vanish after Shadowbind for free
 	class'X2Helper_Abilities'.static.SpectreVanishIsFreeAction();
-	// Archon Valkyrie melee attack can dash and slash
+	// Purifier Flamethrower is guaranteed to hit
 	class'X2Helper_Abilities'.static.PurifierFlamethrowerGuaranteedHit();
+	// Blazing Pinions can panic units
+	class'X2Helper_Abilities'.static.BlazingPinionsInflictPanic();
 
 	// Gives Spectre tier 2 secondary weapon HorrorM4
 	// class'X2Helper_Items'.static.PatchSpectreSecondaryWeapon();
