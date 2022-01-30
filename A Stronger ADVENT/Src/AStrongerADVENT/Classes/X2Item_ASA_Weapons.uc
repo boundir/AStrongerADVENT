@@ -7,6 +7,8 @@ var config WeaponDamageValue PURIFIER_PISTOL_M3_WPN_BASEDAMAGE;
 var config WeaponDamageValue SPECTRE_RIFLE_M4_WPN_BASEDAMAGE;
 var config array<WeaponDamageValue> SPECTRE_PSI_M4_ABILITY_DAMAGE;
 
+var config WeaponDamageValue ANDROMEDON_M4_WPN_BASEDAMAGE;
+
 var config WeaponDamageValue SECTOPOD_LIGHTNINGSTORM_BASEDAMAGE;
 var config int SECTOPOD_LIGHTNINGSTORM_AIM;
 

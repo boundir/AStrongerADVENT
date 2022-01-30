@@ -56,6 +56,8 @@ static event OnPostTemplatesCreated()
 
 	// Gives Spectre tier 2 secondary weapon HorrorM4
 	// class'X2Helper_Items'.static.PatchSpectreSecondaryWeapon();
+	// Gives Andromedon Prime weapon new damage changes
+	class'X2Helper_Items'.static.AdjustWeaponDamage('Andromedon_Acid_WPN', class'X2Item_ASA_Weapons'.default.ANDROMEDON_M4_WPN_BASEDAMAGE);
 
 	// Add Perk to cache
 	AddPerkContentToCache();

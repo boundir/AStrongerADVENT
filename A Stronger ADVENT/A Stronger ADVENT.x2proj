@@ -205,9 +205,6 @@ tags= War of the Chosen, Gameplay, AI, Alien</Description>
     <Content Include="Config\Vipers\XComAI.ini">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Config\XComABA_Settings.ini">
-      <SubType>Content</SubType>
-    </Content>
     <Content Include="Config\XComAI.ini">
       <SubType>Content</SubType>
     </Content>
@@ -334,6 +331,9 @@ tags= War of the Chosen, Gameplay, AI, Alien</Description>
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\AStrongerADVENT\Classes\X2Effect_ASA_ShadowUnitM4.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\AStrongerADVENT\Classes\X2Helper_Items.uc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\AStrongerADVENT\Classes\X2Item_ASA_Ammo.uc">
