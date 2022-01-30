@@ -94,17 +94,18 @@ tags= War of the Chosen, Gameplay, AI, Alien</Description>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Config\" />
-    <Folder Include="Config\Bosses" />
-    <Folder Include="Config\Berserkers" />
-    <Folder Include="Config\Mutons" />
-    <Folder Include="Config\Archons" />
-    <Folder Include="Config\Codex" />
-    <Folder Include="Config\Vipers" />
-    <Folder Include="Config\Spectre" />
     <Folder Include="Config\ADVENT" />
+    <Folder Include="Config\Archons" />
+    <Folder Include="Config\Berserkers" />
+    <Folder Include="Config\Bosses" />
+    <Folder Include="Config\Codex" />
+    <Folder Include="Config\CompanionMods" />
+    <Folder Include="Config\Mutons" />
     <Folder Include="Config\Sectoids" />
-    <Folder Include="Localization\" />
+    <Folder Include="Config\Spectre" />
+    <Folder Include="Config\Vipers" />
     <Folder Include="Content" />
+    <Folder Include="Localization\" />
     <Folder Include="Localization\INT" />
     <Folder Include="Localization\FRA" />
     <Folder Include="Localization\CHN" />
@@ -152,6 +153,12 @@ tags= War of the Chosen, Gameplay, AI, Alien</Description>
       <SubType>Content</SubType>
     </Content>
     <Content Include="Config\Codex\XComGameData_SoldierSkills.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\CompanionMods\XComAllowedUnitsNames.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\CompanionMods\XComYellowAlert.ini">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Config\Mutons\XComAI.ini">
