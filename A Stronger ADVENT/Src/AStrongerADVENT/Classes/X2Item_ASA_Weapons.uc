@@ -90,7 +90,6 @@ static function X2DataTemplate CreateTemplate_LightningStorm()
 	Template.Abilities.AddItem('PistolStandardShot');
 	Template.Abilities.AddItem('PistolOverwatch');
 	Template.Abilities.AddItem('PistolOverwatchShot');
-	Template.Abilities.AddItem('PistolReturnFire');
 	Template.Abilities.AddItem('HotLoadAmmo');
 	Template.Abilities.AddItem('Reload');
 
@@ -135,7 +134,6 @@ static function X2DataTemplate CreateTemplate_PurifierPistolM2_WPN()
 	Template.Abilities.AddItem('PistolStandardShot');
 	Template.Abilities.AddItem('PistolOverwatch');
 	Template.Abilities.AddItem('PistolOverwatchShot');
-	Template.Abilities.AddItem('PistolReturnFire');
 	Template.Abilities.AddItem('HotLoadAmmo');
 	Template.Abilities.AddItem('Reload');
 
@@ -179,7 +177,6 @@ static function X2DataTemplate CreateTemplate_PurifierPistolM3_WPN()
 	Template.Abilities.AddItem('PistolStandardShot');
 	Template.Abilities.AddItem('PistolOverwatch');
 	Template.Abilities.AddItem('PistolOverwatchShot');
-	Template.Abilities.AddItem('PistolReturnFire');
 	Template.Abilities.AddItem('HotLoadAmmo');
 	Template.Abilities.AddItem('Reload');
 
