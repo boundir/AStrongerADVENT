@@ -10,4 +10,7 @@
     [*] Adds Acid rounds for Andromedon Prime instead of Acid weapon.
     [*] Slightly buff Andromedon Prime HP.
     [*] Only use Flamethrower on units vulnerable to Fire.
+    [*] Only use Poison Spit on units vulnerable to Poison.
+    [*] Purifier are able to use their Pistol to shoot if too far to use Flamethrower.
+    [*] Blazing Pinions have a chance to cause Panic.
 [/list]
