@@ -1,8 +1,7 @@
 //---------------------------------------------------------------------------------------
 //  Copyright (c) 2016 Firaxis Games, Inc. All rights reserved.
 //---------------------------------------------------------------------------------------
-class X2Ability_ASA_Archon extends X2Ability_Archon
-	config(GameData_SoldierSkills);
+class X2Ability_ASA_Archon extends X2Ability_Archon config(GameData_SoldierSkills);
 
 var config int STAFFCONTROL_AIM;
 var config int BLAZING_PINIONS_PANIC_INCREASE_PER_HP_LOST;
@@ -13,6 +12,7 @@ static function array<X2DataTemplate> CreateTemplates()
 	local array<X2DataTemplate> Templates;
 
 	Templates.AddItem(CreateStaffControl());
+	Templates.AddItem(PurePassive('BlazingPinionsPanicPassive', "img:///UILibrary_DLC2Images.UIPerk_beserker_faithbreaker"));
 
 	return Templates;
 }
@@ -41,48 +41,6 @@ static function X2AbilityTemplate CreateStaffControl()
 	Template.AddTargetEffect(HitModEffect);
 
 	Template.BuildNewGameStateFn = TypicalAbility_BuildGameState;
-
-	return Template;
-}
-
-
-static function X2AbilityTemplate BlazingPinionsInflictPanic()
-{
-	local X2AbilityTemplate Template;
-	local X2AbilityTrigger_OnAbilityActivated ActivationTrigger;
-	local X2AbilityMultiTarget_BlazingPinions BlazingPinionsMultiTarget;
-	local X2Effect_Panicked PanicEffect;
-	local X2Condition_UnitProperty UnitPropertyCondition;
-
-	`CREATE_X2ABILITY_TEMPLATE(Template, 'BlazingPinionsPanicPassive');
-	Template.AbilitySourceName = 'eAbilitySource_Perk';
-	Template.eAbilityIconBehaviorHUD = EAbilityIconBehavior_NeverShow;
-
-	ActivationTrigger = new class'X2AbilityTrigger_OnAbilityActivated';
-	ActivationTrigger.SetListenerData('BlazingPinionsStage1');
-	Template.AbilityTriggers.AddItem(ActivationTrigger);
-
-	BlazingPinionsMultiTarget = new class'X2AbilityMultiTarget_BlazingPinions';
-	BlazingPinionsMultiTarget.fTargetRadius = default.BLAZING_PINIONS_TARGETING_AREA_RADIUS;
-	BlazingPinionsMultiTarget.NumTargetsRequired = default.BLAZING_PINIONS_NUM_TARGETS;
-	Template.AbilityMultiTargetStyle = BlazingPinionsMultiTarget;
-
-	Template.AbilityTargetStyle = default.SelfTarget;
-
-	PanicEffect = class'X2StatusEffects'.static.CreatePanickedStatusEffect();
-	PanicEffect.ApplyChanceFn = BlazingPinionsPanicApplyChance;
-	PanicEffect.VisualizationFn = BlazingPinionsPanic_PanickedVisualization;
-	Template.AddMultiTargetEffect(PanicEffect);
-	
-	UnitPropertyCondition = new class'X2Condition_UnitProperty';
-	UnitPropertyCondition.ExcludeAlive = false;
-	UnitPropertyCondition.ExcludeDead = true;
-	UnitPropertyCondition.ExcludeFriendlyToSource = true;
-	UnitPropertyCondition.ExcludeHostileToSource = false;
-	UnitPropertyCondition.TreatMindControlledSquadmateAsHostile = false;
-	UnitPropertyCondition.FailOnNonUnits = true;
-	UnitPropertyCondition.ExcludeRobotic = true;
-	Template.AbilityMultiTargetConditions.AddItem(UnitPropertyCondition);
 
 	return Template;
 }

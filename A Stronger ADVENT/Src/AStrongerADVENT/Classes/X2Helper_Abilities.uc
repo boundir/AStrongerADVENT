@@ -154,7 +154,7 @@ static function BlazingPinionsInflictPanic()
 	local X2AbilityTemplate AbilityTemplate;
 	local array<X2DataTemplate> TemplateAllDifficulties;
 	local X2DataTemplate Template;
-	local X2AbilityToHitCalc_StandardAim StandardAim;
+	local X2Effect_Panicked PanicEffect;
 
 	AbilityTemplateMgr = class'X2AbilityTemplateManager'.static.GetAbilityTemplateManager();
 
@@ -167,6 +167,11 @@ static function BlazingPinionsInflictPanic()
 		if( AbilityTemplate != none )
 		{
 			AbilityTemplate.AdditionalAbilities.AddItem('BlazingPinionsPanicPassive');
+
+			PanicEffect = class'X2StatusEffects'.static.CreatePanickedStatusEffect();
+			PanicEffect.ApplyChanceFn = class'X2Ability_ASA_Archon'.static.BlazingPinionsPanicApplyChance;
+			PanicEffect.VisualizationFn = class'X2Ability_ASA_Archon'.static.BlazingPinionsPanic_PanickedVisualization;
+			AbilityTemplate.AddMultiTargetEffect(PanicEffect);
 		}
 	}
 }

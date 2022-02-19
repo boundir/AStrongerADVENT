@@ -10,6 +10,8 @@
 
 class X2DownloadableContentInfo_AStrongerADVENT extends X2DownloadableContentInfo;
 
+var config(Engine) bool DisableDebugLogs;
+
 static function UpdateAnimations(out array<AnimSet> CustomAnimSets, XComGameState_Unit UnitState, XComUnitPawn Pawn)
 {
 	local Animset AnimSetToAdd;
