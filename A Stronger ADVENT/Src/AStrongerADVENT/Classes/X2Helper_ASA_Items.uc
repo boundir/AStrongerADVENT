@@ -1,4 +1,4 @@
-class X2Helper_Items extends Object;
+class X2Helper_ASA_Items extends Object;
 
 static function AdjustWeaponDamage(Name WeaponTemplateName, WeaponDamageValue WeaponDamage)
 {

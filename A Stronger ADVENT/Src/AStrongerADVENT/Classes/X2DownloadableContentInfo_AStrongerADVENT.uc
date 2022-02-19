@@ -31,37 +31,37 @@ static function UpdateAnimations(out array<AnimSet> CustomAnimSets, XComGameStat
 static event OnPostTemplatesCreated()
 {
 	// Add Melee Resistance to Berserkers
-	class'X2Helper_Characters'.static.ApplyMeleeResistance();
+	class'X2Helper_ASA_Characters'.static.ApplyMeleeResistance();
 	// Add Melee Vulnerability to Sectoids
-	class'X2Helper_Characters'.static.ApplyMeleeVulnerability();
+	class'X2Helper_ASA_Characters'.static.ApplyMeleeVulnerability();
 	// Add Icarus Drop to Archon Prime
-	class'X2Helper_Characters'.static.ArchonPrimeIcarusDrop();
+	class'X2Helper_ASA_Characters'.static.ArchonPrimeIcarusDrop();
 	// Add BeastMaster and War Cry to Muton Prime
-	class'X2Helper_Characters'.static.MutonPrimeAbilities();
+	class'X2Helper_ASA_Characters'.static.MutonPrimeAbilities();
 	// Add CounterAttack to ABA Muton variants
-	class'X2Helper_Characters'.static.MutonCounterAttack();
+	class'X2Helper_ASA_Characters'.static.MutonCounterAttack();
 	// Add TriggerSuperpositionPrime to Codex Prime
-	class'X2Helper_Characters'.static.CodexPrimeAbilities();
+	class'X2Helper_ASA_Characters'.static.CodexPrimeAbilities();
 	// Spectre Prime can create a Prime copy, add a new red look
-	class'X2Helper_Characters'.static.SpectrePrimeRework();
+	class'X2Helper_ASA_Characters'.static.SpectrePrimeRework();
 	// Spectre Prime's copy have Prime Reactions
-	class'X2Helper_Characters'.static.ShadowPrimeAbilities();
+	class'X2Helper_ASA_Characters'.static.ShadowPrimeAbilities();
 
 	// Allow Holy Warrior to target Mind Controlled units
-	class'X2Helper_Abilities'.static.HolyWarriorOnMindControlled();
+	class'X2Helper_ASA_Abilities'.static.HolyWarriorOnMindControlled();
 	// Archon Valkyrie melee attack can dash and slash
-	class'X2Helper_Abilities'.static.PatchValkyrieMeleeAttack();
+	class'X2Helper_ASA_Abilities'.static.PatchValkyrieMeleeAttack();
 	// Spectre can vanish after Shadowbind for free
-	class'X2Helper_Abilities'.static.SpectreVanishIsFreeAction();
+	class'X2Helper_ASA_Abilities'.static.SpectreVanishIsFreeAction();
 	// Purifier Flamethrower is guaranteed to hit
-	class'X2Helper_Abilities'.static.PurifierFlamethrowerGuaranteedHit();
+	class'X2Helper_ASA_Abilities'.static.PurifierFlamethrowerGuaranteedHit();
 	// Blazing Pinions can panic units
-	class'X2Helper_Abilities'.static.BlazingPinionsInflictPanic();
+	class'X2Helper_ASA_Abilities'.static.BlazingPinionsInflictPanic();
 
 	// Gives Spectre tier 2 secondary weapon HorrorM4
-	// class'X2Helper_Items'.static.PatchSpectreSecondaryWeapon();
+	// class'X2Helper_ASA_Items'.static.PatchSpectreSecondaryWeapon();
 	// Gives Andromedon Prime weapon new damage changes
-	class'X2Helper_Items'.static.AdjustWeaponDamage('Andromedon_Acid_WPN', class'X2Item_ASA_Weapons'.default.ANDROMEDON_M4_WPN_BASEDAMAGE);
+	class'X2Helper_ASA_Items'.static.AdjustWeaponDamage('Andromedon_Acid_WPN', class'X2Item_ASA_Weapons'.default.ANDROMEDON_M4_WPN_BASEDAMAGE);
 
 	// Add Perk to cache
 	AddPerkContentToCache();

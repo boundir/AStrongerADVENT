@@ -1,4 +1,4 @@
-class X2Helper_Abilities extends Object config(GameData_SoldierSkills);
+class X2Helper_ASA_Abilities extends Object config(GameData_SoldierSkills);
 
 var config bool PURIFIER_FLAMETHROWER_GUARANTEED_HIT;
 

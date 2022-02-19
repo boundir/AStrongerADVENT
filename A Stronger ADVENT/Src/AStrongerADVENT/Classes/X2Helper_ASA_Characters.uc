@@ -1,4 +1,4 @@
-class X2Helper_Characters extends Object config(GameData_SoldierSkills);
+class X2Helper_ASA_Characters extends Object config(GameData_SoldierSkills);
 
 var config array<name> MELEE_RESISTANCE_INCLUDE_UNIT;
 var config array<name> MELEE_VULNERABILITY_INCLUDE_UNIT;
