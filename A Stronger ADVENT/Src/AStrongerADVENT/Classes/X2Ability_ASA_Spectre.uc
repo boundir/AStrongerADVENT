@@ -396,6 +396,8 @@ static function X2AbilityTemplate CreateShadowbindReaction()
 
 	Template.AbilityShooterConditions.AddItem(default.LivingShooterProperty);
 
+	Template.AdditionalAbilities.AddItem('UnbreakableWill');
+
 	SkipExclusions.AddItem(class'X2AbilityTemplateManager'.default.DisorientedName);
 	SkipExclusions.AddItem(class'X2StatusEffects'.default.BurningName);
 	SkipExclusions.AddItem(class'X2AbilityTemplateManager'.default.ConfusedName);

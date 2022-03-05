@@ -10,7 +10,14 @@
 
 class X2DownloadableContentInfo_AStrongerADVENT extends X2DownloadableContentInfo;
 
+struct Primes
+{
+	var name UnitName;
+	var name AbilityName;
+};
+
 var config(Engine) bool DisableDebugLogs;
+var config(GameData_SoldierSkills) array<Primes> PRIMED_UNITS;
 
 static function UpdateAnimations(out array<AnimSet> CustomAnimSets, XComGameState_Unit UnitState, XComUnitPawn Pawn)
 {
@@ -30,6 +37,9 @@ static function UpdateAnimations(out array<AnimSet> CustomAnimSets, XComGameStat
 
 static event OnPostTemplatesCreated()
 {
+	// Prime units are immune to Mental
+	AddPrimeMentalImmunity(default.PRIMED_UNITS);
+
 	// Add Melee Resistance to Berserkers
 	class'X2Helper_ASA_Characters'.static.ApplyMeleeResistance();
 	// Add Melee Vulnerability to Sectoids
@@ -65,6 +75,49 @@ static event OnPostTemplatesCreated()
 
 	// Add Perk to cache
 	AddPerkContentToCache();
+}
+
+static function AddPrimeMentalImmunity(Array<Primes> PrimedUnits, Name AdditionalAbilityName = 'UnbreakableWill', Name ImmunityName = 'Mental')
+{
+	local X2AbilityTemplateManager AbilityTemplateMgr;
+	local X2CharacterTemplateManager CharacterTemplateMgr;
+	local X2AbilityTemplate AbilityTemplate;
+	local X2CharacterTemplate CharacterTemplate;
+	local array<X2DataTemplate> TemplateAllDifficulties;
+	local X2DataTemplate Template;
+	local Primes PrimedUnit;
+
+	AbilityTemplateMgr = class'X2AbilityTemplateManager'.static.GetAbilityTemplateManager();
+	CharacterTemplateMgr = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
+
+	foreach PrimedUnits(PrimedUnit)
+	{
+		AbilityTemplateMgr.FindDataTemplateAllDifficulties(PrimedUnit.AbilityName, TemplateAllDifficulties);
+
+		foreach TemplateAllDifficulties(Template)
+		{
+			AbilityTemplate = X2AbilityTemplate(Template);
+
+			if( AbilityTemplate != none )
+			{
+				AbilityTemplate.AdditionalAbilities.RemoveItem(AdditionalAbilityName);
+				AbilityTemplate.AdditionalAbilities.AddItem(AdditionalAbilityName);
+			}
+		}
+
+		CharacterTemplateMgr.FindDataTemplateAllDifficulties(PrimedUnit.UnitName, TemplateAllDifficulties);
+
+		foreach TemplateAllDifficulties(Template)
+		{
+			CharacterTemplate = X2CharacterTemplate(Template);
+
+			if( CharacterTemplate != none )
+			{
+				CharacterTemplate.ImmuneTypes.RemoveItem(ImmunityName);
+				CharacterTemplate.ImmuneTypes.AddItem(ImmunityName);
+			}
+		}
+	}
 }
 
 static function AddPerkContentToCache()

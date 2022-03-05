@@ -221,6 +221,9 @@ tags= War of the Chosen, Gameplay, AI, Alien</Description>
     <Content Include="Config\XComGameData.ini">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Config\XComGameData_SoldierSkills.ini">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Content\ASA_Perk_Horror.upk">
       <SubType>Content</SubType>
     </Content>
@@ -320,6 +323,9 @@ tags= War of the Chosen, Gameplay, AI, Alien</Description>
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\AStrongerADVENT\Classes\X2Ability_ASA_Codex.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\AStrongerADVENT\Classes\X2Ability_ASA_Prime.uc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\AStrongerADVENT\Classes\X2Ability_ASA_Sectopod.uc">
