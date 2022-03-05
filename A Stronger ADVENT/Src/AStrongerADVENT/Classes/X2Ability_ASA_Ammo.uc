@@ -11,8 +11,8 @@ static function array<X2DataTemplate> CreateTemplates()
 
 static function X2AbilityTemplate CreateAcidRounds()
 {
-	local X2AbilityTemplate             Template;
-	local X2Effect_IncendiaryRounds     Effect;
+	local X2AbilityTemplate Template;
+	local X2Effect_IncendiaryRounds Effect;
 
 	`CREATE_X2ABILITY_TEMPLATE(Template, 'ASA_AcidRounds');
 
