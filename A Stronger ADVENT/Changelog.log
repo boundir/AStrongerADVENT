@@ -1,17 +1,18 @@
 [list]
-    [*] First attempt fix animation for Horror on Spectre Prime.
     [*] Tier 3 weapons Spectre Prime (+1 damage).
     [*] Reverts Lost targeting back to 70% against XCOM so they don't become XCOM's personal army.
     [*] Fixes Savage and Terror encounter lists from A Better ADVENT until main mod gets updated.
     [*] Adds War Cry to Yellow Alert mod defensive action for Muton Prime.
     [*] Units will attack the device twice per turn at max instead of unlimited.
-    [*] Purifiers can't miss (configurable).
+    [*] Purifiers can't miss (configurable) with their Flamethrower.
     [*] Enemy units will try to avoid grenading Lost.
     [*] Adds Acid rounds for Andromedon Prime instead of Acid weapon.
     [*] Slightly buff Andromedon Prime HP.
     [*] Only use Flamethrower on units vulnerable to Fire.
     [*] Only use Poison Spit on units vulnerable to Poison.
-    [*] Purifier are able to use their Pistol to shoot if too far to use Flamethrower.
+    [*] Purifiers are able to use their Pistol to shoot if too far to use Flamethrower.
+    [*] Purifiers are equiped with fire ammo.
     [*] Blazing Pinions have a chance to cause Panic.
     [*] Adds mental immunity to Prime units.
+    [*] Fixes Panicked AI tree where it could fire at nothing. Credits to Chris the Thin Mint.
 [/list]
