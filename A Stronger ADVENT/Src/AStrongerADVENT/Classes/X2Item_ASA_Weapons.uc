@@ -245,9 +245,8 @@ static function X2DataTemplate CreateTemplate_SpectreM4_PsiAttack()
 	Template.WeaponTech = 'alien';
 	Template.strImage = "img:///UILibrary_StrategyImages.X2InventoryIcons.Inv_Psi_Amp";
 	Template.InventorySlot = eInvSlot_SecondaryWeapon;
-	// This all the resources; sounds, animations, models, physics, the works.
 
-	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer); //invalidates multiplayer availability
+	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 
 	Template.ExtraDamage = default.SPECTRE_PSI_M4_ABILITY_DAMAGE;
 
