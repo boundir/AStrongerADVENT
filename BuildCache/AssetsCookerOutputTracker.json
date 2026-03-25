@@ -1,0 +1,24 @@
+{
+    "tfcFiles":  [
+                     {
+                         "fullFileName":  "Textures-a_AStrongerADVENT_DLCTFC_XPACK_.tfc",
+                         "originalSize":  1075176,
+                         "lastUpdatedUtc":  639068721764186917
+                     },
+                     {
+                         "fullFileName":  "World-a_AStrongerADVENT_DLCTFC_XPACK_.tfc",
+                         "originalSize":  1052564,
+                         "lastUpdatedUtc":  639068721764713039
+                     }
+                 ],
+    "sfPackages":  [
+                       {
+                           "fullFileName":  "AStrongerADVENT_Content_SF.upk",
+                           "lastUpdatedUtc":  639068722228120264
+                       },
+                       {
+                           "fullFileName":  "CIN_XP_SpectreM4.upk",
+                           "lastUpdatedUtc":  639067914742170367
+                       }
+                   ]
+}

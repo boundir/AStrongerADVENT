@@ -3,95 +3,18 @@
   <PropertyGroup>
     <Guid>004f9e5e-97ab-4158-a54b-d6d5b56502fc</Guid>
     <Name>A Stronger ADVENT</Name>
-    <Description>A Stronger ADVENT
-======
-
-Using A Better ADVENT mod as a base, I'm trying to balance the aliens my way. It does include things like stats, loadout, abilities, ai or even new units.
-
-
-Changes
-======
-
-Several changes have been done. There will be more to come.
-
-
-Stats
-------
-
-| Enemy                  | Stat        | Rookie     | Veteran    | Commander   | Legend     |
-| -----------------------|-------------|------------|------------|-------------|------------|
-| Sectoid Soldier        | Offense     | 60 -&gt; 80   | 60 -&gt; 80   | 60 -&gt; 80    | 60 -&gt; 80   |
-|                        | HP          | 12 -&gt; 12   | 14 -&gt; 16   | 16 -&gt; 20    | 18 -&gt; 24   |
-| ADVENT Sniper          | Offense     | 65 -&gt; 70   | 65 -&gt; 70   | 65 -&gt; 70    | 65 -&gt; 70   |
-| Advanced Sniper        | Offense     | 70 -&gt; 80   | 70 -&gt; 80   | 70 -&gt; 80    | 70 -&gt; 80   |
-| Elite Sniper           | Offense     | 75 -&gt; 90   | 75 -&gt; 90   | 75 -&gt; 90    | 75 -&gt; 90   |
-| Muton Prime            | Armor       | 3 -&gt; 4     | 3 -&gt; 4     | 3 -&gt; 4      | 3 -&gt; 4     |
-|                        | Defense     | 10 -&gt; 20   | 10 -&gt; 20   | 10 -&gt; 20    | 10 -&gt; 20   |
-|                        | HP          | 16 -&gt; 16   | 18 -&gt; 19   | 20 -&gt; 22    | 22 -&gt; 25   |
-| Berserker Prime        | HP          | 20 -&gt; 24   | 24 -&gt; 28   | 28 -&gt; 32    | 32 -&gt; 36   |
-|                        | Crit-Chance | 10 -&gt; 15   | 10 -&gt; 15   | 10 -&gt; 15    | 10 -&gt; 15   |
-| Firestarter Prime      | HP          | 20 -&gt; 24   | 24 -&gt; 28   | 28 -&gt; 32    | 32 -&gt; 36   |
-|                        | Crit-Chance | 10 -&gt; 15   | 10 -&gt; 15   | 10 -&gt; 15    | 10 -&gt; 15   |
-| Berserker              | Crit-Chance | 10 -&gt; 15   | 10 -&gt; 15   | 10 -&gt; 15    | 10 -&gt; 15   |
-| Firestarter            | Crit-Chance | 10 -&gt; 15   | 10 -&gt; 15   | 10 -&gt; 15    | 10 -&gt; 15   |
-| Andromedon Prime       | Defense     | 10 -&gt; 15   | 10 -&gt; 15   | 10 -&gt; 15    | 10 -&gt; 15   |
-|                        | HP          | 20 -&gt; 24   | 23 -&gt; 27   | 26 -&gt; 30    | 29 -&gt; 33   |
-|                        | Offense     | 70 -&gt; 80   | 70 -&gt; 80   | 70 -&gt; 80    | 70 -&gt; 80   |
-| Andromedon Prime Shell | Mobility    | 12 -&gt; 15   | 12 -&gt; 15   | 12 -&gt; 15    | 12 -&gt; 15   |
-|                        | HP          | 14 -&gt; 24   | 16 -&gt; 26   | 18 -&gt; 28    | 20 -&gt; 30   |
-| Sectopod Prime         | Armor       | 5 -&gt; 7     | 5 -&gt; 7     | 5 -&gt; 7      | 5 -&gt; 7     |
-|                        | Defense     | -10 -&gt; 20  | -10 -&gt; 20  | -10 -&gt; 20   | -10 -&gt; 20  |
-|                        | HP          | 32 -&gt; 40   | 37 -&gt; 45   | 42 -&gt; 50    | 47 -&gt; 55   |
-| Gatekeeper Prime       | Armor       | 4 -&gt; 4     | 4 -&gt; 5     | 4 -&gt; 6      | 4 -&gt; 7     |
-|                        | Defense     | 0 -&gt; 15    | 0 -&gt; 15    | 0 -&gt; 15     | 0 -&gt; 15    |
-|                        | Mobility    | 12 -&gt; 16   | 12 -&gt; 16   | 12 -&gt; 16    | 12 -&gt; 16   |
-|                        | Will        | 100 -&gt; 200 | 100 -&gt; 200 | 100 -&gt; 200  | 100 -&gt; 200 |
-
-
-Abilities
-------
-
-- Melee Vulnerability for the Sectoid Soldier, until he wears something ( buffed his HP ).
-- Melee Vulnerability for the Sectoid Soldier Prime, until he wears something ( buffed his HP ).
-- Codex Prime will not lose Health when cloning.
-- Vanish ability is now a free action.
-- Muton Pyro can now Counterattack.
-- Muton Infector can now Counterattack.
-- Archon Prime is now able to perform Icarus Drop.
-
-
-Loadout
-------
-
-- Are equiped with AP rounds:
-  - ADVENT Guardian
-  - Advanced Guardian.
-  - Advanced Sharpshooter.
-  - Elite Sharpshooter.
-- Are equiped with Talon rounds:
-  - Advanced Assault.
-  - Advanced Striker.
-  - Elite Assault.
-  - Elite Striker.
-
-
-AI
-------
-
-- The Spectre will now use Vanish after Shadowbind.
-- The Spectre Prime will now use Vanish after Shadowbind.
-
-
-Unit
-------
-
-- When a Spectre Prime uses Shadowbind it will now create a Shadow Prime.
-
+    <Description>A Better ADVENT provides a variety of units to fill different roles, aswell as an improved AI. The goal with A Stronger ADVENT is to enhance the experience with different stats, abilities, loadouts, units, AI.
 tags= War of the Chosen, Gameplay, AI, Alien</Description>
     <SteamPublishID>0</SteamPublishID>
     <AssemblyName>A Stronger ADVENT</AssemblyName>
     <RootNamespace>A Stronger ADVENT</RootNamespace>
   </PropertyGroup>
+  <PropertyGroup>
+    <SolutionRoot>$(MSBuildProjectDirectory)\..\</SolutionRoot>
+    <ScriptsDir>$(SolutionRoot).scripts\</ScriptsDir>
+    <BuildCommonRoot>$(ScriptsDir)X2ModBuildCommon\</BuildCommonRoot>
+  </PropertyGroup>
+  <Import Project="$(BuildCommonRoot)XCOM2.targets" />
   <ItemGroup>
     <Folder Include="Config\" />
     <Folder Include="Config\ADVENT" />
@@ -105,6 +28,7 @@ tags= War of the Chosen, Gameplay, AI, Alien</Description>
     <Folder Include="Config\Spectre" />
     <Folder Include="Config\Vipers" />
     <Folder Include="Content" />
+    <Folder Include="ContentForCook\" />
     <Folder Include="Localization\" />
     <Folder Include="Localization\INT" />
     <Folder Include="Localization\FRA" />
@@ -120,257 +44,88 @@ tags= War of the Chosen, Gameplay, AI, Alien</Description>
     <Folder Include="Src\" />
     <Folder Include="Src\AStrongerADVENT\" />
     <Folder Include="Src\AStrongerADVENT\Classes\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Config\ADVENT\XComGameData_SoldierSkills.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\Archons\XComGameData_SoldierSkills.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\Berserkers\XComAI.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\Berserkers\XComGameData_CharacterStats.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\Berserkers\XComGameData_WeaponData.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\Bosses\XComAI.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\Bosses\XComGameData.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\Bosses\XComGameData_CharacterStats.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\Bosses\XComGameData_WeaponData.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\Codex\XComAI.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\Codex\XComGameData_SoldierSkills.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\CompanionMods\XComAllowedUnitsNames.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\CompanionMods\XComYellowAlert.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\Mutons\XComAI.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\Mutons\XComGameData.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\Mutons\XComGameData_CharacterStats.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\Archons\XComAI.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\Mutons\XComGameData_SoldierSkills.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\Sectoids\XComAI.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\Sectoids\XComGameData_CharacterStats.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\Sectoids\XComGameData_SoldierSkills.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\Spectre\XComAI.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\Spectre\XComGameData.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\Spectre\XComGameData_CharacterStats.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\ADVENT\XComAI.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\ADVENT\XComGameData.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\ADVENT\XComGameData_CharacterStats.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\ADVENT\XComGameData_WeaponData.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\Spectre\XComGameData_WeaponData.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\Vipers\XComAI.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\XComAI.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\XComGameCore.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\XComGameData.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Config\XComGameData_SoldierSkills.ini">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Content\ASA_Perk_Horror.upk">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Content\CIN_XP_SpectreM4.umap">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Content\GameUnit_SpectreM4.upk">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Content\MutonM4_ANIM.upk">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Content\ShadowUnit_ANIM.upk">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Content\UILibrary_AStrongerADVENT.upk">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Content\Weapons_SpectreM4.upk">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Localization\CHN\XComGame.chn">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Localization\CHN\AStrongerADVENT.chn">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Localization\CHT\XComGame.cht">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Localization\CHT\AStrongerADVENT.cht">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Localization\DEU\XComGame.deu">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Localization\DEU\AStrongerADVENT.deu">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Localization\ESN\XComGame.esn">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Localization\ESN\AStrongerADVENT.esn">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Localization\FRA\XComGame.fra">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Localization\FRA\AStrongerADVENT.fra">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Localization\INT\XComGame.int">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Localization\INT\AStrongerADVENT.int">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Localization\ITA\XComGame.ita">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Localization\ITA\AStrongerADVENT.ita">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Localization\JPN\XComGame.jpn">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Localization\JPN\AStrongerADVENT.jpn">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Localization\KOR\XComGame.kor">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Localization\KOR\AStrongerADVENT.kor">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Localization\POL\XComGame.pol">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Localization\POL\AStrongerADVENT.pol">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Localization\RUS\XComGame.rus">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Localization\RUS\AStrongerADVENT.rus">
-      <SubType>Content</SubType>
-    </Content>
+    <Content Include="ContentOptions.json" />
     <Content Include="ReadMe.txt" />
     <Content Include="ModPreview.jpg" />
+    <Content Include="Config\XComAI.ini" />
     <Content Include="Config\XComEditor.ini" />
     <Content Include="Config\XComEngine.ini" />
     <Content Include="Config\XComGame.ini" />
-    <Content Include="Src\AStrongerADVENT\Classes\X2Ability_ASA_Ammo.uc">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\X2Ability_ASA_Archon.uc">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\X2Ability_ASA_Codex.uc">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\X2Ability_ASA_Prime.uc">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\X2Ability_ASA_Sectopod.uc">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\X2Ability_ASA_Spectre.uc">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\X2Action_ASA_ShadowbindTarget.uc">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\X2Action_PlayShadowbindAnimation.uc">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\X2Character_ASA_Characters.uc">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\X2Effect_ASA_ShadowUnitM4.uc">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\X2Helper_ASA_Items.uc">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\X2Item_ASA_Ammo.uc">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\X2Item_ASA_Weapons.uc">
-      <SubType>Content</SubType>
-    </Content>
+    <Content Include="Config\XComGameCore.ini" />
+    <Content Include="Config\XComGameData.ini" />
+    <Content Include="Config\XComGameData_SoldierSkills.ini" />
+    <Content Include="Config\ADVENT\XComAI.ini" />
+    <Content Include="Config\ADVENT\XComGameData_CharacterStats.ini" />
+    <Content Include="Config\ADVENT\XComGameData_SoldierSkills.ini" />
+    <Content Include="Config\ADVENT\XComGameData_WeaponData.ini" />
+    <Content Include="Config\ADVENT\XComGameData.ini" />
+    <Content Include="Config\Archons\XComAI.ini" />
+    <Content Include="Config\Archons\XComGameData_SoldierSkills.ini" />
+    <Content Include="Config\Berserkers\XComAI.ini" />
+    <Content Include="Config\Berserkers\XComGameData_CharacterStats.ini" />
+    <Content Include="Config\Berserkers\XComGameData_WeaponData.ini" />
+    <Content Include="Config\Bosses\XComAI.ini" />
+    <Content Include="Config\Bosses\XComGameData_CharacterStats.ini" />
+    <Content Include="Config\Bosses\XComGameData_WeaponData.ini" />
+    <Content Include="Config\Bosses\XComGameData.ini" />
+    <Content Include="Config\Codex\XComAI.ini" />
+    <Content Include="Config\Codex\XComGameData_SoldierSkills.ini" />
+    <Content Include="Config\CompanionMods\XComAllowedUnitsNames.ini" />
+    <Content Include="Config\CompanionMods\XComYellowAlert.ini" />
+    <Content Include="Config\Mutons\XComAI.ini" />
+    <Content Include="Config\Mutons\XComGameData_CharacterStats.ini" />
+    <Content Include="Config\Mutons\XComGameData_SoldierSkills.ini" />
+    <Content Include="Config\Mutons\XComGameData.ini" />
+    <Content Include="Config\Sectoids\XComAI.ini" />
+    <Content Include="Config\Sectoids\XComGameData_CharacterStats.ini" />
+    <Content Include="Config\Sectoids\XComGameData_SoldierSkills.ini" />
+    <Content Include="Config\Spectre\XComAI.ini" />
+    <Content Include="Config\Spectre\XComGameData_CharacterStats.ini" />
+    <Content Include="Config\Spectre\XComGameData_WeaponData.ini" />
+    <Content Include="Config\Spectre\XComGameData.ini" />
+    <Content Include="Config\Vipers\XComAI.ini" />
+    <Content Include="ContentForCook\AStrongerADVENT_Content.upk" />
+    <Content Include="ContentForCook\CIN_XP_SpectreM4.umap" />
+    <Content Include="Localization\CHN\XComGame.chn" />
+    <Content Include="Localization\CHN\AStrongerADVENT.chn" />
+    <Content Include="Localization\CHT\XComGame.cht" />
+    <Content Include="Localization\CHT\AStrongerADVENT.cht" />
+    <Content Include="Localization\DEU\XComGame.deu" />
+    <Content Include="Localization\DEU\AStrongerADVENT.deu" />
+    <Content Include="Localization\ESN\XComGame.esn" />
+    <Content Include="Localization\ESN\AStrongerADVENT.esn" />
+    <Content Include="Localization\FRA\XComGame.fra" />
+    <Content Include="Localization\FRA\AStrongerADVENT.fra" />
+    <Content Include="Localization\INT\XComGame.int" />
+    <Content Include="Localization\INT\AStrongerADVENT.int" />
+    <Content Include="Localization\ITA\XComGame.ita" />
+    <Content Include="Localization\ITA\AStrongerADVENT.ita" />
+    <Content Include="Localization\JPN\XComGame.jpn" />
+    <Content Include="Localization\JPN\AStrongerADVENT.jpn" />
+    <Content Include="Localization\KOR\XComGame.kor" />
+    <Content Include="Localization\KOR\AStrongerADVENT.kor" />
+    <Content Include="Localization\POL\XComGame.pol" />
+    <Content Include="Localization\POL\AStrongerADVENT.pol" />
+    <Content Include="Localization\RUS\XComGame.rus" />
+    <Content Include="Localization\RUS\AStrongerADVENT.rus" />
+    <Content Include="Src\AStrongerADVENT\Classes\X2Ability_ASA_Ammo.uc" />
+    <Content Include="Src\AStrongerADVENT\Classes\X2Ability_ASA_Archon.uc" />
+    <Content Include="Src\AStrongerADVENT\Classes\X2Ability_ASA_Codex.uc" />
+    <Content Include="Src\AStrongerADVENT\Classes\X2Ability_ASA_Prime.uc" />
+    <Content Include="Src\AStrongerADVENT\Classes\X2Ability_ASA_Sectopod.uc" />
+    <Content Include="Src\AStrongerADVENT\Classes\X2Ability_ASA_Spectre.uc" />
+    <Content Include="Src\AStrongerADVENT\Classes\X2Action_ASA_PlayShadowbindAnimation.uc" />
+    <Content Include="Src\AStrongerADVENT\Classes\X2Action_ASA_ShadowbindTarget.uc" />
+    <Content Include="Src\AStrongerADVENT\Classes\X2Character_ASA_Characters.uc" />
     <Content Include="Src\AStrongerADVENT\Classes\X2DownloadableContentInfo_AStrongerADVENT.uc" />
-    <Content Include="Src\AStrongerADVENT\Classes\X2Effect_ASA_SpawnShadowbindUnit.uc">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\X2Effect_ASA_BeastMaster.uc">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\X2Effect_ASA_WarCry.uc">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\X2Helper_ASA_Characters.uc">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Src\AStrongerADVENT\Classes\X2Helper_ASA_Abilities.uc">
-      <SubType>Content</SubType>
-    </Content>
+    <Content Include="Src\AStrongerADVENT\Classes\X2Effect_ASA_BeastMaster.uc" />
+    <Content Include="Src\AStrongerADVENT\Classes\X2Effect_ASA_ShadowUnitM4.uc" />
+    <Content Include="Src\AStrongerADVENT\Classes\X2Effect_ASA_SpawnShadowbindUnit.uc" />
+    <Content Include="Src\AStrongerADVENT\Classes\X2Effect_ASA_WarCry.uc" />
+    <Content Include="Src\AStrongerADVENT\Classes\X2Helper_ASA_Abilities.uc" />
+    <Content Include="Src\AStrongerADVENT\Classes\X2Helper_ASA_Characters.uc" />
+    <Content Include="Src\AStrongerADVENT\Classes\X2Helper_ASA_Items.uc" />
+    <Content Include="Src\AStrongerADVENT\Classes\X2Item_ASA_Ammo.uc" />
+    <Content Include="Src\AStrongerADVENT\Classes\X2Item_ASA_Weapons.uc" />
   </ItemGroup>
-  <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets" />
 </Project>

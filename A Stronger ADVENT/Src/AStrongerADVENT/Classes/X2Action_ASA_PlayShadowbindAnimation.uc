@@ -1,7 +1,7 @@
 //-----------------------------------------------------------
 // Used by the visualizer system to control a Visualization Actor
 //-----------------------------------------------------------
-class X2Action_PlayShadowbindAnimation extends X2Action
+class X2Action_ASA_PlayShadowbindAnimation extends X2Action
 	dependson(XComAnimTreeController);
 
 var public  BlendMaskIndex		BlendType;
@@ -83,15 +83,6 @@ Begin:
 		else
 		{
 			`RedScreen("Failed to play animation" @ Params.AnimName @ "on" @ UnitPawn @ "as part of" @ self);
-			foreach UnitPawn.Mesh.AnimSets(AnimSet)
-			{
-				`log("AnimSet: " $ PathName(AnimSet),, 'UpdateAnimations');
-
-				foreach AnimSet.Sequences(Sequence)
-				{
-					`log("SequenceName: " $ Sequence.SequenceName,, 'UpdateAnimations');
-				}
-			}
 		}
 	}
 

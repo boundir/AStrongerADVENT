@@ -15,7 +15,7 @@ var config int SECTOPOD_LIGHTNINGSTORM_AIM;
 static function array<X2DataTemplate> CreateTemplates()
 {
 	local array<X2DataTemplate> Weapons;
-	
+
 	Weapons.AddItem(CreateTemplate_LightningStorm());
 	Weapons.AddItem(CreateTemplate_PurifierPistolM1_WPN());
 	Weapons.AddItem(CreateTemplate_PurifierPistolM2_WPN());
@@ -31,7 +31,7 @@ static function X2DataTemplate CreateTemplate_LightningStorm()
 	local X2WeaponTemplate Template;
 
 	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'LightningStorm');
-	Template.WeaponPanelImage = "_Sword"; // used by the UI. Probably determines iconview of the weapon.
+	Template.WeaponPanelImage = "_Sword";
 
 	Template.ItemCat = 'weapon';
 	Template.WeaponCat = 'sword';
@@ -52,7 +52,7 @@ static function X2DataTemplate CreateTemplate_LightningStorm()
 	Template.BaseDamage.DamageType = 'Melee';
 
 	Template.Abilities.AddItem('SectopodLightningStorm_ASA');
-	
+
 	Template.StartingItem = false;
 	Template.CanBeBuilt = false;
 	Template.bInfiniteItem = false;
@@ -67,8 +67,8 @@ static function X2DataTemplate CreateTemplate_LightningStorm()
 	local X2WeaponTemplate Template;
 
 	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PurifierPistolM1_WPN');
-	Template.WeaponPanelImage = "_Pistol";                       // used by the UI. Probably determines iconview of the weapon.
-	 
+	Template.WeaponPanelImage = "_Pistol";
+
 	Template.ItemCat = 'weapon';
 	Template.WeaponCat = 'pistol';
 	Template.WeaponTech = 'conventional';
@@ -85,7 +85,7 @@ static function X2DataTemplate CreateTemplate_LightningStorm()
 
 	Template.InfiniteAmmo = true;
 	Template.OverwatchActionPoint = class'X2CharacterTemplateManager'.default.PistolOverwatchReserveActionPoint;
-	
+
 	Template.InventorySlot = eInvSlot_SecondaryWeapon;
 	Template.Abilities.AddItem('PistolStandardShot');
 	Template.Abilities.AddItem('PistolOverwatch');
@@ -93,9 +93,8 @@ static function X2DataTemplate CreateTemplate_LightningStorm()
 	Template.Abilities.AddItem('HotLoadAmmo');
 	Template.Abilities.AddItem('Reload');
 
-	Template.SetAnimationNameForAbility('FanFire', 'FF_FireMultiShotConvA');	
-	
-	// This all the resources; sounds, animations, models, physics, the works.
+	Template.SetAnimationNameForAbility('FanFire', 'FF_FireMultiShotConvA');
+
 	Template.GameArchetype = "WP_Pistol_MG.WP_Pistol_MG_Advent";
 	Template.iPhysicsImpulse = 5;
 	Template.CanBeBuilt = false;
@@ -110,7 +109,7 @@ static function X2DataTemplate CreateTemplate_PurifierPistolM2_WPN()
 	local X2WeaponTemplate Template;
 
 	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PurifierPistolM2_WPN');
-	Template.WeaponPanelImage = "_Pistol";                       // used by the UI. Probably determines iconview of the weapon.
+	Template.WeaponPanelImage = "_Pistol";
 
 	Template.ItemCat = 'weapon';
 	Template.WeaponCat = 'pistol';
@@ -138,8 +137,7 @@ static function X2DataTemplate CreateTemplate_PurifierPistolM2_WPN()
 	Template.Abilities.AddItem('Reload');
 
 	Template.SetAnimationNameForAbility('FanFire', 'FF_FireMultiShotMagA');
-	
-	// This all the resources; sounds, animations, models, physics, the works.
+
 	Template.GameArchetype = "WP_Pistol_MG.WP_Pistol_MG_Advent";
 	Template.iPhysicsImpulse = 5;
 	Template.CanBeBuilt = false;
@@ -154,7 +152,7 @@ static function X2DataTemplate CreateTemplate_PurifierPistolM3_WPN()
 	local X2WeaponTemplate Template;
 
 	`CREATE_X2TEMPLATE(class'X2WeaponTemplate', Template, 'PurifierPistolM3_WPN');
-	Template.WeaponPanelImage = "_Pistol";                       // used by the UI. Probably determines iconview of the weapon.
+	Template.WeaponPanelImage = "_Pistol";
 
 	Template.ItemCat = 'weapon';
 	Template.WeaponCat = 'pistol';
@@ -182,7 +180,6 @@ static function X2DataTemplate CreateTemplate_PurifierPistolM3_WPN()
 
 	Template.SetAnimationNameForAbility('FanFire', 'FF_FireMultiShotBeamA');
 
-	// This all the resources; sounds, animations, models, physics, the works.
 	Template.GameArchetype = "WP_Pistol_MG.WP_Pistol_MG_Advent";
 	Template.iPhysicsImpulse = 5;
 	Template.CanBeBuilt = false;
@@ -223,8 +220,7 @@ static function X2DataTemplate CreateTemplate_SpectreM4_WPN()
 	Template.Abilities.AddItem('Reload');
 	Template.Abilities.AddItem('HotLoadAmmo');
 
-	// This all the resources; sounds, animations, models, physics, the works.
-	Template.GameArchetype = "Weapons_SpectreM4.Alien.WP_SpectreM4Rifle";
+	Template.GameArchetype = "AStrongerADVENT_Content.Weapons.SpectreM4.Materials.WP_SpectreM4Rifle";
 
 	Template.iPhysicsImpulse = 5;
 
@@ -245,9 +241,8 @@ static function X2DataTemplate CreateTemplate_SpectreM4_PsiAttack()
 	Template.WeaponTech = 'alien';
 	Template.strImage = "img:///UILibrary_StrategyImages.X2InventoryIcons.Inv_Psi_Amp";
 	Template.InventorySlot = eInvSlot_SecondaryWeapon;
-	// This all the resources; sounds, animations, models, physics, the works.
 
-	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer); //invalidates multiplayer availability
+	Template.RemoveTemplateAvailablility(Template.BITFIELD_GAMEAREA_Multiplayer);
 
 	Template.ExtraDamage = default.SPECTRE_PSI_M4_ABILITY_DAMAGE;
 

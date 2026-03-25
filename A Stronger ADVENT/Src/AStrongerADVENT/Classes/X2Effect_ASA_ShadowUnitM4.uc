@@ -23,7 +23,7 @@ simulated function AddX2ActionsForVisualization_Removed(XComGameState VisualizeG
 {
 	local XComGameStateVisualizationMgr VisualizationMgr;
 	local XComGameStateHistory History;
-	local X2Action_PlayShadowbindAnimation AnimationAction, CosmeticAnimationAction;
+	local X2Action_ASA_PlayShadowbindAnimation AnimationAction, CosmeticAnimationAction;
 	local X2Action_Delay DelayAction;
 	local X2Action_Death DeathAction;
 	local X2Action DelayParentAction;
@@ -68,22 +68,22 @@ simulated function AddX2ActionsForVisualization_Removed(XComGameState VisualizeG
 	if( DeathAction != None )
 	{
 		// This unit is dying so play the additive before the Death
-		AnimationAction = X2Action_PlayShadowbindAnimation(class'X2Action_PlayShadowbindAnimation'.static.AddToVisualizationTree(ActionMetadata, VisualizeGameState.GetContext(), true, , DeathAction.ParentActions));
+		AnimationAction = X2Action_ASA_PlayShadowbindAnimation(class'X2Action_ASA_PlayShadowbindAnimation'.static.AddToVisualizationTree(ActionMetadata, VisualizeGameState.GetContext(), true, , DeathAction.ParentActions));
 		DelayParentAction = DeathAction;
 
 		if( bHasGremlin )
 		{
-			CosmeticAnimationAction = X2Action_PlayShadowbindAnimation(class'X2Action_PlayShadowbindAnimation'.static.AddToVisualizationTree(CosmeticUnitMetaData, VisualizeGameState.GetContext(), true, , DeathAction.ParentActions));
+			CosmeticAnimationAction = X2Action_ASA_PlayShadowbindAnimation(class'X2Action_ASA_PlayShadowbindAnimation'.static.AddToVisualizationTree(CosmeticUnitMetaData, VisualizeGameState.GetContext(), true, , DeathAction.ParentActions));
 		}
 	}
 	else
 	{
-		AnimationAction = X2Action_PlayShadowbindAnimation(class'X2Action_PlayShadowbindAnimation'.static.AddToVisualizationTree(ActionMetadata, VisualizeGameState.GetContext()));
+		AnimationAction = X2Action_ASA_PlayShadowbindAnimation(class'X2Action_ASA_PlayShadowbindAnimation'.static.AddToVisualizationTree(ActionMetadata, VisualizeGameState.GetContext()));
 		DelayParentAction = AnimationAction;
 
 		if( bHasGremlin )
 		{
-			CosmeticAnimationAction = X2Action_PlayShadowbindAnimation(class'X2Action_PlayShadowbindAnimation'.static.AddToVisualizationTree(CosmeticUnitMetaData, VisualizeGameState.GetContext()));
+			CosmeticAnimationAction = X2Action_ASA_PlayShadowbindAnimation(class'X2Action_ASA_PlayShadowbindAnimation'.static.AddToVisualizationTree(CosmeticUnitMetaData, VisualizeGameState.GetContext()));
 		}
 	}
 
@@ -105,7 +105,7 @@ simulated function AddX2ActionsForVisualization_Removed(XComGameState VisualizeG
 simulated function AddX2ActionsForVisualization_Sync( XComGameState VisualizeGameState, out VisualizationActionMetadata ActionMetadata )
 {
 	local XComGameStateHistory History;
-	local X2Action_PlayShadowbindAnimation AnimationAction;
+	local X2Action_ASA_PlayShadowbindAnimation AnimationAction;
 	local X2Action LastActionAdded;
 	local XComGameState_Unit Unit, CosmeticUnit;
 	local VisualizationActionMetadata CosmeticUnitMetaData;
@@ -118,7 +118,7 @@ simulated function AddX2ActionsForVisualization_Sync( XComGameState VisualizeGam
 	{
 		LastActionAdded = ActionMetadata.LastActionAdded;
 
-		AnimationAction = X2Action_PlayShadowbindAnimation(class'X2Action_PlayShadowbindAnimation'.static.AddToVisualizationTree(ActionMetadata, VisualizeGameState.GetContext(), false, LastActionAdded));
+		AnimationAction = X2Action_ASA_PlayShadowbindAnimation(class'X2Action_ASA_PlayShadowbindAnimation'.static.AddToVisualizationTree(ActionMetadata, VisualizeGameState.GetContext(), false, LastActionAdded));
 		AnimationAction.Params.AnimName = default.ADD_EFFECT_ANIM_NAME;
 		AnimationAction.Params.BlendTime = 0.0f;
 		AnimationAction.Params.Additive = true;
@@ -138,7 +138,7 @@ simulated function AddX2ActionsForVisualization_Sync( XComGameState VisualizeGam
 			History.GetCurrentAndPreviousGameStatesForObjectID(CosmeticUnit.ObjectID, CosmeticUnitMetaData.StateObject_OldState, CosmeticUnitMetaData.StateObject_NewState, , VisualizeGameState.HistoryIndex);
 			CosmeticUnitMetaData.VisualizeActor = CosmeticUnit.GetVisualizer();
 
-			AnimationAction = X2Action_PlayShadowbindAnimation(class'X2Action_PlayShadowbindAnimation'.static.AddToVisualizationTree(CosmeticUnitMetaData, VisualizeGameState.GetContext(), false, LastActionAdded));
+			AnimationAction = X2Action_ASA_PlayShadowbindAnimation(class'X2Action_ASA_PlayShadowbindAnimation'.static.AddToVisualizationTree(CosmeticUnitMetaData, VisualizeGameState.GetContext(), false, LastActionAdded));
 			AnimationAction.Params.AnimName = default.ADD_EFFECT_ANIM_NAME;
 			AnimationAction.Params.BlendTime = 0.0f;
 			AnimationAction.Params.Additive = true;
