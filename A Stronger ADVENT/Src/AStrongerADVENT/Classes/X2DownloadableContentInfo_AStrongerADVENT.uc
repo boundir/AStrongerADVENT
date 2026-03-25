@@ -1,13 +1,3 @@
-//---------------------------------------------------------------------------------------
-//  FILE:   XComDownloadableContentInfo_AStrongerADVENT.uc                                    
-//           
-//	Use the X2DownloadableContentInfo class to specify unique mod behavior when the 
-//  player creates a new campaign or loads a saved game.
-//  
-//---------------------------------------------------------------------------------------
-//  Copyright (c) 2016 Firaxis Games, Inc. All rights reserved.
-//---------------------------------------------------------------------------------------
-
 class X2DownloadableContentInfo_AStrongerADVENT extends X2DownloadableContentInfo;
 
 struct Primes
@@ -23,7 +13,7 @@ static function UpdateAnimations(out array<AnimSet> CustomAnimSets, XComGameStat
 {
 	local Animset AnimSetToAdd;
 
-	AnimSetToAdd = AnimSet(`CONTENT.RequestGameArchetype("ShadowUnit_ANIM.Anims.AS_ShadowUnitM4"));
+	AnimSetToAdd = AnimSet(`CONTENT.RequestGameArchetype("AStrongerADVENT_Content.ShadowUnitM4.Anims.AS_ShadowUnitM4"));
 
 	if(UnitState.IsSoldier() || UnitState.GetMyTemplateName() == 'ShadowbindUnitM4')
 	{
@@ -56,6 +46,8 @@ static event OnPostTemplatesCreated()
 	class'X2Helper_ASA_Characters'.static.SpectrePrimeRework();
 	// Spectre Prime's copy have Prime Reactions
 	class'X2Helper_ASA_Characters'.static.ShadowPrimeAbilities();
+	// Priest gets Stasis Shield
+	class'X2Helper_ASA_Characters'.static.PriestStasisShield();
 
 	// Allow Holy Warrior to target Mind Controlled units
 	class'X2Helper_ASA_Abilities'.static.HolyWarriorOnMindControlled();
@@ -67,32 +59,31 @@ static event OnPostTemplatesCreated()
 	class'X2Helper_ASA_Abilities'.static.PurifierFlamethrowerGuaranteedHit();
 	// Blazing Pinions can panic units
 	class'X2Helper_ASA_Abilities'.static.BlazingPinionsInflictPanic();
+	// Berserker Devastating Punch miss damage doesn't apply to civilians
+	class'X2Helper_ASA_Abilities'.static.DevastatingPunchMissNoDamageOnCivilians();
 
 	// Gives Spectre tier 2 secondary weapon HorrorM4
 	// class'X2Helper_ASA_Items'.static.PatchSpectreSecondaryWeapon();
 	// Gives Andromedon Prime weapon new damage changes
 	class'X2Helper_ASA_Items'.static.AdjustWeaponDamage('Andromedon_Acid_WPN', class'X2Item_ASA_Weapons'.default.ANDROMEDON_M4_WPN_BASEDAMAGE);
-
-	// Add Perk to cache
-	AddPerkContentToCache();
 }
 
 static function AddPrimeMentalImmunity(Array<Primes> PrimedUnits, Name AdditionalAbilityName = 'UnbreakableWill', Name ImmunityName = 'Mental')
 {
-	local X2AbilityTemplateManager AbilityTemplateMgr;
-	local X2CharacterTemplateManager CharacterTemplateMgr;
+	local X2AbilityTemplateManager AbilityTemplateManager;
+	local X2CharacterTemplateManager CharacterTemplateManager;
 	local X2AbilityTemplate AbilityTemplate;
 	local X2CharacterTemplate CharacterTemplate;
 	local array<X2DataTemplate> TemplateAllDifficulties;
 	local X2DataTemplate Template;
 	local Primes PrimedUnit;
 
-	AbilityTemplateMgr = class'X2AbilityTemplateManager'.static.GetAbilityTemplateManager();
-	CharacterTemplateMgr = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
+	AbilityTemplateManager = class'X2AbilityTemplateManager'.static.GetAbilityTemplateManager();
+	CharacterTemplateManager = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
 
 	foreach PrimedUnits(PrimedUnit)
 	{
-		AbilityTemplateMgr.FindDataTemplateAllDifficulties(PrimedUnit.AbilityName, TemplateAllDifficulties);
+		AbilityTemplateManager.FindDataTemplateAllDifficulties(PrimedUnit.AbilityName, TemplateAllDifficulties);
 
 		foreach TemplateAllDifficulties(Template)
 		{
@@ -105,7 +96,7 @@ static function AddPrimeMentalImmunity(Array<Primes> PrimedUnits, Name Additiona
 			}
 		}
 
-		CharacterTemplateMgr.FindDataTemplateAllDifficulties(PrimedUnit.UnitName, TemplateAllDifficulties);
+		CharacterTemplateManager.FindDataTemplateAllDifficulties(PrimedUnit.UnitName, TemplateAllDifficulties);
 
 		foreach TemplateAllDifficulties(Template)
 		{
@@ -118,15 +109,6 @@ static function AddPrimeMentalImmunity(Array<Primes> PrimedUnits, Name Additiona
 			}
 		}
 	}
-}
-
-static function AddPerkContentToCache()
-{
-	local XComContentManager Content;
-
-    Content = `CONTENT;
-    Content.BuildPerkPackageCache();
-    Content.CachePerkContent('ASA_Perk_Horror');
 }
 
 static function bool AbilityTagExpandHandler(string InString, out string OutString)

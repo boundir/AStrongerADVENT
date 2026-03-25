@@ -68,20 +68,20 @@ static function HolyWarriorOnMindControlled()
 
 static function PatchValkyrieMeleeAttack()
 {
-	local X2AbilityTemplateManager AbilityTemplateMgr;
+	local X2AbilityTemplateManager AbilityTemplateManager;
 	local X2AbilityTemplate AbilityTemplate;
 	local array<X2DataTemplate> TemplateAllDifficulties;
 	local X2DataTemplate Template;
 
-	AbilityTemplateMgr = class'X2AbilityTemplateManager'.static.GetAbilityTemplateManager();
+	AbilityTemplateManager = class'X2AbilityTemplateManager'.static.GetAbilityTemplateManager();
 
-	AbilityTemplateMgr.FindDataTemplateAllDifficulties('StandardMeleeLifeLeech', TemplateAllDifficulties);
+	AbilityTemplateManager.FindDataTemplateAllDifficulties('StandardMeleeLifeLeech', TemplateAllDifficulties);
 
 	foreach TemplateAllDifficulties(Template)
 	{
 		AbilityTemplate = X2AbilityTemplate(Template);
 
-		if( AbilityTemplate != none )
+		if (AbilityTemplate != none)
 		{
 			AbilityTemplate.AbilityTargetStyle = new class'X2AbilityTarget_MovingMelee';
 			AbilityTemplate.TargetingMethod = class'X2TargetingMethod_MeleePath';
@@ -92,28 +92,28 @@ static function PatchValkyrieMeleeAttack()
 
 static function SpectreVanishIsFreeAction()
 {
-	local X2AbilityTemplateManager AbilityTemplateMgr;
+	local X2AbilityTemplateManager AbilityTemplateManager;
 	local X2AbilityTemplate AbilityTemplate;
 	local array<X2DataTemplate> TemplateAllDifficulties;
 	local X2DataTemplate Template;
 	local X2AbilityCost_ActionPoints ActionPointCost;
 	local int Index;
 
-	AbilityTemplateMgr = class'X2AbilityTemplateManager'.static.GetAbilityTemplateManager();
+	AbilityTemplateManager = class'X2AbilityTemplateManager'.static.GetAbilityTemplateManager();
 
-	AbilityTemplateMgr.FindDataTemplateAllDifficulties('Vanish', TemplateAllDifficulties);
+	AbilityTemplateManager.FindDataTemplateAllDifficulties('Vanish', TemplateAllDifficulties);
 
 	foreach TemplateAllDifficulties(Template)
 	{
 		AbilityTemplate = X2AbilityTemplate(Template);
 
-		if( AbilityTemplate != none )
+		if (AbilityTemplate != none)
 		{
 			for (Index = 0; Index < AbilityTemplate.AbilityCosts.Length; ++Index)
 			{
 				ActionPointCost = X2AbilityCost_ActionPoints(AbilityTemplate.AbilityCosts[Index]);
 
-				if(ActionPointCost != none)
+				if (ActionPointCost != none)
 				{
 					ActionPointCost.bFreeCost = true;
 				}
@@ -125,21 +125,21 @@ static function SpectreVanishIsFreeAction()
 
 static function PurifierFlamethrowerGuaranteedHit()
 {
-	local X2AbilityTemplateManager AbilityTemplateMgr;
+	local X2AbilityTemplateManager AbilityTemplateManager;
 	local X2AbilityTemplate AbilityTemplate;
 	local array<X2DataTemplate> TemplateAllDifficulties;
 	local X2DataTemplate Template;
 	local X2AbilityToHitCalc_StandardAim StandardAim;
 
-	AbilityTemplateMgr = class'X2AbilityTemplateManager'.static.GetAbilityTemplateManager();
+	AbilityTemplateManager = class'X2AbilityTemplateManager'.static.GetAbilityTemplateManager();
 
-	AbilityTemplateMgr.FindDataTemplateAllDifficulties('AdvPurifierFlamethrower', TemplateAllDifficulties);
+	AbilityTemplateManager.FindDataTemplateAllDifficulties('AdvPurifierFlamethrower', TemplateAllDifficulties);
 
 	foreach TemplateAllDifficulties(Template)
 	{
 		AbilityTemplate = X2AbilityTemplate(Template);
 
-		if( AbilityTemplate != none )
+		if (AbilityTemplate != none)
 		{
 			StandardAim = new class'X2AbilityToHitCalc_StandardAim';
 			StandardAim.bGuaranteedHit = default.PURIFIER_FLAMETHROWER_GUARANTEED_HIT;
@@ -150,21 +150,21 @@ static function PurifierFlamethrowerGuaranteedHit()
 
 static function BlazingPinionsInflictPanic()
 {
-	local X2AbilityTemplateManager AbilityTemplateMgr;
+	local X2AbilityTemplateManager AbilityTemplateManager;
 	local X2AbilityTemplate AbilityTemplate;
 	local array<X2DataTemplate> TemplateAllDifficulties;
 	local X2DataTemplate Template;
 	local X2Effect_Panicked PanicEffect;
 
-	AbilityTemplateMgr = class'X2AbilityTemplateManager'.static.GetAbilityTemplateManager();
+	AbilityTemplateManager = class'X2AbilityTemplateManager'.static.GetAbilityTemplateManager();
 
-	AbilityTemplateMgr.FindDataTemplateAllDifficulties('BlazingPinionsStage1', TemplateAllDifficulties);
+	AbilityTemplateManager.FindDataTemplateAllDifficulties('BlazingPinionsStage1', TemplateAllDifficulties);
 
 	foreach TemplateAllDifficulties(Template)
 	{
 		AbilityTemplate = X2AbilityTemplate(Template);
 
-		if( AbilityTemplate != none )
+		if (AbilityTemplate != none)
 		{
 			AbilityTemplate.AdditionalAbilities.AddItem('BlazingPinionsPanicPassive');
 
@@ -175,3 +175,46 @@ static function BlazingPinionsInflictPanic()
 		}
 	}
 }
+
+static function DevastatingPunchMissNoDamageOnCivilians()
+{
+	local X2AbilityTemplateManager AbilityTemplateManager;
+	local X2AbilityTemplate AbilityTemplate;
+	local array<X2DataTemplate> TemplateAllDifficulties;
+	local X2DataTemplate Template;
+	local X2Effect_ApplyWeaponDamage MissDamageEffect;
+	local X2Condition_UnitProperty UnitPropertyCondition;
+	local Int Index;
+
+	AbilityTemplateManager = class'X2AbilityTemplateManager'.static.GetAbilityTemplateManager();
+
+	AbilityTemplateManager.FindDataTemplateAllDifficulties('DevastatingPunch', TemplateAllDifficulties);
+
+	foreach TemplateAllDifficulties(Template)
+	{
+		AbilityTemplate = X2AbilityTemplate(Template);
+
+		if (AbilityTemplate != none )
+		{
+			for (Index = 0; Index < AbilityTemplate.AbilityTargetEffects.Length; ++Index)
+			{
+				MissDamageEffect = X2Effect_ApplyWeaponDamage(AbilityTemplate.AbilityTargetEffects[Index]);
+
+				if (MissDamageEffect != none && MissDamageEffect.bApplyOnHit == false && MissDamageEffect.bApplyOnMiss == true)
+				{
+					UnitPropertyCondition = new class'X2Condition_UnitProperty';
+					UnitPropertyCondition.ExcludeAlive = false;
+					UnitPropertyCondition.ExcludeDead = true;
+					UnitPropertyCondition.ExcludeFriendlyToSource = false;
+					UnitPropertyCondition.ExcludeHostileToSource = false;
+					UnitPropertyCondition.TreatMindControlledSquadmateAsHostile = false;
+					UnitPropertyCondition.FailOnNonUnits = true;
+					UnitPropertyCondition.ExcludeCivilian = true;
+					UnitPropertyCondition.ExcludeCosmetic = true;
+
+					MissDamageEffect.TargetConditions.AddItem(UnitPropertyCondition);
+				}
+			}
+
+		}
+	}

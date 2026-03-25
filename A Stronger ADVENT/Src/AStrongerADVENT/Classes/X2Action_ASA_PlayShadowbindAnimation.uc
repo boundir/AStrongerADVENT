@@ -83,15 +83,6 @@ Begin:
 		else
 		{
 			`RedScreen("Failed to play animation" @ Params.AnimName @ "on" @ UnitPawn @ "as part of" @ self);
-			foreach UnitPawn.Mesh.AnimSets(AnimSet)
-			{
-				`log("AnimSet: " $ PathName(AnimSet),, 'UpdateAnimations');
-
-				foreach AnimSet.Sequences(Sequence)
-				{
-					`log("SequenceName: " $ Sequence.SequenceName,, 'UpdateAnimations');
-				}
-			}
 		}
 	}
 

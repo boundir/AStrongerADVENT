@@ -3,38 +3,22 @@
                      {
                          "fullFileName":  "Textures-a_AStrongerADVENT_DLCTFC_XPACK_.tfc",
                          "originalSize":  1075176,
-                         "lastUpdatedUtc":  639049691966931740
+                         "lastUpdatedUtc":  639068721764186917
                      },
                      {
                          "fullFileName":  "World-a_AStrongerADVENT_DLCTFC_XPACK_.tfc",
                          "originalSize":  1052564,
-                         "lastUpdatedUtc":  639049691967501721
+                         "lastUpdatedUtc":  639068721764713039
                      }
                  ],
     "sfPackages":  [
                        {
-                           "fullFileName":  "ASA_Perk_Horror_SF.upk",
-                           "lastUpdatedUtc":  639049691721473101
+                           "fullFileName":  "AStrongerADVENT_Content_SF.upk",
+                           "lastUpdatedUtc":  639068722228120264
                        },
                        {
-                           "fullFileName":  "GameUnit_SpectreM4_SF.upk",
-                           "lastUpdatedUtc":  639049692297829605
-                       },
-                       {
-                           "fullFileName":  "MutonM4_ANIM_SF.upk",
-                           "lastUpdatedUtc":  639049692320072338
-                       },
-                       {
-                           "fullFileName":  "ShadowUnit_ANIM_SF.upk",
-                           "lastUpdatedUtc":  639049692581413208
-                       },
-                       {
-                           "fullFileName":  "UILibrary_AStrongerADVENT_SF.upk",
-                           "lastUpdatedUtc":  639049692602097450
-                       },
-                       {
-                           "fullFileName":  "Weapons_SpectreM4_SF.upk",
-                           "lastUpdatedUtc":  639049692796686926
+                           "fullFileName":  "CIN_XP_SpectreM4.upk",
+                           "lastUpdatedUtc":  639067914742170367
                        }
                    ]
 }

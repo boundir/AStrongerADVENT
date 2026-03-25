@@ -14,11 +14,6 @@ var array<name> CharacterNamesLow;
 
 var localized string strWarCryFriendlyDesc;
 
-/// <summary>
-/// Implements War Cry ability 
-/// </summary>
-
-
 simulated function AddPersistentStatChange(ECharStatType StatType, float StatAmount, bool HighStat, optional EStatModOp InModOp=MODOP_Addition)
 {
 	local StatChange NewChange;

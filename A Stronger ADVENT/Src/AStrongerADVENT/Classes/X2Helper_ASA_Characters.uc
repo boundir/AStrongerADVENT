@@ -5,22 +5,22 @@ var config array<name> MELEE_VULNERABILITY_INCLUDE_UNIT;
 
 static function ApplyMeleeResistance()
 {
-	local X2CharacterTemplateManager CharacterTemplateMgr;
+	local X2CharacterTemplateManager CharacterTemplateManager;
 	local X2CharacterTemplate CharacterTemplate;
 	local array<X2DataTemplate> TemplateAllDifficulties;
 	local X2DataTemplate Template;
 	local name UnitName;
 
-	CharacterTemplateMgr = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
+	CharacterTemplateManager = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
 
 	foreach default.MELEE_RESISTANCE_INCLUDE_UNIT(UnitName)
 	{
-		CharacterTemplateMgr.FindDataTemplateAllDifficulties(UnitName, TemplateAllDifficulties);
+		CharacterTemplateManager.FindDataTemplateAllDifficulties(UnitName, TemplateAllDifficulties);
 
 		foreach TemplateAllDifficulties(Template)
 		{
 			CharacterTemplate = X2CharacterTemplate(Template);
-			if( CharacterTemplate != none )
+			if (CharacterTemplate != none)
 			{
 				CharacterTemplate.Abilities.AddItem('MeleeResistance');
 			}
@@ -30,22 +30,22 @@ static function ApplyMeleeResistance()
 
 static function ApplyMeleeVulnerability()
 {
-	local X2CharacterTemplateManager CharacterTemplateMgr;
+	local X2CharacterTemplateManager CharacterTemplateManager;
 	local X2CharacterTemplate CharacterTemplate;
 	local array<X2DataTemplate> TemplateAllDifficulties;
 	local X2DataTemplate Template;
 	local name UnitName;
 
-	CharacterTemplateMgr = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
+	CharacterTemplateManager = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
 
 	foreach default.MELEE_VULNERABILITY_INCLUDE_UNIT(UnitName)
 	{
-		CharacterTemplateMgr.FindDataTemplateAllDifficulties(UnitName, TemplateAllDifficulties);
+		CharacterTemplateManager.FindDataTemplateAllDifficulties(UnitName, TemplateAllDifficulties);
 
 		foreach TemplateAllDifficulties(Template)
 		{
 			CharacterTemplate = X2CharacterTemplate(Template);
-			if( CharacterTemplate != none )
+			if (CharacterTemplate != none)
 			{
 				CharacterTemplate.Abilities.AddItem('VulnerabilityMelee');
 			}
@@ -55,19 +55,19 @@ static function ApplyMeleeVulnerability()
 
 static function ArchonPrimeIcarusDrop()
 {
-	local X2CharacterTemplateManager CharacterTemplateMgr;
+	local X2CharacterTemplateManager CharacterTemplateManager;
 	local X2CharacterTemplate CharacterTemplate;
 	local array<X2DataTemplate> TemplateAllDifficulties;
 	local X2DataTemplate Template;
 
-	CharacterTemplateMgr = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
+	CharacterTemplateManager = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
 
-	CharacterTemplateMgr.FindDataTemplateAllDifficulties('ArchonM4', TemplateAllDifficulties);
+	CharacterTemplateManager.FindDataTemplateAllDifficulties('ArchonM4', TemplateAllDifficulties);
 
 	foreach TemplateAllDifficulties(Template)
 	{
 		CharacterTemplate = X2CharacterTemplate(Template);
-		if( CharacterTemplate != none )
+		if (CharacterTemplate != none)
 		{
 			CharacterTemplate.AdditionalAnimSets.AddItem(AnimSet(`CONTENT.RequestGameArchetype("DLC_60_ArchonKing_ANIM.Anims.AS_ArchonKing")));
 			CharacterTemplate.Abilities.AddItem('IcarusDropGrab');
@@ -77,7 +77,7 @@ static function ArchonPrimeIcarusDrop()
 
 static function MutonCounterAttack()
 {
-	local X2CharacterTemplateManager CharacterTemplateMgr;
+	local X2CharacterTemplateManager CharacterTemplateManager;
 	local X2CharacterTemplate CharacterTemplate;
 	local array<X2DataTemplate> TemplateAllDifficulties;
 	local X2DataTemplate Template;
@@ -87,16 +87,16 @@ static function MutonCounterAttack()
 	MutonUnits.AddItem('MutonDragonrounds');
 	MutonUnits.AddItem('MutonVenomrounds');
 
-	CharacterTemplateMgr = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
+	CharacterTemplateManager = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
 
 	foreach MutonUnits(UnitName)
 	{
-		CharacterTemplateMgr.FindDataTemplateAllDifficulties(UnitName, TemplateAllDifficulties);
+		CharacterTemplateManager.FindDataTemplateAllDifficulties(UnitName, TemplateAllDifficulties);
 
 		foreach TemplateAllDifficulties(Template)
 		{
 			CharacterTemplate = X2CharacterTemplate(Template);
-			if( CharacterTemplate != none )
+			if (CharacterTemplate != none)
 			{
 				CharacterTemplate.Abilities.AddItem('CounterattackPreparation');
 				CharacterTemplate.Abilities.AddItem('CounterattackDescription');
@@ -107,21 +107,21 @@ static function MutonCounterAttack()
 
 static function MutonPrimeAbilities()
 {
-	local X2CharacterTemplateManager CharacterTemplateMgr;
+	local X2CharacterTemplateManager CharacterTemplateManager;
 	local X2CharacterTemplate CharacterTemplate;
 	local array<X2DataTemplate> TemplateAllDifficulties;
 	local X2DataTemplate Template;
 
-	CharacterTemplateMgr = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
+	CharacterTemplateManager = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
 
-	CharacterTemplateMgr.FindDataTemplateAllDifficulties('MutonM4', TemplateAllDifficulties);
+	CharacterTemplateManager.FindDataTemplateAllDifficulties('MutonM4', TemplateAllDifficulties);
 
 	foreach TemplateAllDifficulties(Template)
 	{
 		CharacterTemplate = X2CharacterTemplate(Template);
-		if( CharacterTemplate != none )
+		if (CharacterTemplate != none)
 		{
-			CharacterTemplate.AdditionalAnimSets.AddItem(AnimSet(`CONTENT.RequestGameArchetype("MutonM4_ANIM.AS_MutonM2")));
+			CharacterTemplate.AdditionalAnimSets.AddItem(AnimSet(`CONTENT.RequestGameArchetype("AStrongerADVENT_Content.MutonM4.Anims.AS_MutonM2")));
 			CharacterTemplate.Abilities.AddItem('Beastmaster_ASA');
 			CharacterTemplate.Abilities.AddItem('WarCry_ASA');
 		}
@@ -130,19 +130,19 @@ static function MutonPrimeAbilities()
 
 static function CodexPrimeAbilities()
 {
-	local X2CharacterTemplateManager CharacterTemplateMgr;
+	local X2CharacterTemplateManager CharacterTemplateManager;
 	local X2CharacterTemplate CharacterTemplate;
 	local array<X2DataTemplate> TemplateAllDifficulties;
 	local X2DataTemplate Template;
 
-	CharacterTemplateMgr = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
+	CharacterTemplateManager = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
 
-	CharacterTemplateMgr.FindDataTemplateAllDifficulties('CodexM4', TemplateAllDifficulties);
+	CharacterTemplateManager.FindDataTemplateAllDifficulties('CodexM4', TemplateAllDifficulties);
 
 	foreach TemplateAllDifficulties(Template)
 	{
 		CharacterTemplate = X2CharacterTemplate(Template);
-		if( CharacterTemplate != none )
+		if (CharacterTemplate != none)
 		{
 			CharacterTemplate.Abilities.RemoveItem('TriggerSuperposition');
 			CharacterTemplate.Abilities.AddItem('TriggerSuperpositionPrime');
@@ -152,46 +152,79 @@ static function CodexPrimeAbilities()
 
 static function SpectrePrimeRework()
 {
-	local X2CharacterTemplateManager CharacterTemplateMgr;
+	local X2CharacterTemplateManager CharacterTemplateManager;
 	local X2CharacterTemplate CharacterTemplate;
 	local array<X2DataTemplate> TemplateAllDifficulties;
 	local X2DataTemplate Template;
 
-	CharacterTemplateMgr = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
+	CharacterTemplateManager = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
 
-	CharacterTemplateMgr.FindDataTemplateAllDifficulties('SpectreM4', TemplateAllDifficulties);
+	CharacterTemplateManager.FindDataTemplateAllDifficulties('SpectreM4', TemplateAllDifficulties);
 
 	foreach TemplateAllDifficulties(Template)
 	{
 		CharacterTemplate = X2CharacterTemplate(Template);
-		if( CharacterTemplate != none )
+		if (CharacterTemplate != none)
 		{
 			CharacterTemplate.Abilities.RemoveItem('ShadowbindM2');
 			CharacterTemplate.Abilities.AddItem('ShadowbindM4');
+
 			CharacterTemplate.strPawnArchetypes.Length = 0;
 			CharacterTemplate.strMatineePackages.Length = 0;
-			CharacterTemplate.strPawnArchetypes.AddItem("GameUnit_SpectreM4.Archetypes.ARC_GameUnit_SpectreM4");
-			CharacterTemplate.strMatineePackages[0] = "CIN_XP_SpectreM4";
+
+			CharacterTemplate.strPawnArchetypes.AddItem("AStrongerADVENT_Content.SpectreM4.Archetypes.ARC_GameUnit_SpectreM4");
+			CharacterTemplate.strMatineePackages.AddItem("CIN_XP_SpectreM4");
 			CharacterTemplate.DefaultLoadout = 'SpectreM4_Loadout';
+		}
+	}
+}
+
+static function PriestStasisShield()
+{
+	local X2CharacterTemplateManager CharacterTemplateManager;
+	local X2CharacterTemplate CharacterTemplate;
+	local array<X2DataTemplate> TemplateAllDifficulties;
+	local X2DataTemplate Template;
+	local array<name> PriestUnits;
+	local name UnitName;
+
+	PriestUnits.AddItem('AdvPriestM1');
+	PriestUnits.AddItem('AdvPriestM2');
+	PriestUnits.AddItem('AdvPriestM3');
+
+	CharacterTemplateManager = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
+
+	foreach PriestUnits(UnitName)
+	{
+		CharacterTemplateManager.FindDataTemplateAllDifficulties(UnitName, TemplateAllDifficulties);
+
+		foreach TemplateAllDifficulties(Template)
+		{
+			CharacterTemplate = X2CharacterTemplate(Template);
+
+			if (CharacterTemplate != none)
+			{
+				CharacterTemplate.Abilities.AddItem('StasisShield');
+			}
 		}
 	}
 }
 
 static function ShadowPrimeAbilities()
 {
-	local X2CharacterTemplateManager CharacterTemplateMgr;
+	local X2CharacterTemplateManager CharacterTemplateManager;
 	local X2CharacterTemplate CharacterTemplate;
 	local array<X2DataTemplate> TemplateAllDifficulties;
 	local X2DataTemplate Template;
 
-	CharacterTemplateMgr = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
+	CharacterTemplateManager = class'X2CharacterTemplateManager'.static.GetCharacterTemplateManager();
 
-	CharacterTemplateMgr.FindDataTemplateAllDifficulties('ShadowbindUnitM4', TemplateAllDifficulties);
+	CharacterTemplateManager.FindDataTemplateAllDifficulties('ShadowbindUnitM4', TemplateAllDifficulties);
 
 	foreach TemplateAllDifficulties(Template)
 	{
 		CharacterTemplate = X2CharacterTemplate(Template);
-		if( CharacterTemplate != none )
+		if (CharacterTemplate != none)
 		{
 			CharacterTemplate.Abilities.RemoveItem('ShadowUnitInitialize');
 			CharacterTemplate.Abilities.AddItem('ShadowUnitM4Initialize');
